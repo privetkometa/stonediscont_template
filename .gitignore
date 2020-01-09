@@ -7,3 +7,5 @@ tmp/
 
 # Bower stuff.
 bower_components/
+
+*.DS_Store
