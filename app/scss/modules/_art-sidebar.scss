@@ -1,0 +1,35 @@
+.art-sidebar{
+  position: sticky;
+  top: 0;
+  &__title{
+    padding-top: 25px;
+    font-family: 'PT Serif';
+    padding-bottom: 17px;
+    position: relative;
+    &:after{
+      content: '';
+      height: 1px;
+      width: 100%;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      background: $smoke;
+    }
+  }
+  &__list{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    li{
+      margin-bottom: 10px;
+      font-size: 14px;
+    }
+    a{
+      text-decoration: none;
+      color: $red;
+      &:hover{
+        color: $dark;
+      }
+    }
+  }
+}

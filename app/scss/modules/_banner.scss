@@ -1,0 +1,39 @@
+.banner{
+  height: 600px;
+  padding: 20px;
+  background: url('../assets/images/monument-statue.jpg') no-repeat center;
+  background-size: cover;
+  position: relative;
+  &::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 0;
+    background: linear-gradient(to top, rgba(15,33,49,0.3), rgba(15,33,49,0.75));
+  }
+  .container{
+    position: relative;
+    z-index: 1;
+  }
+  &__title{
+    font-family: 'PT Serif';
+    font-size: 60px;
+    line-height: 66px;
+    // text-transform: uppercase;
+    color: $white;
+    text-align: center;
+    font-weight: bold;
+    margin: 0 0 30px;
+    // font-weight: 400;
+  }
+  &__descrip{
+    text-align: center;
+    color: $smoke;
+    max-width: 800px;
+    font-size: 22px;
+    margin-bottom: 60px;
+  }
+}

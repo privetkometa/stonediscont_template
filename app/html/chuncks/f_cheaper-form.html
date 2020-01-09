@@ -1,0 +1,37 @@
+<div class="modal" id="[[+target]]" role="dialog" aria-labelledby="[[+target]]Label">
+  <h2>Нужно дешевле?</h2>
+  <div class="content">
+    <p>Если вы не нашли нужную комплектацию памятника или стоимость слишком высока, то оставьте заявку и менеджер подберет для вас оптимальный вариант по приемлемой цене. </p>
+  </div>
+  <div class="modal-dialog">
+		<div class="modal-content">
+      <form role="form" method="POST" action="[[~[[*id]]]]" class="">
+        <div class="order__fields modal-body">
+          <div class="order__field">
+            <label class="order__field-label" for="phone">
+                Ваш телефон:<span>*</span>
+            </label>
+            <input type="text" class="form-control input" id="phone" name="phone"
+                  value="[[!+fi.phone]]" data-mask="+0 (000) 000-00-00" placeholder="+7 (000) 000-00-00">
+  					<span class="input__error error_phone error">[[+fi.error.phone]]</span>
+          </div>
+
+          <div class="order__field">
+            <label class="order__field-label" for="name">
+              Ваше имя:<span>*</span>
+            </label>
+            <input type="text" class="form-control input" id="name" name="name"
+                  value="[[!+fi.name]]" placeholder="Как Вас зовут?">
+  					<span class="input__error error error_name">[[+fi.error.name]]</span>
+          </div>
+        </div>
+
+        <div class="modal-footer">
+          <button type="submit" class="callback-submit button">Отправить</button>
+        </div>
+
+  		</form>
+    </div>
+  </div>
+
+</div>

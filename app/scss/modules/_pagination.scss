@@ -1,0 +1,38 @@
+.pagination{
+  margin: 15px 0 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  li{
+    margin: 0 3px;
+    a, span{
+      transition: all $transition;
+      text-decoration: none;
+      padding: 2px 10px 1px;
+      display: inline-block;
+      border-radius: 3px;
+      &:hover{
+        background: $smoke;
+      }
+    }
+    &.disabled{
+      a, span{
+        color: $gray;
+        &:hover{
+          background: none;
+        }
+      }
+    }
+    &.active{
+      a, span{
+        background: $orange;
+        &:hover{
+          a{
+            color: $white;
+          }
+        }
+      }
+    }
+  }
+}

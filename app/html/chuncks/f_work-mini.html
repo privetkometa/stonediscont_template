@@ -1,0 +1,20 @@
+<div class="col-md-4">
+  <a href="[[~[[+id]]]]" class="work-mini">
+    <div class="work-mini__wrapper">
+      <div class="work-mini__img">
+        [[getImageList?
+          &tvname=`gallery`
+          &tpl=`f_work-mini-thumbTpl`
+          &limit=`2`
+          &docid=`[[+id]]`
+        ]]
+      </div>
+      <h2 class="work-mini__title">[[+pagetitle]]</h2>
+      <!-- <div class="work-mini__review">
+        <p class="work-mini__review-title">Отзыв о работе</p>
+        <p class="work-mini__review-text">[[+tv.review:ellipsis=`100`]]</p>
+      </div> -->
+    </div>
+    <span class="button work-mini__button">Подробнее</span>
+  </a>
+</div>

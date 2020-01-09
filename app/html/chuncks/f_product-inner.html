@@ -1,0 +1,26 @@
+<form class="ms2_form msoptionsprice-product" method="post">
+  <input type="hidden" name="id" value="[[*id]]"/>
+
+  Артикул:<span class='msoptionsprice-article msoptionsprice-[[*id]]'>[[+article]]</span>
+
+  <div class="product-card__title">Выберите размер</div>
+  [[msOptions? &options=`stela_size,stand_size,garden_size,polishing,discount` &tpl=`f_product-option`]]
+
+  {'msOptionsPrice.option' | snippet : [
+    'options' => 'stela_size,stand_size,garden_size,polishing,discount',
+    'tpl' => 'f_product-option',
+    'constraintOptions' => [
+        'stand_size' => ['stela_size'],
+        'garden_size' => ['stela_size'],
+        'discount' => ['stela_size']
+    ]
+    ]}
+
+  <div class="">Цена: <span class="msoptionsprice-cost msoptionsprice-[[*id]]">[[+price]]</span></div>
+  <div class="">
+      <button type="submit" class="btn" name="ms2_action" value="cart/add">
+          [[%ms2_frontend_add_to_cart]]
+      </button>
+  </div>
+
+</form>

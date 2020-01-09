@@ -1,0 +1,35 @@
+.contact-block{
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  position: relative;
+  margin-top: 6px;
+  &__icon{
+    font-size: 28px;
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 5px;
+    left: -10px;
+    transform: translateX(-100%);
+    svg {
+      fill: $dark;
+    }
+  }
+  &__info{
+    display: flex;
+    flex-direction: column;
+  }
+  &__text{
+    font-family: 'PT Serif';
+    margin-bottom: 2px;
+    a{
+      text-decoration: none;
+    }
+  }
+  &__descrip{
+    color: $gray;
+    font-size: 14px;
+  }
+}

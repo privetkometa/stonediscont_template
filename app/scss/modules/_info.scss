@@ -1,0 +1,37 @@
+.info{
+  margin-top: 20px;
+  &__nav{
+    margin: 0 0 30px;
+    border-bottom: 1px solid $smoke;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__nav-item{
+    & + & {
+      margin-left: 20px;
+    }
+    .info__nav-link{
+      box-sizing: border-box;
+      text-decoration: none;
+      padding: 0 0 10px;
+      border: 0;
+      border-radius: 0;
+      border-bottom: 3px solid transparent;
+      color: $dark;
+      transition: all $transition;
+      &.active{
+        border: 0;
+        border-radius: 0;
+        border-bottom: 3px solid $red;
+        font-weight: bold;
+        color: $dark;
+      }
+      &:hover{
+        border: 0;
+        border-radius: 0;
+        border-bottom: 3px solid $smoke;
+      }
+    }
+  }
+
+}

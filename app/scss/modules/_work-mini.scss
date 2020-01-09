@@ -1,0 +1,65 @@
+.work-mini{
+  text-decoration: none;
+  padding: 15px;
+  display: block;
+  position: relative;
+  transition: all $transition;
+  border-radius: $border-radius;
+  &:hover{
+    box-shadow: $box-shadow;
+    .work-mini__img img{
+      &:last-child{
+        opacity: 1;
+      }
+      &:first-child{
+        opacity: 0;
+      }
+    }
+    .work-mini__button{
+      opacity: 1;
+    }
+    .work-mini__wrapper{
+      opacity: 0.7;
+    }
+  }
+  &__img{
+    position: relative;
+    height: 210px;
+    border-radius: $border-radius;
+    overflow: hidden;
+    img{
+      position: absolute;
+      left: 0;
+      top: 0;
+      transition: all $transition;
+      &:last-child{
+        opacity: 0;
+      }
+    }
+  }
+  &__title{
+    margin: 10px 0 15px;
+    font-size: 18px;
+  }
+  &__review{
+    background: $light;
+    border-radius: $border-radius;
+    padding: 10px;
+    font-size: 14px;
+  }
+  &__review-title{
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  &__review-text{
+    font-family: 'PT Serif';
+    font-style: italic;
+  }
+  &__button{
+    position: absolute;
+    top: 25%;
+    opacity: 0;
+    left: 50%;
+    transform: translate(-50%);
+  }
+}

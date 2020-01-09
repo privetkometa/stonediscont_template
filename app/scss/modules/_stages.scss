@@ -1,0 +1,52 @@
+.stages{
+  margin: 20px 0 40px;
+  &__list{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    counter-reset: li;
+  }
+  &__title{
+    margin-bottom: 15px;
+  }
+  &__item{
+    padding: 45px 15px 5px 0;
+    position: relative;
+    & + & {
+      border-left: 1px solid $smoke;
+      padding-left: 15px;
+      &::after{
+        left: 15px;
+      }
+    }
+    &::after {
+      content: counter(li);
+      counter-increment: li;
+      position:absolute;
+      font-weight: 800;
+      // background: $orange;
+      color: $orange;
+      border-radius: 50%;
+      width: 30px;
+      border: 1px solid $orange;
+      height: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+      top: 5px;
+      left: 0;
+    }
+  }
+  &__text{
+    margin-bottom: 5px;
+  }
+  &__descrip{
+    color: $gray;
+    font-size: 12px;
+    white-space: nowrap;
+  }
+}

@@ -1,0 +1,16 @@
+{foreach $options as $name => $values}
+    {foreach $values as $value}
+      <div class="d-none"
+        {if $constraints[$name]}
+            data-constraints="{$constraints[$name]| json_encode: 256 | htmlentities}"
+        {/if}
+      >
+        <input type="radio" class="form-control" name="options[{$name}]" value="{$value}" id="value_{$value}"
+        {if $value@index == 0}checked="checked"{/if}
+          {if $constraints[$name]}
+              data-relations="{$relations[$name][$value]| json_encode: 256 | htmlentities}"
+          {/if}
+        >
+      </div>
+    {/foreach}
+{/foreach}

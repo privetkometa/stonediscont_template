@@ -1,0 +1,67 @@
+.block{
+  padding: 40px 0 60px;
+  &__title{
+    font-family: 'PT Serif';
+    font-size: 30px;
+  }
+  &__text{
+    line-height: 1.8;
+    margin-bottom: 15px;
+  }
+  &__accent{
+    text-transform: uppercase;
+    font-family: 'PT Serif';
+    font-weight: bold;
+    color: $red;
+  }
+  &.block--light{
+    background: $light;
+  }
+  &__price{
+    font-size: 26px;
+    margin: 10px 0 20px;
+  }
+  &.block--dark{
+    background: $darkblue;
+    .block__title{
+      color: $white;
+    }
+  }
+  &__call-back{
+    color: $white;
+    display: flex;
+    justify-content: center;
+    p{
+      max-width: 700px;
+      padding: 40px 0 0px 125px;
+      font-size: 20px;
+      background-image: url('../assets/images/customer-support.svg');
+      background-repeat: no-repeat;
+      background-position: left center;
+      background-size: contain;
+    }
+  }
+  &__catalog{
+    height: 360px;
+    margin-top: 60px;
+    background: url('../assets/images/img1.png') no-repeat 0 center ,
+    url('../assets/images/img2.png') no-repeat 33% center,
+    url('../assets/images/img3.png') no-repeat 66% center,
+    url('../assets/images/img4.png') no-repeat 100% center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &:last-child{
+    padding-bottom: 0;
+  }
+  &__attent{
+    background: $white;
+    padding: 15px;
+    line-height: 1.6;
+    box-shadow: $box-shadow;
+    border-radius: $border-radius;
+    font-size: 14px;
+    border-left: 2px solid $orange;
+  }
+}

@@ -1,0 +1,23 @@
+.review{
+  padding: 15px 15px 20px;
+  box-shadow: $box-shadow;
+  border-radius: $border-radius;
+  background: $light;
+  &__header{
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+  &__date{
+    font-size: 14px;
+    color: $gray;
+  }
+  &__autor{
+    font-weight: bold;
+  }
+  &__text{
+    font-family: 'PT Serif';
+    font-style: italic;
+  }
+}

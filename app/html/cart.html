@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      [[!$f_head]]
+  </head>
+  <body>
+    [[!$f_header]]
+    [[!$f_menu]]
+    <main>
+      <div class="container">
+        <h1 class="pagetitle">[[*pagetitle]]</h1>
+        [[!msGetOrder? tpl=`f_get-order`]]
+        <h2 class="stages__title">Этапы работы</h2>
+        [[!$f_order-stages]]
+        <div class="row">
+          <div class="col-md-8">
+            [[!msCart? tpl=`f_cart`]]
+          </div>
+          <div class="col-md-4">
+            [[!msOrder? tpl=`f_order`]]
+
+          </div>
+        </div>
+      </div>
+    </main>
+    [[$f_footer]]
+  </body>
+</html>

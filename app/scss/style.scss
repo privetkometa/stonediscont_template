@@ -1,0 +1,158 @@
+@import 'modules/variables';
+@import 'modules/fonts';
+
+@import "node_modules/bootstrap/scss/functions";
+@import "node_modules/bootstrap/scss/variables";
+@import "node_modules/bootstrap/scss/mixins";
+@import 'node_modules/bootstrap/scss/grid';
+@import 'node_modules/bootstrap/scss/utilities';
+@import 'node_modules/bootstrap/scss/transitions';
+@import 'node_modules/bootstrap/scss/navbar';
+@import 'node_modules/bootstrap/scss/nav';
+@import 'node_modules/bootstrap/scss/dropdown';
+
+@import 'node_modules/owl.carousel2/src/scss/owl.carousel.scss';
+
+@import 'modules/normalize';
+@import 'modules/header';
+@import 'modules/logo';
+@import 'modules/menu';
+@import 'modules/buttons';
+@import 'modules/typography';
+@import 'modules/form-block';
+@import 'modules/contact-block';
+@import 'modules/banner';
+@import 'modules/catalog-menu';
+@import 'modules/product-mini';
+@import 'modules/product-amount';
+@import 'modules/sorting';
+@import 'modules/pagination';
+@import 'modules/product-card';
+@import 'modules/option';
+@import 'modules/cart';
+@import 'modules/order';
+@import 'modules/stages';
+@import 'modules/footer';
+@import 'modules/action-order';
+@import 'modules/work';
+@import 'modules/review';
+@import 'modules/work-mini';
+@import 'modules/category';
+@import 'modules/thankpage';
+@import 'modules/modal';
+@import 'modules/block';
+@import 'modules/stones';
+@import 'modules/stones-mini';
+@import 'modules/garanty';
+@import 'modules/info';
+@import 'modules/category-banner';
+@import 'modules/art-sidebar';
+
+body {
+  -moz-osx-font-smoothig: grayscale;
+  -webkit-font-smoothing: antialiased;
+  color: $dark;
+  font-family: 'Montserrat', 'Arial', sans-serif;
+  letter-spacing: 0;
+  font-size: 16px;
+  line-height: 1.4;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  min-height: 100vh;
+  & > svg {
+    display: none;
+  }
+}
+a{
+  color: inherit;
+}
+*{
+  -webkit-tap-highlight-color: transparent;
+  box-sizing: border-box;
+}
+
+img{
+  max-width: 100%;
+}
+
+svg{
+  fill: $dark;
+}
+
+//for fotorama script
+.fotorama--fullscreen .fotorama__stage,.fotorama--fullscreen, .fotorama--fullscreen .fotorama__nav, .fullscreen, .fotorama__thumb{
+  background: $white!important;
+}
+.fotorama__thumb-border{
+  background: none!important;
+  border-color: $orange!important;
+}
+.fotorama.fotorama--work-gallery{
+  .fotorama__stage{
+    background: $light;
+  }
+  .fotorama__nav{
+    display: flex!important;
+    justify-content: flex-start!important;
+  }
+}
+
+main{
+  position: relative;
+  flex-grow: 2;
+}
+.hidden{
+  visibility:hidden;
+}
+
+.coin-icon{
+  width: 300px;
+  height: 240px;
+  background: url('../assets/images/coins.svg') no-repeat center;
+  background-size: contain;
+}
+
+.error{
+  font-size: 12px;
+  color: $red;
+}
+
+.chat_button{
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  background: $red;
+  padding: 5px 10px;
+  color: $white;
+  text-transform: uppercase;
+  font-weight: bold;
+
+}
+
+.owl-nav{
+  & > div {
+    font-size: 0;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: -30px;
+    background-image: url('../assets/images/right-arrow.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 30px;
+    width: 30px;
+    &:hover{
+      opacity: 0.7;
+    }
+  }
+  & > .owl-prev{
+    right: auto;
+    left: -30px;
+    transform: rotate(180deg);
+  }
+}
+.owl-stage-outer {
+  padding: 3px;
+}

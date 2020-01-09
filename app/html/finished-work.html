@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      [[!$f_head]]
+      <script type="text/javascript" src="/assets/components/minishop2/js/web/lib/fotorama.min.js"></script>
+      <link rel="stylesheet" type="text/css" href="/assets/components/minishop2/css/web/lib/fotorama.min.css">
+  </head>
+  <body>
+    [[!$f_header]]
+    [[!$f_menu]]
+    <main>
+      [[!msMiniCart? &tpl=`f_mini-cart`]]
+      <div class="action-order">
+        <div class="container action-order__container">
+          <p class="action-order__text">Уважаемые покупатели! Почти конец лета — заказывать лучше уже сейчас. Поможем ускорить подготовку. <strong>8 (812) 565-35-24</strong></p>
+        </div>
+      </div>
+
+      <div class="container work">
+        <h1 class="pagetitle">[[*pagetitle]]</h1>
+
+        <div class="row">
+          <div class="col-md-6">
+            <div class="fotorama fotorama--work-gallery"
+              data-height="400"
+              data-nav="thumbs"
+              data-width="100%"
+              data-thumbheight="60"
+              data-allowfullscreen="true"
+              data-swipe="true"
+              data-autoplay="false"
+              data-thumbmargin="5"
+              data-thumbfit="contain"
+            >
+              [[getImageList?
+                &tvname=`gallery`
+                &tpl=`f_work-gallery-tpl`]]
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="work__descrip content">
+              [[*content]]
+            </div>
+            <p class="work__place">Установлен на кладбище [[*cemetery]]</p>
+            <ul class="work__params">
+              <li><span>Стела:</span> [[*stela_size]] см</li>
+              <li><span>Подставка:</span> [[*stand_size]] см</li>
+              <li><span>Цветник:</span> [[*garden_size]] см</li>
+              <li><span>Полировка:</span> [[*polishing]]</li>
+            </ul>
+            <div class="work__btn-wrap">
+              <a href="[[~[[*model]]]]" class="button">Заказать такой</a>
+            </div>
+          </div>
+          <!-- {if $review !== ''}
+            <div class="col-md-12">
+              <h2 class="work__title">Отзыв о готовой работе</h2>
+              <div class="review">
+                <div class="review__header">
+                  <p class="review__autor">[[*autor]]</p>
+                  <p class="review__date">[[*date]]</p>
+                </div>
+                <p class="review__text">[[*review]]</p>
+              </div>
+            </div>
+          {/if} -->
+
+        </div>
+      </div>
+    </main>
+    [[$f_footer]]
+  </body>
+</html>

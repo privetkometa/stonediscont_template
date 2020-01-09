@@ -1,0 +1,177 @@
+p{
+  margin: 0;
+}
+hr{
+  margin: 20px 0;
+  border: none;
+  height: 1px;
+  background: $smoke;
+}
+h1{
+  font-family: 'PT Serif';
+  letter-spacing: -1px;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  font-size: 28px;
+}
+.descrip{
+  font-size: 23px;
+  color: $gray;
+  margin-bottom: 30px;
+}
+h2{
+  // font-family: 'PT Serif';
+  margin-top: 15px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  font-size: 20px;
+}
+h3{
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+.pagetitle{
+  margin-bottom: 35px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid $smoke;
+}
+
+.list{
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  svg{
+    fill: $red;
+    vertical-align: bottom;
+  }
+}
+
+.content{
+  font-size: 14px;
+  p{
+    margin-bottom: 15px;
+    line-height: 1.7;
+  }
+  h2{
+    margin: 35px 0 15px;
+    font-family: 'PT Serif';
+  }
+  h3{
+    font-family: 'PT Serif';
+  }
+  ul{
+    list-style-type: none;
+    margin: 15px 0;
+    & > li{
+      position: relative;
+      margin-bottom: 8px;
+      &:before{
+        height: 6px;
+        width: 6px;
+        content: '';
+        background: $red;
+        position: absolute;
+        left: -20px;
+        top: 6px;
+        border-radius: 50%;
+      }
+    }
+  }
+  ol{
+    counter-reset: myCounter;
+    margin: 10px 0;
+    & > li{
+      list-style-type: none;
+      margin-bottom: 10px;
+      position: relative;
+      &:before{
+        position: absolute;
+        left: -18px;
+        top: 0;
+        counter-increment: myCounter;
+        content: counter(myCounter) ".";
+        color: $red;
+        margin-right: 5px;
+        font-weight: bold;
+      }
+    }
+  }
+  a:not(.button){
+    text-decoration: none;
+    color: $red;
+  }
+
+  table{
+    border-collapse: collapse;
+    margin: 20px 0;
+    thead{
+      background: $red;
+    }
+    th{
+      padding: 10px 15px;
+      text-align: left;
+      color: $white;
+      &:last-child{
+        border-radius: 0 $border-radius 0 0;
+      }
+      &:first-child{
+        border-radius: $border-radius 0 0 0;
+      }
+    }
+    td{
+      padding: 10px 15px;
+      border: 1px solid $smoke;
+      border-top: none;
+      &.price{
+        text-align: right;
+      }
+    }
+  }
+  .attention{
+    padding: 5px 0 5px  25px;
+    position: relative;
+    &:before{
+      content: '!';
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-60%);
+      width: 20px;
+      height: 20px;
+      background: $orange;
+      border-radius: 50%;
+      display: inline-block;
+      color: $white;
+      font-weight: 800;
+      line-height: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}
+.notice{
+  color: $gray;
+}
+.small{
+  font-size: 14px;
+}
+.bold{
+  font-weight: bold;
+  &.orange{
+    white-space: nowrap;
+  }
+}
+.orange, a.orange{
+  color: $orange;
+}
+.red{
+  color: $red;
+}
+.price{
+  font-weight: 800;
+  color: $red;
+}

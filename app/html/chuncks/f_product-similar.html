@@ -1,0 +1,35 @@
+<div class="similar-carusel__item">
+  <a href="{$id | url}" class="product-mini" onclick="yaCounter49607626.reachGoal('choose_similar'); return true;">
+    <div class="product-mini__img">
+      {if $thumb?}
+          <img src="{$thumb}" alt="{$pagetitle}" title="{$pagetitle}"/>
+      {else}
+          <img src="{'assets_url' | option}components/minishop2/img/web/ms2_small.png"
+               srcset="{'assets_url' | option}components/minishop2/img/web/ms2_small@2x.png 2x"
+               alt="{$pagetitle}" title="{$pagetitle}"/>
+      {/if}
+    </div>
+    <div class="product-mini__info">
+      <h3 class="product-mini__title">{$pagetitle}</h3>
+      <div class="product-mini__price">
+        <span class="product-mini__price-value">
+          <span class="product-mini__price-text">от</span>
+          <span class="msoptionsprice-cost msoptionsprice-{$id}">{$price}</span>&nbsp;{'ms2_frontend_currency' | lexicon}
+        </span>
+      </div>
+    </div>
+    {if $discount && $discount[0] !== ""}
+      <div class="product-mini__discount">
+        <span class="product-mini__discount-text">Скидка</span>
+        <span>
+          до
+          <span class="product-mini__discount-value">
+            [[!getGreatestDiscount? &string=`{$discount| json_encode: 256 | htmlentities}`]]%
+          </span>
+        </span>
+      </div>
+    {/if}
+
+    <span class="button product-mini__button">Подробнее</span>
+  </a>
+</div>

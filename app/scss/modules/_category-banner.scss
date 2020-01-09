@@ -1,0 +1,22 @@
+.category-banner{
+  order: 1;
+  &__inner{
+    display: flex;
+    align-items: flex-start;
+    box-shadow: $box-shadow;
+    border-radius: $border-radius;
+    overflow: hidden;
+  }
+  &__helper{
+    order: 2;
+    &:nth-child(1), &:nth-child(2), , &:nth-child(3){
+      order: 0;
+    }
+    &:nth-child(12), &:nth-child(13), , &:nth-child(14){
+      order: 4;
+    }
+  }
+  &.category-banner--second{
+    order: 3;
+  }
+}

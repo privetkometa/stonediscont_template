@@ -1,0 +1,185 @@
+<h2>Ваш заказ</h2>
+<div id="msCart" class="cart">
+    {if !count($products)}
+        Для оформления заказа выберите, пожалуйста, памятник.
+    {else}
+
+      {foreach $products as $product}
+        <div class="cart__item" id="{$product.key}">
+          <div class="row">
+            <div class="col-md-2">
+              <div class="cart__image">
+                {if $product.thumb?}
+                    <img src="{$product.thumb}" alt="{$product.pagetitle}" title="{$product.pagetitle}"/>
+                {else}
+                    <img src="{'assets_url' | option}components/minishop2/img/web/ms2_small.png"
+                         srcset="{'assets_url' | option}components/minishop2/img/web/ms2_small@2x.png 2x"
+                         alt="{$product.pagetitle}" title="{$product.pagetitle}"/>
+                {/if}
+              </div>
+            </div>
+            <div class="col-md-4">
+              <h3 class="cart__title">
+                {if $product.id?}
+                    <a href="{$product.id | url}">{$product.pagetitle}</a>
+                {else}
+                    {$product.name}
+                {/if}
+              </h3>
+              <ul class="cart__options">
+                <li class="cart__option">
+                  <span>Стела: </span> {$product.options.stela_size}
+                </li>
+                <li class="cart__option">
+                  <span>Подставка: </span> {$product.options.stand_size}
+                </li>
+                <li class="cart__option">
+                  <span>Цветник: </span> {$product.options.garden_size}
+                </li>
+                <li class="cart__option">
+                  <span>Тип полировки: </span> {$product.options.polishing}
+                </li>
+                <!-- <li class="cart__option">
+                  <svg width="20" height="20"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#plus"></use></svg>
+                  Дизайн-проект
+                </li> -->
+              </ul>
+            </div>
+            <div class="col-md-3">
+              <!-- <p class="cart__column-title">
+                Количество:
+              </p> -->
+              <form method="post" class="ms2_form form-inline cart__count" role="form">
+                  <input type="hidden" name="key" value="{$product.key}"/>
+                    <!-- <input type="number" name="count" value="{$product.count}" class="input input--mini"/>
+                    <button class="d-none" type="submit" name="ms2_action" value="cart/change"></button> -->
+                  <div class="counter">
+                      <button type="button" class="counter__dec counter__btn">&minus;</button>
+                      <input class="counter__input" type="text" name="count" value="{$product.count}" data-min="1" data-max="15"/>
+                      <button type="button" class="counter__inc counter__btn">&plus;</button>
+                      <button class="counter__subm" type="submit" name="ms2_action" value="cart/change"></button>
+                  </div>
+              </form>
+            </div>
+            <div class="col-md-3">
+              <div class="cart__price">
+                <!-- <p class="cart__column-title">
+                  Cтоимость:
+                </p> -->
+                <span class="cart__price-value">
+                  {$product.price} {'ms2_frontend_currency' | lexicon}
+                </span>
+                <p class="cart__price-text">
+                  *без гравировки
+                </p>
+              </div>
+            </div>
+          </div>
+          <form method="post" class="ms2_form">
+            <input type="hidden" name="key" value="{$product.key}">
+            <button class="cart__delete-btn" type="submit" name="ms2_action" value="cart/remove" onclick="yaCounter49607626.reachGoal('delete_request'); return true;">
+                Удалить
+            </button>
+          </form>
+        </div>
+      {/foreach}
+
+       <div class="cart__footer">
+         <div class="row">
+           <div class="col-md-6"></div>
+           <div class="col-md-6">
+             <div class="cart__total">
+               <p class="cart__total-text">Итого:</p>
+               <p class="cart__total-price">
+                 <span class="ms2_total_cost">{$total.cost}</span>
+                  {'ms2_frontend_currency' | lexicon}
+               </p>
+             </div>
+           </div>
+         </div>
+       </div>
+
+      <script>
+        function catalogItemCounter(field){
+          var input = {}
+              min = {}
+              max = {}
+              dec = {}
+              inc = {}
+              submit = {}
+            function fieldCount(el, index) {
+                // сам инпут
+                input[index] = el.children('.counter__input')
+                // Мин. значение
+                min[index]= input[index].data('min') || false,
+                // Макс. значение
+                max[index] = input[index].data('max') || false,
+
+                // Кнопка уменьшения кол-ва
+                dec[index] = el.children('.counter__dec'),
+
+                // Кнопка увеличения кол-ва
+                inc[index] = el.children('.counter__inc');
+
+                submit[index] = el.children('.counter__subm');
+                // Уменьшим значение
+
+                function isDisabled(index) {
+                  var value = input[index].val();
+                  if (value > min[index] && value < max[index]) {
+                    dec[index].attr('disabled', false)
+                    inc[index].attr('disabled', false)
+                  } else {
+                    if (value <=  min[index]) {
+                      dec[index].attr('disabled', 'disabled')
+                    }
+                    else if (value >=  max[index]) {
+                      inc[index].attr('disabled', 'disabled')
+                    }
+                  }
+                }
+
+                function decrement(index) {
+                  var value = parseInt(input[index].val());
+                  value--;
+
+                  if(!min[index] || value >= min[index]) {
+                    input[index].val(value);
+                  }
+                  isDisabled(index);
+                  submit[index].trigger('click');
+                };
+
+                // Увеличим значение
+                function increment() {
+                  var value = parseInt(input[index].val());
+                  value++;
+
+                  if(!max[index] || value <= max[index]) {
+                    input[index].val(value);
+                  }
+                  isDisabled(index);
+                  submit[index].trigger('click');
+                };
+
+                if(!input[index].attr('disabled')){
+                  dec[index].on('click', function(){
+                    decrement(index);
+                  });
+                  inc[index].on('click', function(){
+                    increment(index);
+                  });
+                }
+                isDisabled(index);
+            };
+
+            $(field).each(function(index){
+              // console.log($(this));
+              fieldCount($(this), index);
+            });
+          }
+
+        catalogItemCounter('.counter');
+      </script>
+    {/if}
+</div>

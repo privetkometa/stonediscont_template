@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      [[$f_head]]
+  </head>
+  <body>
+    [[$f_header]]
+    [[$f_menu? &class=`catalog-menu-open`]]
+    <main>
+      [[!msMiniCart? &tpl=`f_mini-cart`]]
+      <div class="action-order">
+        <div class="container action-order__container">
+          <p class="action-order__text">Уважаемые покупатели! Почти конец лета — заказывать лучше уже сейчас. Поможем ускорить подготовку. <strong>8 (812) 565-35-24</strong></p>
+        </div>
+      </div>
+      <div class="container">
+        <div class="d-flex justify-content-between align-items-baseline category__title">
+          <div class="flex-fill d-flex align-items-baseline">
+            <h1 class="pagetitle">[[*pagetitle]]</h1>
+            <p class="product-amount">[[!getProductAmount]] [[!getProductAmount:declension=`памятник,памятника,памятников`]]</p>
+            <div class="stones-mini stones-mini--gorizontal">
+              <div class="stones-mini__item stones-mini__item--gabroo">
+                <p class="stones-mini__text">
+                  Камень, используемый для этих моделей:
+                  <b>Черный гранит Габбро-диабаз</b>
+                </p>
+              </div>
+              <div class="stones-mini__item stones-mini__item--dimovsky">
+                <p class="stones-mini__text">
+                  Можем выполнить из камня:
+                  <b>Коричневый гранит Дымовский</b>
+                  <span>Подробности и стоимость у оператора</span>
+                </p>
+              </div>
+              <div class="stones-mini__item stones-mini__item--pokostovsky">
+                <p class="stones-mini__text">
+                    Можем выполнить из камня:
+                  <b>Серый гранит Покостовский</b>
+                  <span>Подробности и стоимость у оператора</span>
+                </p>
+              </div>
+              <div class="stones-mini__item stones-mini__item--leznikovsky">
+                <p class="stones-mini__text">
+                    Можем выполнить из камня:
+                  <b>Красный гранит Лезниковский</b>
+                  <span>Подробности и стоимость у оператора</span>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="flex-fill d-flex justify-content-end">
+            <div class="sorting">
+              [[!sorting]]
+              <p class="sorting__title">Сортировать по&nbsp;</p>
+
+              <div class="dropdown sorting__dropdown">
+                <a class="dropdown-toggle sorting__active-item" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  [[+DetectGetText]]
+                </a>
+
+                <div class="dropdown-menu sorting__list" aria-labelledby="dropdownMenuLink">
+                  <a class="dropdown-item sorting__item" href="[[~[[*id]]]]">популярности</a>
+                  <a class="dropdown-item sorting__item" href="[[~[[*id]]]]?sort=new">новизне</a>
+                  <a class="dropdown-item sorting__item" href="[[~[[*id]]]]?sort=price_up">возрастанию цены</a>
+                  <a class="dropdown-item sorting__item" href="[[~[[*id]]]]?sort=price_down">убыванию цены</a>
+                  <a class="dropdown-item sorting__item" href="[[~[[*id]]]]?sort=discount">размеру скидки</a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          [[!pdoPage?
+            &element=`msProducts`
+            &tpl=`f_product-mini`
+            &limit=`14`
+            &sortbyTV=`[[+DetectGetBy]]`
+          	&sortbyTVType=`integer`
+          	&sortdirTV=`[[+DetectGetDir]]`
+            &sortby=`[[+DetectGetBy]]`
+            &sortdir=`[[+DetectGetDir]]`
+            &tplPageWrapper=`@INLINE <ul class="pagination">[[+prev]][[+pages]][[+next]]</ul>`
+          ]]
+          <div class="col-md-3 category-banner">
+            <a class="category-banner__inner" href="[[~48]]" target="_blank">
+              <img src="/assets/images/garanty-banner-min.png" alt="Гарантия лучшей цены">
+            </a>
+          </div>
+          <div class="col-md-3 category-banner category-banner--second">
+            <div class="category-banner__inner">
+              <img src="/assets/images/other-stone-banner-min.png" alt="Изготовим памятник любой сложности">
+            </div>
+          </div>
+        </div>
+
+        <div class="d-flex justify-content-end">
+          [[!+page.nav]]
+        </div>
+      </div>
+    </main>
+    [[!msOptionsPrice.initialize?]]
+    [[$f_footer]]
+  </body>
+</html>

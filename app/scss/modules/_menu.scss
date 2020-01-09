@@ -1,0 +1,106 @@
+.menu{
+  background: $red;
+  position: relative;
+  // font-family: 'PT Serif';
+  // text-transform: uppercase;
+  &__list{
+    margin: 0;
+    padding: 0;
+    & > .menu__item + .menu__item {
+      margin-left: 15px;
+    }
+    & > .menu__item:first-child{
+      & > a{
+        padding-left: 0;
+      }
+    }
+
+  }
+  &__item{
+    list-style: none;
+    position: relative;
+    font-size: 18px;
+    &.active > a{
+      color: $dark;
+    }
+    & > a{
+      transition: all $transition;
+      &:hover{
+        color: $dark;
+      }
+    }
+    a{
+      color: $white;
+      display: inline-block;
+      padding: 10px;
+      text-decoration: none;
+    }
+    &:hover{
+      .menu__inner{
+        max-height: 200px;
+      }
+    }
+  }
+  &.catalog-menu-open{
+    margin-bottom: 118px;
+    .catalog-menu{
+      & > a{
+        position: relative;
+        z-index: 5;
+        &::after{
+          content: '';
+          position: absolute;
+          bottom: -16px;
+          left: 50%;
+          margin-left: -8px;
+          border: 8px solid transparent;
+          border-top: 8px solid $red;
+          opacity: 1;
+        }
+      }
+    }
+    .catalog-menu__wrapp{
+      max-height: none;
+    }
+  }
+  &__inner{
+    position: absolute;
+    bottom: 0;
+    transform: translateY(100%);
+    left: -5px;
+    background: $light;
+    z-index: 5;
+    transition: all $transition;
+    padding: 0;
+    max-height: 0;
+    overflow: hidden;
+    border-radius: 0 0 $border-radius $border-radius;
+    li{
+      font-size: 14px;
+      white-space: nowrap;
+      &:first-child{
+        padding-top: 5px;
+      }
+      &:last-child{
+        padding-bottom: 5px;
+      }
+      a{
+        padding: 5px 15px;
+        color: $dark;
+        &:hover{
+          color: $red;
+        }
+      }
+    }
+  }
+}
+
+.menu-btn{
+  display: flex;
+  width: 40px;
+  justify-content: center;
+  align-items: center;
+  svg {
+    fill: #dark;
+  }
+}

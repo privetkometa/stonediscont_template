@@ -1,0 +1,22 @@
+.order{
+  margin-top: 0!important;
+  padding: 20px;
+  box-shadow: $box-shadow;
+  border-radius: $border-radius;
+  &__field{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+  }
+  &__field-label{
+    margin-bottom: 3px;
+    span{
+      color: $red;
+      display: inline-block;
+      margin-left: 3px;
+    }
+  }
+  &__fields{
+    margin-bottom: 30px;
+  }
+}

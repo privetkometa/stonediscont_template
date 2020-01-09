@@ -1,0 +1,95 @@
+.garanty{
+  &__banner{
+    background: url('../assets/images/garanty-bg.jpg') no-repeat center;
+    background-size: cover;
+    position: relative;
+  }
+  &__flow{
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    counter-reset: li;
+    max-width: 700px;
+  }
+  &__flow-item{
+    padding: 15px 15px 15px 45px;
+    position: relative;
+    margin-bottom: 15px;
+    &::after {
+      content: counter(li);
+      counter-increment: li;
+      position:absolute;
+      font-weight: 800;
+      color: $orange;
+      border-radius: 50%;
+      background: $white;
+      width: 30px;
+      border: 1px solid $orange;
+      height: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 0;
+      z-index: 2;
+    }
+    & + & {
+      &::before{
+        content: '';
+        position: absolute;
+        width: 2px;
+        background: $orange;
+        left: 14px;
+        height: 90px;
+        bottom: calc(50% + 15px);
+      }
+    }
+  }
+  &__discount-icon{
+    height: 165px;
+    width: 165px;
+    background: url('../assets/images/discount.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  &__adv-icon{
+    height: 100px;
+    width: 100px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin: 20px 0 10px;
+    display: inline-block;
+    &.garanty__adv-icon--choices{
+      background-image: url('../assets/images/choices.svg');
+    }
+    &.garanty__adv-icon--people{
+      background-image: url('../assets/images/hired.svg');
+    }
+    &.garanty__adv-icon--design{
+      background-image: url('../assets/images/pencil.svg');
+    }
+    &.garanty__adv-icon--garanty{
+      background-image: url('../assets/images/guarantee-certificate.svg');
+    }
+    &.garanty__adv-icon--installation{
+      background-image: url('../assets/images/pick-and-shovel.svg');
+    }
+    &.garanty__adv-icon--distance{
+      background-image: url('../assets/images/distance.svg');
+    }
+    &.garanty__adv-icon--graveyard{
+      background-image: url('../assets/images/graveyard.svg');
+    }
+    &.garanty__adv-icon--certificate{
+      background-image: url('../assets/images/certificate.svg');
+    }
+    &.garanty__adv-icon--conversation{
+      background-image: url('../assets/images/conversation.svg');
+    }
+  }
+}

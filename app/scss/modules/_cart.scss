@@ -1,0 +1,108 @@
+.cart{
+  margin-bottom: 40px;
+  &__title{
+    font-weight: normal;
+    margin: 0 0 5px;
+    font-size: 16px;
+    a{
+      text-decoration: none;
+    }
+  }
+  &__price{
+    flex-direction: column;
+    align-items: flex-end;
+    display: flex;
+  }
+  &__item {
+    padding-top: 15px;
+    margin: 15px 0;
+    position: relative;
+    & + & {
+      border-top: 1px solid $smoke;
+    }
+  }
+  &__image{
+    text-align: center;
+    img{
+      max-height: 120px;
+    }
+  }
+  &__options{
+    margin: 0;
+    font-size: 14px;
+    color: $gray;
+    padding: 0;
+    list-style-type: none;
+  }
+  &__option{
+    margin-bottom: 2px;
+    svg{
+      fill: $dark;
+      vertical-align: top;
+    }
+  }
+  &__price-text{
+    font-size: 14px;
+    color: $gray;
+  }
+  &__price-value{
+    color: $red;
+    font-weight: 800;
+    font-size: 24px;
+  }
+  &__column-title{
+    margin-bottom: 10px;
+  }
+  &__delete-btn{
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    color: $gray;
+    font-size: 12px;
+    line-height: 1.1;
+    border-bottom: 1px solid $gray;
+    svg{
+      fill: $gray;
+      transition: all $transition;
+    }
+    &:hover{
+      border-bottom: 1px solid $dark;
+      color: $dark;
+      svg{
+        fill: $dark;
+      }
+    }
+  }
+  &__footer{
+    padding-top: 15px;
+    margin-top: 15px;
+    border-top: 1px solid $smoke;
+  }
+  &__footer-title{
+    font-weight: 400;
+    margin: 0;
+  }
+  &__total-price{
+    color: $red;
+    font-weight: 800;
+    font-size: 24px;
+  }
+  &__count{
+    margin-top: 5px;
+    justify-content: center;
+    display: flex;
+  }
+  &__total{
+    justify-content: space-between;
+    align-items: baseline;
+    display: flex;
+    padding-left: 50px;
+  }
+  &__total-text{
+    text-transform: uppercase;
+  }
+}

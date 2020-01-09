@@ -1,0 +1,109 @@
+{foreach $options as $name => $values}
+  {if $name == 'stela_size'}
+    <div class="col-md-12">
+      <div class="row option">
+        <div class="option__title col-md-6">{('ms2_product_' ~ $name) | lexicon}</div>
+        <div class="option__title col-md-6"></div>
+      </div>
+      <div class="row option__size"
+          {if $constraints[$name]}
+              data-constraints="{$constraints[$name]| json_encode: 256 | htmlentities}"
+          {/if}
+      >
+
+        {foreach $values as $value}
+          <div class="col-md-6">
+            <div class="radio">
+              <input type="radio" class="form-control" name="options[{$name}]"
+              value="{$value}" id="value_{$value}"
+              onclick="yaCounter49607626.reachGoal('change_size'); return true;"
+              {if $value@index == 0}checked="checked"{/if}
+                {if $constraints[$name]}
+                    data-relations="{$relations[$name][$value]| json_encode: 256 | htmlentities}"
+                {/if}
+              >
+              <label for="value_{$value}">{$value} см</label>
+              <br/>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="option__discount">
+              {foreach $options['discount'] as $discountvalue}
+                [[getAssociatedProperty? &stringArray=`{$relations['discount'][$discountvalue] | json_encode: 256 | htmlentities}` &entry=`{$name}={$value}` &value=`{$discountvalue}`]]
+              {/foreach}
+            </div>
+          </div>
+        {/foreach}
+      </div>
+    </div>
+
+    {else}
+      {if $name == 'garden_size' || $name == 'stand_size'}
+          {if $name == 'stand_size'}
+          <div class="col-md-12 order-3">
+            <div class="option__title">Доп. элементы&nbsp;<span class="option__title-descrip"> (входят в стоимость)</span></div>
+          {/if}
+          <div class="option option--mini">
+            <span class="option__icon">
+              <svg width="18" height="14"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#checkbox"></use></svg>
+            </span>
+            <span>{('ms2_product_' ~ $name) | lexicon}&nbsp;</span>
+            {foreach $values as $value}
+            <div
+            {if $constraints[$name]}
+                data-constraints="{$constraints[$name]| json_encode: 256 | htmlentities}"
+            {/if}
+            >
+              <div class="radio radio--fake">
+                <input type="radio" class="form-control" name="options[{$name}]" value="{$value}" id="value_{$value}"
+                {if $value@index}checked="checked"{/if}
+                  {if $constraints[$name]}
+                      data-relations="{$relations[$name][$value]| json_encode: 256 | htmlentities}"
+                  {/if}
+                >
+                <label for="value_{$value}">{$value} см</label>
+              </div>
+            </div>
+            {/foreach}
+          </div>
+          {if $name == 'garden_size'}
+            </div>
+          {/if}
+
+        {else}
+          {if $name != 'discount'}
+            <div class="col-md-12 order-2 option__size">
+              <div class="option__title">
+                <span>{('ms2_product_' ~ $name) | lexicon}</span>
+                {if $name == 'polishing'}
+                  <a href="#polishing-type" rel="modal:open" class="help-btn">?</a>
+                {/if}
+              </div>
+              <div
+                  {if $constraints[$name]}
+                      data-constraints="{$constraints[$name]| json_encode: 256 | htmlentities}"
+                  {/if}
+              >
+                {foreach $values as $value}
+                  <div class="radio">
+                    <input type="radio"class="form-control" name="options[{$name}]"
+                    value="{$value}" id="value_{$value}"
+                    {if $name == 'polishing'}
+                      onclick="yaCounter49607626.reachGoal('change_polishing'); return true;"
+                    {/if}
+
+                    {if $value@index == 0}checked="checked"{/if}
+                      {if $constraints[$name]}
+                          data-relations="{$relations[$name][$value]| json_encode: 256 | htmlentities}"
+                      {/if}
+                    >
+                    <label for="value_{$value}">{$value}</label>
+                  </div>
+                {/foreach}
+              </div>
+            </div>
+
+          {/if}
+      {/if}
+  {/if}
+{/foreach}

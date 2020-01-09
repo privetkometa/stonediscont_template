@@ -1,0 +1,12 @@
+.category{
+  &__title{
+    .pagetitle{
+      padding: 0;
+      margin-bottom: 0;
+      border: none;
+    }
+    margin-bottom: 35px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid $smoke;
+  }
+}
