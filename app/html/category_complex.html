@@ -13,7 +13,7 @@
         <div class="d-flex justify-content-between align-items-baseline category__title">
           <div class="flex-fill d-flex align-items-baseline">
             <h1 class="pagetitle">[[*pagetitle]]</h1>
-            <p class="product-amount">[[!getProductAmount]] [[!getProductAmount:declension=`памятник,памятника,памятников`]]</p>
+            <p class="product-amount">[[!getProductAmount]] [[!getProductAmount:declension=`комлекс,комплекса,комплексов`]]</p>
             <div class="stones-mini stones-mini--gorizontal">
               <div class="stones-mini__item stones-mini__item--gabroo">
                 <p class="stones-mini__text">
@@ -71,8 +71,9 @@
         <div class="row">
           [[!pdoPage?
             &element=`msProducts`
-            &tpl=`f_product-mini`
+            &tpl=`f_complex-mini`
             &limit=`14`
+            &includeThumbs=`product_complex`
             &sortbyTV=`[[+DetectGetBy]]`
           	&sortbyTVType=`integer`
           	&sortdirTV=`[[+DetectGetDir]]`
@@ -80,7 +81,7 @@
             &sortdir=`[[+DetectGetDir]]`
             &tplPageWrapper=`@INLINE <ul class="pagination">[[+prev]][[+pages]][[+next]]</ul>`
           ]]
-          <div class="col-md-3 category-banner">
+          <!-- <div class="col-md-3 category-banner">
             <a class="category-banner__inner" href="[[~48]]" target="_blank">
               <img src="/assets/images/garanty-banner-min.png" alt="Гарантия лучшей цены">
             </a>
@@ -89,7 +90,7 @@
             <div class="category-banner__inner">
               <img src="/assets/images/other-stone-banner-min.png" alt="Изготовим памятник любой сложности">
             </div>
-          </div>
+          </div> -->
         </div>
 
         <div class="d-flex justify-content-end">

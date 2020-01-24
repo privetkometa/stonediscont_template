@@ -13,6 +13,7 @@ const gulp 					= require('gulp'),
 		babel 				= require('gulp-babel'),
 		svgmin 				= require('gulp-svgmin');
 		ftp 				= require('gulp-ftp');
+		changed 			= require('gulp-changed');
 
 sass.compiler = require('node-sass');
 
@@ -21,7 +22,12 @@ function commonJs() {
 	.pipe(concat('common.min.js'))
 	.pipe(uglify())
 	.pipe(gulp.dest('public/js'))
-	.pipe(livereload());
+	.pipe(ftp({
+		host: 'vh166.timeweb.ru',
+		user: 'cu67168_stonede',
+		pass: 'cxtEfVF9',
+		remotePath: '/public_html/assets/templates/frankenstein/public/js'
+	}))
 }
 
 function vendorJs() {
@@ -109,6 +115,7 @@ function images() {
 
 function html() {
 	return gulp.src(['app/html/**/*.html'])
+	.pipe(changed('public'))
 	.pipe(gulp.dest('public'))
 	.pipe(ftp({
 		host: 'vh166.timeweb.ru',
@@ -120,7 +127,6 @@ function html() {
 }
 
 exports.watch = function() {
-	livereload.listen();
 	gulp.watch('app/scss/**/*.scss', css);
 	gulp.watch('app/js/*.js', commonJs);
 	gulp.watch('app/html/**/*.html', html);

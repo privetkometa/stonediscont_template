@@ -1,0 +1,26 @@
+<div class="col-md-4 category-banner__helper">
+  <a href="{$id | url}" class="product-mini">
+    <div class="product-mini__img product-mini__img--short">
+      {if $thumb?}
+          <img src="[[+product_complex]]" alt="{$pagetitle}" title="{$pagetitle}"/>
+      {else}
+          <img src="{'assets_url' | option}components/minishop2/img/web/ms2_small.png"
+               srcset="{'assets_url' | option}components/minishop2/img/web/ms2_small@2x.png 2x"
+               alt="{$pagetitle}" title="{$pagetitle}"/>
+      {/if}
+    </div>
+    <div class="product-mini__info">
+      <h3 class="product-mini__title">{$pagetitle}</h3>
+      <div class="product-mini__price">
+        <span class="product-mini__price-value">
+          <span class="product-mini__price-text">от</span>
+          <span class="msoptionsprice-cost msoptionsprice-{$id}">{$price}</span>&nbsp;{'ms2_frontend_currency' | lexicon}
+        </span>
+      </div>
+    </div>
+
+    [[msProductOptions? &product=`{$id}` &tpl=`category_uni_discount`]]
+
+    <span class="button product-mini__button">Подробнее</span>
+  </a>
+</div>

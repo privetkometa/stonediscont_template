@@ -20,13 +20,44 @@ $(function() {
             document.getElementById('old_price').textContent = '';
           }
         }
+        
       }
   });
+
+  // calculate discont in other cards
+  var discountNode = document.getElementById('simple-discount');
+  if (discountNode) {
+    var discount = discountNode.value;
+    if (discount) {
+      var price = document.getElementById('price').value.split(' ').join('');
+      var oldPrice = Math.round(price / ((100 - discount) / 100));
+      var benefit = oldPrice - price;
+      var formattedOldPrice = oldPrice.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1 ");
+      var formattedBenefit = benefit.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1 ");
+      document.getElementById('old_price').textContent = formattedOldPrice;
+      $("#discount").html(`<div class="product-card__discount">Скидка <span class="product-card__discount-value">${discount} %</span></div>`)
+      $("#benefit").html(`<span class="product-card__benefit-title">Экономия</span><span id="benefit-value" class="product-card__benefit-value">${formattedBenefit} ₽</span>`);
+    }
+  }
 
   $('.similar-carusel').owlCarousel({
     items: 4,
     margin: 30,
     nav: true,
+    loop: true,
+  })
+  $('.similar-complex-carusel').owlCarousel({
+    items: 3,
+    margin: 30,
+    nav: true,
+    loop: true,
+  })
+
+  $('.examples-carusel').owlCarousel({
+    items: 4,
+    margin: 30,
+    nav: true,
+    loop: true,
   })
 
 });

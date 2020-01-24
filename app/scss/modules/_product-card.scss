@@ -101,7 +101,7 @@
     background: $orange;
     border-radius: 5px;
     font-weight: bold;
-    padding: 2px 13px;
+    padding: 2px 8px;
     min-width: 75px;
     text-align: center;
   }
@@ -120,12 +120,21 @@
     font-size: 36px;
     font-weight: bold;
     line-height: 1;
+    &.product-card__new-price--smaller{
+      font-size: 32px;
+    }
+  }
+  &__new-price-small{
+    font-size: 20px;
   }
   &__old-price{
     text-decoration: line-through;
     font-size: 20px;
     margin-bottom: -10px;
     min-height: 1.4em;
+    &.product-card__old-price--no-placeholder{
+      min-height: auto;
+    }
   }
   &__btn-wrapp{
     margin-top: 5px;

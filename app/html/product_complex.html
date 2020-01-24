@@ -4,6 +4,8 @@
         [[!$f_head]]
     </head>
     <body>
+      <input id="simple-discount" name="simple-discount" type="hidden" value="[[msProductOptions?tpl=`uni_discount_value`]]">
+      <input id="price" name="price" type="hidden" value="[[+price]]">
       [[!$f_header]]
       [[!$f_menu]]
       <main>
@@ -12,7 +14,7 @@
         <div class="container product-card">
           <div class="row">
             <div class="col-md-12">
-              <h1 class="pagetitle product-card__main-title">Памятник из чёрного гранита {$pagetitle} [[*pagetitle]] {$article}</h1>
+              <h1 class="pagetitle product-card__main-title">Комплекс из чёрного гранита {$pagetitle} [[*pagetitle]] {$article}</h1>
             </div>
           </div>
           [[!msOptionsPrice.initialize?]]
@@ -21,11 +23,11 @@
               <div class="col-md-8">
                 <div class="row">
 
-                  <div class="col-md-6">
+                  <div class="col-md-12">
                     <div class="product-card__gallery" >
-                      [[!msGallery? &tpl=`f_gallery`]]
+                      [[!msGallery? &tpl=`f_gallery_wide`]]
+                      
                       <div id="discount">
-
                       </div>
 
                       <div class="product-card__stones">
@@ -60,38 +62,6 @@
                         </div>
                       </div>
                     </div>
-                  </div>
-
-                  <div class="col-md-6">
-                    <input type="hidden" name="id" value="[[*id]]"/>
-                    <input type="hidden" name="count" id="product_price" class="input-sm form-control" value="1"/>
-
-                    <!-- <div class="option">Артикул: <span class='msoptionsprice-article msoptionsprice-[[*id]]'>[[+article]]</span></div> -->
-
-                    <h2 class="product-card__title">Выберите размер <a href="#choose-size" rel="modal:open" class="help-btn">?</a></h2>
-
-                     <div class="row">
-                       {'msOptionsPrice.option' | snippet : [
-                        'options' => 'stela_size,stand_size,garden_size,discount',
-                        'tpl' => 'f_product-option',
-                        'sortOptions' => 'stela_size:SORT_ASC:SORT_NATURAL',
-                        'constraintOptions' => [
-                            'stand_size' => ['stela_size'],
-                            'garden_size' => ['stela_size'],
-                            'discount' => ['stela_size']
-                        ]
-                        ]}
-
-                       {'msOptionsPrice.option' | snippet : [
-                          'options' => 'polishing',
-                          'tpl' => 'f_product-option',
-                          'sortOptions' => 'polishing:SORT_DESC:SORT_STRING'
-                        ]}
-                      <div class="col-md-12 order-5">
-                        <!-- <p class="product-card__notice">Согласование гравировки происходит после оформления заказа <a href="#engraving" rel="modal:open" class="help-btn">?</a></p> -->
-
-                      </div>
-                     </div>
                   </div>
 
                   <div class="col-md-12">
@@ -290,7 +260,7 @@
                             <tbody>
                               <tr>
                                 <td>Установка памятника на кладбище</td>
-                                <td class="price">от 13 000 ₽</td>
+                                <td class="price">по согласованию</td>
                               </tr>
                             </tbody>
                           </table>
@@ -320,11 +290,15 @@
                   <div class="product-card__submit-block">
                     <div class="product-card__price-block">
                       <div class="product-card__benefit-block">
-                        <span id="old_price" class="product-card__old-price"></span>
+                        <span id="old_price" class="product-card__old-price product-card__old-price--no-placeholder"></span>
 
                       </div>
                       <div class="product-card__price">
-                        <span class="product-card__new-price"><span class="msoptionsprice-cost msoptionsprice-[[*id]]">[[+price]]</span> {'ms2_frontend_currency' | lexicon}</span>
+                        <span class="product-card__new-price product-card__new-price--smaller">
+                          <span class="product-card__new-price-small">от </span>
+                          <span class="msoptionsprice-cost msoptionsprice-[[*id]]">[[+price]]</span>
+                          {'ms2_frontend_currency' | lexicon}<span class="product-card__new-price-small">/пм </span>
+                          </span>
                         <!-- <span class="product-card__prepay">без предоплаты</span> -->
                         <div id="benefit" class="product-card__benefit">
 
@@ -353,7 +327,7 @@
                         Разработка<br/>дизайн-проекта
                       </span>
                       <span class="product-card__services-price">
-                        <s>2 000 {'ms2_frontend_currency' | lexicon}</s>
+                        <s>5 000 {'ms2_frontend_currency' | lexicon}</s>
                         <span>бесплатно</span>
                       </span>
                     </li>
@@ -365,7 +339,7 @@
                         Хранение<br/>комплекта
                       </span>
                       <span class="product-card__services-price">
-                        <s>150 {'ms2_frontend_currency' | lexicon}/сут</s>
+                        <s>350 {'ms2_frontend_currency' | lexicon}/сут</s>
                         <span>бесплатно</span>
                       </span>
                     </li>
@@ -417,27 +391,14 @@
                 <br />
                 <br />
                 <h2>
-                  Примеры оформления
+                  Похожие комплексы
                 </h2>
-                <div class="examples-carusel owl-carousel">
-                  [[getImageList?
-                    &tvname=`examples`
-                    &tpl=`f_examples-tpl`
-                  ]]
-                </div>
-              </div>
-
-              <div class="col-md-12">
-                <br />
-                <br />
-                <h2>
-                  Похожие памятники
-                </h2>
-                <div class="similar-carusel owl-carousel">
+                <div class="similar-complex-carusel owl-carousel">
                   [[!pdoPage?
                     &parents=`37`
                     &element=`msProducts`
-                    &tpl=`f_product-similar`
+                    &tpl=`f_complex-similar`
+                    &includeThumbs=`product_complex`
                     &master=`[[*id]]`
                     &limit=`10`
                     &link=`2`
@@ -475,38 +436,6 @@
           {/ignore}
         </div>
       </main>
-
-      <div class="modal modal--big" id="choose-size">
-        <h2>Выбор размера комплекта</h2>
-        <div class="content">
-          <h3>Стела (надгробие)</h3>
-          <p>Стела — основной элемент в виде обычной или резной плиты. На стелу наносят основные элементы гравировки – ФИО, даты жизни, портрет и эпитафию. От размера выбираемой стелы зависят размеры других элементов комплекта памятника.</p>
-          <h3>Подставка (тумба)</h3>
-          <p>Подставка — обязательный элемент памятника. Она соединяет стелу и бетонное основание. Это придает устойчивости всей конструкции. Подставка увеличивает общую высоту надгробия. При необходимости можно заказать 2 и более подставки.</p>
-          <h3>Цветник</h3>
-          <p>Цветник служит для благоустройства захоронения. Состоит из 3-х балок: двух поперечных и одной продольной. Внутрь цветника засыпают землей и засевают газонной травой.</p>
-          <h3>Плита</h3>
-          <p>Плита устанавливается на цветник и образует с ней единую конструкцию. Плита хорошо подходит для нанесения гравировки. Также можно вмонтировать вазу.</p>
-        </div>
-      </div>
-
-      <div class="modal modal--big" id="polishing-type">
-        <h2>Тип полировки</h2>
-        <div class="content">
-          <h3>Лицевая полировка</h3>
-          <p>Полируется лицевая сторона стелы. Подставка и цветник полируются сверху. Неполированный камень будет тёмно-серым. Полированный камень глянцевый и блестящий.</p>
-          <h3>Круговая полировка</h3>
-          <p>Полируются все видимые поверхности памятника. Такой тип полировки защищает камень от разрушения, выветривания, замерзания влаги и нарастания лишайников.</p>
-        </div>
-      </div>
-
-      <div class="modal modal--big" id="engraving">
-        <h2>Выбор гравировки</h2>
-        <div class="content">
-          <p>После оформления памятника художник изготовит для вас бесплатный дизайн-проект памятника. Для этого нужно подготовить ФИО и даты на памятник, а также портрет. После этого мы пришлем несколько вариантов на ваше усмотрение. </p>
-          <p>Подробнее об этапах работы можно почитать <a href="[[~52]]">здесь</a>.</p>
-        </div>
-      </div>
 
 
       [[$f_footer]]
