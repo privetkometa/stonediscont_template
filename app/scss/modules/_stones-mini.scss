@@ -6,9 +6,11 @@
     align-self: flex-end;
     .stones-mini__item{
       margin-top: 0;
-      margin-left: 7px;
       height: 40px;
       width: 40px;
+      & + .stones-mini__item {
+        margin-left: 7px;
+      }
     }
     .stones-mini__text{
       top: 25px;
@@ -27,7 +29,7 @@
     &.stones-mini__item--gabroo{
       background: url('../assets/images/gabroo.jpg') no-repeat center;
       background-size: cover;
-      border-color: $orange;
+      border-color: $red;
     }
     &.stones-mini__item--dimovsky{
       background: url('../assets/images/dimovsky.jpg') no-repeat center;

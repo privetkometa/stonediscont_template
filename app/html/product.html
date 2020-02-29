@@ -28,37 +28,7 @@
 
                       </div>
 
-                      <div class="product-card__stones">
-                        <div class="stones-mini">
-                          <div class="stones-mini__item stones-mini__item--gabroo">
-                            <p class="stones-mini__text">
-                              Камень, используемый в этой модели:
-                              <b>Черный гранит Габбро-диабаз</b>
-                            </p>
-                          </div>
-                          <div class="stones-mini__item stones-mini__item--dimovsky">
-                            <p class="stones-mini__text">
-                              Можем выполнить из камня:
-                              <b>Коричневый гранит Дымовский</b>
-                              <span>Подробности и стоимость у менеджера</span>
-                            </p>
-                          </div>
-                          <div class="stones-mini__item stones-mini__item--pokostovsky">
-                            <p class="stones-mini__text">
-                                Можем выполнить из камня:
-                              <b>Серый гранит Покостовский</b>
-                              <span>Подробности и стоимость у менеджера</span>
-                            </p>
-                          </div>
-                          <div class="stones-mini__item stones-mini__item--leznikovsky">
-                            <p class="stones-mini__text">
-                                Можем выполнить из камня:
-                              <b>Красный гранит Лезниковский</b>
-                              <span>Подробности и стоимость у менеджера</span>
-                            </p>
-                          </div>
-                        </div>
-                      </div>
+
                     </div>
                   </div>
 
@@ -67,8 +37,6 @@
                     <input type="hidden" name="count" id="product_price" class="input-sm form-control" value="1"/>
 
                     <!-- <div class="option">Артикул: <span class='msoptionsprice-article msoptionsprice-[[*id]]'>[[+article]]</span></div> -->
-
-                    <h2 class="product-card__title">Выберите размер <a href="#choose-size" rel="modal:open" class="help-btn">?</a></h2>
 
                      <div class="row">
                        {'msOptionsPrice.option' | snippet : [
@@ -87,10 +55,40 @@
                           'tpl' => 'f_product-option',
                           'sortOptions' => 'polishing:SORT_DESC:SORT_STRING'
                         ]}
-                      <div class="col-md-12 order-5">
-                        <!-- <p class="product-card__notice">Согласование гравировки происходит после оформления заказа <a href="#engraving" rel="modal:open" class="help-btn">?</a></p> -->
 
-                      </div>
+                        <div class="col-md-12 order-5 option__size">
+                          <div class="option__title">Варианты камня</div>
+                            <div class="stones-mini stones-mini--gorizontal">
+                              <div class="stones-mini__item stones-mini__item--gabroo">
+                                <p class="stones-mini__text">
+                                  Камень, используемый в этой модели:
+                                  <b>Черный гранит Габбро-диабаз</b>
+                                </p>
+                              </div>
+                              <div class="stones-mini__item stones-mini__item--dimovsky">
+                                <p class="stones-mini__text">
+                                  Можем выполнить из камня:
+                                  <b>Коричневый гранит Дымовский</b>
+                                  <span>Подробности и стоимость у менеджера</span>
+                                </p>
+                              </div>
+                              <div class="stones-mini__item stones-mini__item--pokostovsky">
+                                <p class="stones-mini__text">
+                                    Можем выполнить из камня:
+                                  <b>Серый гранит Покостовский</b>
+                                  <span>Подробности и стоимость у менеджера</span>
+                                </p>
+                              </div>
+                              <div class="stones-mini__item stones-mini__item--leznikovsky">
+                                <p class="stones-mini__text">
+                                    Можем выполнить из камня:
+                                  <b>Красный гранит Лезниковский</b>
+                                  <span>Подробности и стоимость у менеджера</span>
+                                </p>
+                              </div>
+                            </div>
+                        </div>
+                      
                      </div>
                   </div>
 

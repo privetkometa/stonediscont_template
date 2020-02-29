@@ -2,7 +2,10 @@
   {if $name == 'stela_size'}
     <div class="col-md-12">
       <div class="row option">
-        <div class="option__title col-md-6">{('ms2_product_' ~ $name) | lexicon}</div>
+        <div class="option__title col-md-6">
+          {('ms2_product_' ~ $name) | lexicon}
+          <a href="#choose-size" rel="modal:open" class="help-btn">?</a>
+        </div>
         <div class="option__title col-md-6"></div>
       </div>
       <div class="row option__size"
@@ -40,8 +43,8 @@
     {else}
       {if $name == 'garden_size' || $name == 'stand_size'}
           {if $name == 'stand_size'}
-          <div class="col-md-12 order-3">
-            <div class="option__title">Доп. элементы&nbsp;<span class="option__title-descrip"> (входят в стоимость)</span></div>
+          <div class="col-md-12 order-3 option__size">
+            <div class="option__title">Доп. элементы&nbsp;<span class="option__title-descrip"> (включены в стоимость)</span></div>
           {/if}
           <div class="option option--mini">
             <span class="option__icon">
