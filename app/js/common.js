@@ -60,4 +60,8 @@ $(function() {
     loop: true,
   })
 
+  $('[data-fancybox="examplesCarusel"]').fancybox({
+    loop: true,
+  });
+
 });

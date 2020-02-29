@@ -3,13 +3,14 @@
   text-decoration: none;
   border: none;
   text-align: center;
-  padding: 10px 20px;
+  padding: 8px 20px;
   border-radius: $border-radius;
   background: $orange;
   color: $dark;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 25px;
   transition: all $transition;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.3);
   &:hover{
     // background: $darkblue;
     color: $white;
@@ -34,11 +35,13 @@
     box-shadow: 0 0 0 7px rgba(255,255,255,0.4);
   }
   &.button--red{
+    // background: #065fd4;
     background: $red;
     font-weight: bold;
+    text-transform: uppercase;
     color: $white;
     &:hover{
-      color: $dark;
+      // background: #af141b;
     }
   }
 }

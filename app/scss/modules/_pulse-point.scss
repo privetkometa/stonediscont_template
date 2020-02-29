@@ -1,0 +1,33 @@
+@keyframes pulse-point-animation {
+  from {
+    transform:scale(1)
+  }
+  to { 
+    transform:scale(2);
+    opacity:0;
+  }
+}
+
+.pulse-point{
+  width:10px;
+  height:10px;
+  background-color: $white;
+  border-radius:50%;
+  position: relative;
+  display: inline-block;
+  margin-right: 7px;
+  margin-bottom: 3px;
+  vertical-align: middle;
+  &:after{
+    content:'';
+    background-color:inherit;
+    position:absolute;
+    top:0;
+    left:0;
+    bottom:0;
+    right:0;
+    border-radius:50%;
+    animation: pulse-point-animation 1.5s ease-in infinite;
+    opacity:.6;
+  }
+}

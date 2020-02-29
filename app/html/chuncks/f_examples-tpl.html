@@ -1,3 +1,8 @@
-<div class="examples-carusel__item">
-    <img src="[[!phpthumbon? &input=`assets/gallery/[[+image]]` &options=`w=230&h=340&bg=ffffff&far=B`]]" alt="" title="">
+<div class="examples-carusel__item text-center">
+    <a href="assets/gallery/[[+image]]" data-fancybox="examplesCarusel" data-caption="Пример оформления №[[+idx]]">
+        <img src="[[!phpthumbon? &input=`assets/gallery/[[+image]]` &options=`w=230&h=340&bg=ffffff&far=B`]]" alt="" />
+    </a>
+    <span class="examples-carusel__title">
+        Пример №[[+idx]]
+    </span>
 </div>

@@ -1,0 +1,46 @@
+.consult-banner{
+  background-color: $light;
+  margin: 40px 0 20px;
+  padding-bottom: 30px;
+  background-image: url('../assets/images/final_2.png');
+  background-position: 87% bottom;
+  background-repeat: no-repeat;
+  background-size: 580px ;
+  ul{
+    padding-left: 20px;
+    margin-bottom: 10px;
+  }
+  h2{
+    margin: 30px 0 0;
+  }
+  &__bonus{
+    font-weight: bold;
+    display: flex;
+    svg{
+      fill: $red;
+      margin-right: 7px;
+      margin-left: -6px;
+    }
+  }
+  &__button{
+    margin-top: 30px;
+  }
+  .button{
+    width: 100%;
+  }
+  &__number-block{
+    margin-top: 30px;
+  }
+  &__number{
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 1;
+    a{
+      text-decoration: none;
+    }
+  }
+  &__number-text{
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+}
