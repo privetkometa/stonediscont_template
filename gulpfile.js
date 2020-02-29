@@ -14,6 +14,7 @@ const gulp 					= require('gulp'),
 		svgmin 				= require('gulp-svgmin');
 		ftp 				= require('gulp-ftp');
 		changed 			= require('gulp-changed');
+		cssimport			= require('gulp-cssimport');
 
 sass.compiler = require('node-sass');
 
@@ -37,6 +38,7 @@ function vendorJs() {
 		'node_modules/bootstrap/dist/js/bootstrap.min.js',
 		'node_modules/jquery-modal/jquery.modal.min.js',
 		'node_modules/owl.carousel2/dist/owl.carousel.min.js',
+		'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.js',
 		])
 	.pipe(concat('vendor.min.js'))
 	// .pipe(babel({ presets: ['babel-preset-env'] }))
@@ -55,6 +57,7 @@ function css() {
 	return gulp.src('app/scss/*.scss')
 	.pipe(sassGlob())
 	.pipe(sass().on('error', sass.logError))
+	.pipe(cssimport({ matchPattern: '*.css' }))
 	.pipe(rename({suffix: '.min', prefix : ''}))
 	.pipe(autoprefixer(['last 15 versions']))
 	.pipe(cleanCSS())
