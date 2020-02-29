@@ -1,0 +1,26 @@
+.product-gallery{
+  .owl-nav > .owl-prev {
+    left: -7px;
+  }
+  .owl-nav > .owl-next {
+    right: -7px;
+  }
+  &__navigation{
+    margin-top: 15px;
+    a {
+      margin: 5px;
+      display: flex;
+      width: 65px;
+      height: 65px;
+      border-radius: $border-radius;
+      border: 2px solid $light;
+      transition: all $transition;
+      &:hover{
+        border-color: $orange;
+      }
+      img{
+        object-fit: cover;
+      }
+    }
+  }
+}

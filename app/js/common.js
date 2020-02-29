@@ -62,6 +62,18 @@ $(function() {
 
   $('[data-fancybox="examplesCarusel"]').fancybox({
     loop: true,
-  });
+  })
+
+  $('.product-gallery-carusel').owlCarousel({
+    items: 1,
+    margin: 0,
+    nav: true,
+    loop: true,
+    URLhashListener:true,
+  })
+
+  $('[data-fancybox="productGallery"]').fancybox({
+    loop: true,
+  })
 
 });
