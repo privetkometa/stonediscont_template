@@ -4,17 +4,35 @@
   font-size: 18px;
   position: relative;
   margin-top: 6px;
+  @include media-breakpoint-down(lg) {
+    font-size: 16px;
+    margin-top: 2px;
+    &.contact-block--addres{
+      max-width: 160px;
+      margin-left: 15px;
+      & .contact-block__descrip{
+        display: none;
+      }
+    }
+  }
   &__icon{
-    font-size: 28px;
     margin-right: 10px;
     display: flex;
     align-items: center;
     position: absolute;
     top: 5px;
     left: -10px;
+    @include media-breakpoint-down(lg) {
+      top: 2px;
+      left: -5px;
+    }
     transform: translateX(-100%);
     svg {
       fill: $dark;
+      @include media-breakpoint-down(lg) {
+        height: 20px;
+        width: 20px;
+      }
     }
   }
   &__info{

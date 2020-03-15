@@ -8,6 +8,9 @@
     font-size: 24px;
     font-weight: bold;
     text-transform: uppercase;
+    @include media-breakpoint-down(lg) {
+      font-size: 18px;
+    }
   }
   &__descrip{
     font-size: 14px;

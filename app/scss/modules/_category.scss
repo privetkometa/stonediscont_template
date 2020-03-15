@@ -8,5 +8,8 @@
     margin-bottom: 35px;
     padding-bottom: 15px;
     border-bottom: 1px solid $smoke;
+    @include media-breakpoint-down(lg) {
+      margin-bottom: 25px;
+    }
   }
 }

@@ -36,6 +36,11 @@
     padding: 15px 0 10px;
     display: flex;
     align-items: stretch;
+    @include media-breakpoint-down(lg) {
+      & > a {
+        padding: 5px;
+      }
+    }
     &.active{
       .catalog-menu__text{
         border-bottom: 1px dashed $white;
@@ -65,9 +70,16 @@
   &__text{
     font-size: 14px;
     display: inline-block;
+    @include media-breakpoint-down(lg){
+      font-size: 12px;  
+    }
   }
   &__img{
     margin-bottom: 5px;
+    @include media-breakpoint-down(lg){
+      transform: scale(0.9);
+      margin-bottom: 4px;
+    }
     &.catalog-menu__img--for-all{
       display: flex;
       justify-content: space-between;

@@ -2,8 +2,18 @@
   background: $darkblue;
   margin-top: 70px;
   padding: 30px 0;
+  @include media-breakpoint-down(lg) {
+    padding: 20px 0;
+    margin-top: 50px;
+  }
   &__title{
     margin: 10px 0;
+    @include media-breakpoint-down(lg) {
+      &.footer__title--contacts{
+        margin-top: 20px;
+      }
+    }
+
     a {
       text-decoration: none;
       color: $smoke;

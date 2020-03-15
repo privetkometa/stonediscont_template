@@ -8,6 +8,9 @@
     padding: 0;
     & > .menu__item + .menu__item {
       margin-left: 15px;
+      @include media-breakpoint-down(lg) {
+        margin: 0;
+      }
     }
     & > .menu__item:first-child{
       & > a{
@@ -40,9 +43,15 @@
         max-height: 200px;
       }
     }
+    @include media-breakpoint-down(lg) {
+      font-size: 16px;
+    }
   }
   &.catalog-menu-open{
     margin-bottom: 118px;
+    @include media-breakpoint-down(lg) {
+      margin-bottom: 105px;
+    }
     .catalog-menu{
       & > a{
         position: relative;
