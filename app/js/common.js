@@ -66,7 +66,7 @@ $(function() {
 
   $('.product-gallery-carusel').owlCarousel({
     items: 1,
-    margin: 0,
+    margin: 20,
     nav: true,
     loop: true,
     URLhashListener:true,

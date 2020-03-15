@@ -128,11 +128,14 @@ main{
   position: fixed;
   bottom: 0;
   right: 0;
-  background: $red;
+  background: $orange;
   padding: 5px 10px;
-  color: $white;
   text-transform: uppercase;
   font-weight: bold;
+  z-index: 1;
+  &:hover{
+    background: $red;
+  }
 
 }
 
@@ -156,9 +159,14 @@ main{
   & > .owl-prev{
     right: auto;
     left: -30px;
+    margin-top: -15px;
     transform: rotate(180deg);
   }
 }
 .owl-stage-outer {
   padding: 3px;
+}
+
+.fancybox-bg{
+  background: #fff;
 }

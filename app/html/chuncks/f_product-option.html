@@ -2,11 +2,11 @@
   {if $name == 'stela_size'}
     <div class="col-md-12">
       <div class="row option">
-        <div class="option__title col-md-6">
-          {('ms2_product_' ~ $name) | lexicon}
+        <div class="option__title col-md-12">
+          <!-- {('ms2_product_' ~ $name) | lexicon} -->
+          Размер памятника
           <a href="#choose-size" rel="modal:open" class="help-btn">?</a>
         </div>
-        <div class="option__title col-md-6"></div>
       </div>
       <div class="row option__size"
           {if $constraints[$name]}
