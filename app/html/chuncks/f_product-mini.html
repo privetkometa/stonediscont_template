@@ -1,5 +1,5 @@
-<div class="col-xl-3 col-md-4 category-banner__helper">
-  <a href="{$id | url}" class="product-mini">
+<div class="col-xl-3 col-md-4 col-6 category-banner__helper">
+  <a href="{$id | url}" class="product-mini" target="_blank">
     <div class="product-mini__img">
       {if $thumb?}
           <img src="{$thumb}" alt="{$pagetitle}" title="{$pagetitle}"/>
@@ -20,11 +20,11 @@
     </div>
     {if $discount && $discount[0] !== ""}
       <div class="product-mini__discount">
-        <span class="product-mini__discount-text">Скидка</span>
+        <span class="product-mini__discount-text d-none d-md-inline">Скидка</span>
         <span>
           до
           <span class="product-mini__discount-value">
-            [[!getGreatestDiscount? &string=`{$discount| json_encode: 256 | htmlentities}`]]%
+            <span class="d-md-none">−</span>[[!getGreatestDiscount? &string=`{$discount| json_encode: 256 | htmlentities}`]]%
           </span>
         </span>
       </div>

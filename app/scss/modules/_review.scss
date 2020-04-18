@@ -1,8 +1,4 @@
 .review{
-  padding: 15px 15px 20px;
-  box-shadow: $box-shadow;
-  border-radius: $border-radius;
-  background: $light;
   &__header{
     margin-bottom: 10px;
     display: flex;
@@ -12,12 +8,24 @@
   &__date{
     font-size: 14px;
     color: $gray;
+    margin-top: 5px;
+    text-align: right;
   }
   &__autor{
-    font-weight: bold;
   }
   &__text{
     font-family: 'PT Serif';
     font-style: italic;
+  }
+  &__recommendation-icon{
+    align-self: start;
+    margin-right: 5px;
+    svg {
+      fill: $green;
+    }
+  }
+  &__recommendation {
+    display: flex;
+    align-items: baseline;
   }
 }

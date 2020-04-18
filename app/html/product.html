@@ -125,6 +125,7 @@
                             Заказать консультацию
                         </button> -->
                     </div>
+                    <a href="tel:+78125653524" class="product-card__phone">8 (812) 565-35-24</a>
                     <div class="product-card__cheaper">
                       <a href="#CheaperModal" onclick="yaCounter49607626.reachGoal('open_need_cheaper'); return true;" rel="modal:open" class="product-card__cheaper-link">Нужно дешевле? Снизим цену!</a>
                     </div>
@@ -253,6 +254,33 @@
           </div>
         `]]
 
+        [[pdoPage?
+          &parents=`5`
+          &includeTVs=`model,date,autor,review,mark,cemetery_string,cemetery_list,gallery`
+          &limit=`10`
+          &tpl=`finishedWorkTpl`
+          &tvFilters=`model==[[*id]]`
+          &toPlaceholder=`finishedWorks`
+        ]]
+        
+        [[+finishedWorks:!empty=`
+          <br/>
+          <br/>
+          <div class="container">
+            <div class="row">
+              <div class="col-md-12">
+                <h2 class="underlined_title">
+                  Готовые работы
+                </h2>
+                <div class="">
+                  [[+finishedWorks]]
+
+                </div>
+              </div>
+            </div>
+          </div>
+        `]]
+
 
         [[$f_consultation_banner]]
 
@@ -302,6 +330,8 @@
           <p>Полируется лицевая сторона стелы. Подставка и цветник полируются сверху. Неполированный камень будет тёмно-серым. Полированный камень глянцевый и блестящий.</p>
           <h3>Круговая полировка</h3>
           <p>Полируются все видимые поверхности памятника. Такой тип полировки защищает камень от разрушения, выветривания, замерзания влаги и нарастания лишайников.</p>
+          <h3>Боковая полировка</h3>
+          <p>Полируется лицевая сторона стелы и боковые стороны. Подставка и цветник полируются сверху спереди и по бокам. Задняя сторона памятника останется серой.</p>
         </div>
       </div>
 

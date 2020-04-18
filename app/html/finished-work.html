@@ -17,27 +17,26 @@
 
         <div class="row">
           <div class="col-md-6">
-            <div class="fotorama fotorama--work-gallery"
-              data-height="400"
-              data-nav="thumbs"
-              data-width="100%"
-              data-thumbheight="60"
-              data-allowfullscreen="true"
-              data-swipe="true"
-              data-autoplay="false"
-              data-thumbmargin="5"
-              data-thumbfit="contain"
-            >
-              [[getImageList?
-                &tvname=`gallery`
-                &tpl=`f_work-gallery-tpl`]]
+            <div id="msGallery" class="product-gallery">
+              <div class="owl-carousel product-gallery-carusel" >
+                [[getImageList?
+                  &tvname=`gallery`
+                  &tpl=`f_work-gallery-tpl`
+                ]]
+              </div>
+              <div class="product-gallery__navigation d-flex justify-content-center">
+                [[getImageList?
+                  &tvname=`gallery`
+                  &tpl=`work-gallery-navigation-tpl`
+                ]]
+              </div>
             </div>
           </div>
           <div class="col-md-6">
             <div class="work__descrip content">
               [[*content]]
             </div>
-            <p class="work__place">Установлен на кладбище [[*cemetery]]</p>
+            <p class="work__place">Установлен на кладбище [[*cemetery_string]]</p>
             <ul class="work__params">
               <li><span>Стела:</span> [[*stela_size]] см</li>
               <li><span>Подставка:</span> [[*stand_size]] см</li>
@@ -48,18 +47,29 @@
               <a href="[[~[[*model]]]]" class="button">Заказать такой</a>
             </div>
           </div>
-          <!-- {if $review !== ''}
+          
+          [[*review:!empty=`
             <div class="col-md-12">
               <h2 class="work__title">Отзыв о готовой работе</h2>
               <div class="review">
                 <div class="review__header">
                   <p class="review__autor">[[*autor]]</p>
-                  <p class="review__date">[[*date]]</p>
+                  [[*mark:is=`isRecommended`:then=`
+                    <div class="review__recommendation">
+                      <span class="review__recommendation-icon">
+                        <svg width="25" height="26">
+                          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#quality"></use>
+                        </svg>
+                      </span>
+                      Я Рекомендую!
+                    </div>
+                  `]]
                 </div>
                 <p class="review__text">[[*review]]</p>
+                <p class="review__date">[[*date]]</p>
               </div>
             </div>
-          {/if} -->
+          `]]
 
         </div>
       </div>

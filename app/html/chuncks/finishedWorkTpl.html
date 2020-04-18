@@ -1,0 +1,40 @@
+<div class="row product-card__review-container">
+  <div class="col-md-6">
+    <h3>
+      Установлен на кладбище
+      [[+tv.cemetery_list:isnot=``:then=`
+        [[!pdoField?id=`[[+tv.cemetery_list]]`&field=`menutitle`]]
+      `:else=`[[+tv.cemetery_string]]`]]
+    </h3>
+      [[getImageList?
+        &tvname=`gallery`
+        &docid=`[[+id]]`
+        &tpl=`reviews-gallery-item-tpl`
+        &limit=`5`
+      ]]
+    [[+tv.gallery]]
+  </div>
+  <div class="col-md-6">
+    [[+tv.review:!empty=`
+      <div class="review">
+        <h3>Отзыв</h3>
+        <div class="review__header">
+          <p class="review__autor">[[+tv.autor]]</p>
+          [[+tv.mark:is=`isRecommended`:then=`
+            <div class="review__recommendation">
+              <span class="review__recommendation-icon">
+                <svg width="25" height="26">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#quality"></use>
+                </svg>
+              </span>
+              Я Рекомендую!
+            </div>
+          `]]
+        </div>
+        <p class="review__text">[[+tv.review]]</p>
+        <p class="review__date">[[+tv.date:strtotime:date=`%d.%m.%Y`]]</p>
+      </div>
+      
+    `]]
+  </div>
+</div>

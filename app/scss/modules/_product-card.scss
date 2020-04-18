@@ -141,7 +141,6 @@
     display: flex;
     flex-direction: column;
     align-items: stretch;
-    margin-bottom: 20px;
   }
   &__notice{
     margin: 15px 0 20px;
@@ -201,5 +200,21 @@
   &__sticky-column{
     position: sticky;
     top: 30px;
+  }
+  &__review-container{
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #e0e0e0;
+    &:last-child{
+      border-bottom: none;
+    }
+  }
+  &__phone{
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    text-align: center;
   }
 }

@@ -6,4 +6,7 @@
   @include media-breakpoint-down(lg) {
     margin-right: 20px;
   }
+  @include media-breakpoint-down(sm) {
+   margin: 10px 0;
+  }
 }

@@ -47,6 +47,12 @@
   position: relative;
   border-radius: $border-radius;
 
+  @include media-breakpoint-down(sm) {
+    padding: 7px;
+    margin-bottom: 25px;
+    box-shadow: $box-shadow;
+  }
+
   &:hover{
     box-shadow: $box-shadow;
     .product-mini__button{
@@ -67,6 +73,9 @@
     }
     @include media-breakpoint-down(lg) {
       height: 270px;
+    }
+    @include media-breakpoint-down(sm) {
+      height: auto;
     }
   }
   &__title{
@@ -104,28 +113,21 @@
     background: $red;
     color: $white;
     top: 10px;
-    left: 10px;
-    height: 85px;
-    width: 85px;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    display: flex;
+    right: 0;
+    padding: 4px 7px;
     z-index: 2;
-    border-radius: 50%;
+    border-radius: $border-radius;
     line-height: 1.2;
     font-size: 14px;
-    @include media-breakpoint-down(lg) {
-      height: 75px;
-      width: 75px;
+    @include media-breakpoint-down(sm) {
+      padding: 3px 5px;
+      top: 7px;
+      right: 0;
+      font-size: 12px;
     }
   }
   &__discount-value{
-    font-size: 22px;
     font-weight: 800;
-    @include media-breakpoint-down(lg) {
-      font-size: 18px;
-    }
   }
   &__discount-text{
     // text-transform: uppercase;
@@ -144,6 +146,9 @@
     white-space: nowrap;
     flex-grow: 2;
     height: 42px;
+    @include media-breakpoint-down(sm){
+      height: auto;
+    }
   }
   &__price-value{
     color: $red;
@@ -170,6 +175,11 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
+
+    @include media-breakpoint-down(sm){
+      flex-direction: column;
+      align-items: flex-start;
+    }
   }
 
 }

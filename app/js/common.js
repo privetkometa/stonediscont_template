@@ -76,4 +76,15 @@ $(function() {
     loop: true,
   })
 
+  $('#navbarCatalogMenuButton').click(function(){
+    $("#navbarMenu").removeClass("show")
+  })
+
+  $('#navbarMenuButton').click(function(){
+    console.log('CLICK')
+    $("#navbarCatalogMenu").removeClass("show")
+  })
+
+
+
 });

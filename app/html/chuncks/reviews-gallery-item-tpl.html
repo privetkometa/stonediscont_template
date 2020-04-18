@@ -1,0 +1,12 @@
+<a
+  class="item"
+  href="assets/gallery/[[+image]]"
+  data-hash="[[+idx]]"
+  data-fancybox="workGallery"
+  data-caption="Готовая работа [[*pagetitle]] изображение №[[+idx]]"
+>
+  <img
+  src="[[!phpthumbon? &input=`assets/gallery/[[+image]]` &options=`&h=100&w=100&zc=1`]]"
+  alt="[[*pagetitle]] готовая работа изображение №[[+idx]]"
+  title="[[*pagetitle]] готовая работа изображение №[[+idx]]">
+</a>

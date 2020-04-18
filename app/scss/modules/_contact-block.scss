@@ -15,6 +15,11 @@
       }
     }
   }
+  @include media-breakpoint-down(sm) {
+    &.contact-block--addres{
+      display: none;
+    }
+  }
   &__icon{
     margin-right: 10px;
     display: flex;
@@ -49,5 +54,8 @@
   &__descrip{
     color: $gray;
     font-size: 14px;
+    @include media-breakpoint-down(sm) {
+      display: none;
+    }
   }
 }

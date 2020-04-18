@@ -1,4 +1,4 @@
-<nav class="menu [[+class]]">
+<nav class="menu [[+class]] d-none d-md-block">
   <div class="container  d-flex justify-content-between align-items-center">
     [[Wayfinder?
       &startId=`0`
@@ -15,3 +15,59 @@
     </div> -->
   </div>
 </nav>
+
+
+
+<nav class="navbar menu d-md-none">
+  <button id="navbarCatalogMenuButton" class="navbar-toggler menu__item dropdown-toggle d-flex align-items-center" type="button" data-toggle="collapse" data-target="#navbarCatalogMenu" aria-controls="navbarCatalogMenu" aria-expanded="false" aria-label="Toggle navigation">
+    Каталог
+  </button>
+
+  <button id="navbarMenuButton" class="navbar-toggler menu__item d-flex align-items-center" type="button" data-toggle="collapse" data-target="#navbarMenu" aria-controls="navbarMenu" aria-expanded="false" aria-label="Toggle navigation">
+    Меню
+    <span class="menu__icon">
+      <svg height="25" width="25"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#menu"></use></svg>
+    </span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarMenu">
+    [[pdoMenu?
+      &startId=`0`
+      &level=`2`
+      &where=`[{"template:!=": "9"}]`
+      &outerClass=`navbar-nav mr-auto menu__list`
+      &tplParentRow=`rowMenuParentTplMobile`
+      &tplInner=`@INLINE <ul class="dropdown-menu menu__mobile-inner [[+classnames]]" aria-labelledby="menuDropdown[[+id]]">[[+wrapper]]</ul>`
+      &tplInnerRow=`@INLINE <li class="dropdown-item menu__mobile-inner-item"><a href="[[+link]]" [[+attributes]]>[[+menutitle]]</a>[[+wrapper]]</li>`
+      &rowClass=`menu__mobile-item`
+    ]]
+  </div>
+
+
+  <div class="collapse navbar-collapse" id="navbarCatalogMenu">
+    <ul class="navbar-nav mr-auto catalog-menu">
+      <li class="nav-item catalog-menu__item">
+        <a class="nav-link" href="[[~37]]" title="Все памятники">
+          <span class="catalog-menu__img catalog-menu__img--for-all">
+            <svg height="40" width="20"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#simple"></use></svg>
+            <svg height="40" width="20"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#crosses"></use></svg>
+            <svg height="30" width="30"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#double"></use></svg>
+          </span>
+          <span class="catalog-menu__text">Все памятники</span>
+        </a>
+      </li>
+      [[getResources?
+        &parents=`37`
+        &sortby=`id`
+        &sortdir=`ASC`
+        &limit=`6`
+        &tpl=`rowCatalogMenuTplMobile`
+        &depth=`0`
+        &includeTVs=`1`
+        &includeTVList=`categoryIcon`
+        &where=`[{"class_key:!=": "msProduct"}]`
+      ]]
+    </ul>
+  </div>
+</nav>
+

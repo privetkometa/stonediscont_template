@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-      [[$f_head]]
+      [[$f_head? &mobile=`1`]]
   </head>
   <body>
     [[$f_header]]
@@ -10,11 +10,11 @@
       [[!msMiniCart? &tpl=`f_mini-cart`]]
       [[$f_advert]]
       <div class="container">
-        <div class="d-flex justify-content-between align-items-baseline category__title">
-          <div class="flex-fill d-flex align-items-baseline">
+        <div class="d-md-flex justify-content-between align-items-baseline category__title">
+          <div class="flex-fill d-md-flex align-items-baseline">
             <h1 class="pagetitle">[[*pagetitle]]</h1>
             <p class="product-amount">[[!getProductAmount]] [[!getProductAmount:declension=`памятник,памятника,памятников`]]</p>
-            <div class="stones-mini stones-mini--gorizontal">
+            <div class="stones-mini stones-mini--gorizontal d-none d-xl-flex">
               <div class="stones-mini__item stones-mini__item--gabroo">
                 <p class="stones-mini__text">
                   Камень, используемый для этих моделей:
@@ -44,7 +44,7 @@
               </div>
             </div>
           </div>
-          <div class="flex-fill d-flex justify-content-end">
+          <div class="flex-fill d-flex justify-content-md-end">
             <div class="sorting">
               [[!sorting]]
               <p class="sorting__title">Сортировать по&nbsp;</p>
@@ -80,12 +80,12 @@
             &sortdir=`[[+DetectGetDir]]`
             &tplPageWrapper=`@INLINE <ul class="pagination">[[+prev]][[+pages]][[+next]]</ul>`
           ]]
-          <div class="col-xl-3 col-md-4 category-banner">
+          <div class="col-xl-3 col-md-4 col-6 category-banner">
             <a class="category-banner__inner" href="[[~48]]" target="_blank">
               <img src="/assets/images/garanty-banner-min.png" alt="Гарантия лучшей цены">
             </a>
           </div>
-          <div class="col-xl-3 col-md-4 category-banner category-banner--second">
+          <div class="col-xl-3 col-md-4 col-6 category-banner category-banner--second">
             <div class="category-banner__inner">
               <img src="/assets/images/other-stone-banner-min.png" alt="Изготовим памятник любой сложности">
             </div>

@@ -3,6 +3,15 @@
   position: relative;
   // font-family: 'PT Serif';
   // text-transform: uppercase;
+  @include media-breakpoint-down(sm) {
+    padding: 0;
+  }
+  &__icon{
+    margin-left: 10px;
+    svg{
+      fill: $white;
+    }
+  }
   &__list{
     margin: 0;
     padding: 0;
@@ -17,12 +26,30 @@
         padding-left: 0;
       }
     }
+    @include media-breakpoint-down(sm) {
+      background: $light;
+      padding-top: 5px 0;
+    }
+
+  }
+  &__mobile-inner-item {
+    padding: 5px 20px;
+    text-align: right;
+    font-size: 14px;
+  }
+  &__mobile-item {
+    padding: 10px 20px;
+    text-align: right;
+    & a {
+      text-decoration: none;
+    }
 
   }
   &__item{
     list-style: none;
     position: relative;
     font-size: 18px;
+    outline: none;
     &.active > a{
       color: $dark;
     }
@@ -46,6 +73,14 @@
     @include media-breakpoint-down(lg) {
       font-size: 16px;
     }
+    @include media-breakpoint-down(sm) {
+      padding: 8px 20px;
+      color: $white;
+      &:after{
+        margin-left: 7px;
+      }
+    }
+    
   }
   &.catalog-menu-open{
     margin-bottom: 118px;

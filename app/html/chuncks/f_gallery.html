@@ -21,7 +21,7 @@
     
     <div class="product-gallery__navigation d-flex justify-content-center">
       {foreach $files as $file}
-          <a href="[[~[[*id]]]]#{$file['id']}">
+          <a class="d-flex justify-content-center" href="[[~[[*id]]]]#{$file['id']}">
             <img
               src="{$file['gallery']}"
               alt="[[*pagetitle]] {$file['id']}"
