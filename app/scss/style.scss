@@ -156,6 +156,9 @@ main{
     background-position: center center;
     height: 30px;
     width: 30px;
+    @include media-breakpoint-down(md) {
+      right: -15px;
+    }
     &:hover{
       opacity: 0.7;
     }
@@ -165,6 +168,9 @@ main{
     left: -30px;
     margin-top: -15px;
     transform: rotate(180deg);
+    @include media-breakpoint-down(md) {
+      left: -15px;
+    }
   }
 }
 .owl-stage-outer {

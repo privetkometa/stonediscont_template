@@ -63,6 +63,9 @@
     display: none;
     border-radius: $border-radius;
     box-shadow: $box-shadow;
+    @include media-breakpoint-down(sm) {
+      width: 180px;
+    }
     b{
       display: block;
     }
@@ -71,6 +74,9 @@
       white-space: nowrap;
       color: $gray;
       margin-top: 5px;
+      @include media-breakpoint-down(sm) {
+        white-space: normal;
+      }
     }
   }
 }

@@ -25,6 +25,43 @@
   }
 }
 
+.select {
+  background: $white;
+  border: 1px solid $smoke;
+  padding: 7px 5px;
+  box-sizing: border-box;
+  transition: all $transition;
+  width: 100%;
+  max-width: 300px;
+  position: relative;
+  &:focus{
+    border: 1px solid $orange;
+    box-shadow: 0 0 0 1px $orange;
+  }
+  &:hover{
+    border: 1px solid $orange;
+  }
+  &__wrapp{
+    position: relative;
+    &::before{
+      content: '';
+      position: absolute;
+      display: block;
+      // height: 10px;
+      // width: 10px;
+      // background: $red;
+      z-index: 1;
+      border-top: 5px solid $dark;
+      border-right: 5px solid transparent;
+      border-bottom: 0;
+      border-left: 5px solid transparent;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 8px;
+    }
+  }
+}
+
 .counter{
   display: flex;
   align-items: center;

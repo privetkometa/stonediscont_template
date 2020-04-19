@@ -1,18 +1,40 @@
 .info{
-  margin-top: 20px;
-  &__nav{
-    margin: 0 0 30px;
+  margin-top: 60px;
+  @include media-breakpoint-down(lg) {
+    margin-top: 40px;
+  }
+  @include media-breakpoint-down(lg) {
+    margin-top: 20px;
+  }
+  &__nav-wrapper {
+    overflow: hidden;
+    margin-bottom: 30px;
     border-bottom: 1px solid $smoke;
+    @include media-breakpoint-down(lg) {
+      margin-bottom: 20px;
+    }
+  }
+  &__nav{
+    margin: 0 0 -30px;
     display: flex;
-    justify-content: space-between;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding-bottom: 30px;
   }
   &__nav-item{
     & + & {
-      margin-left: 20px;
+      margin-left: 40px;
+      @include media-breakpoint-down(lg) {
+        margin-left: 30px;
+      }
+      @include media-breakpoint-down(sm) {
+        margin-left: 20px;
+      }
     }
     .info__nav-link{
       box-sizing: border-box;
       text-decoration: none;
+      white-space: nowrap;
       padding: 0 0 10px;
       border: 0;
       border-radius: 0;

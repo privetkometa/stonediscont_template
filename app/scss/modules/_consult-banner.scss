@@ -5,10 +5,22 @@
   background-image: url('../assets/images/final_2.png');
   background-position: 87% bottom;
   background-repeat: no-repeat;
-  background-size: 580px ;
+  background-size: 580px;
+  @include media-breakpoint-down(lg) {
+    margin: 10px 0 10px;
+    background-size: 410px;
+    background-position: 95% bottom;
+    padding-bottom: 60px;
+  }
+  @include media-breakpoint-down(sm) {
+    background-size: 230px;
+  }
   ul{
     padding-left: 20px;
     margin-bottom: 10px;
+    @include media-breakpoint-down(sm) {
+      margin-top: 0;
+    }
   }
   h2{
     margin: 30px 0 0;
@@ -30,6 +42,9 @@
   }
   &__number-block{
     margin-top: 30px;
+    @include media-breakpoint-down(sm) {
+      margin-top: 15px;
+    }
   }
   &__number{
     font-size: 24px;

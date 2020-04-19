@@ -18,6 +18,10 @@ h1{
     font-size: 24px;
     margin-top: 24px;
   }
+  @include media-breakpoint-down(sm) {
+    font-size: 20px;
+    margin-top: 20px;
+  }
 }
 .descrip{
   font-size: 23px;
@@ -30,12 +34,18 @@ h2{
   margin-bottom: 20px;
   font-weight: bold;
   font-size: 20px;
+  @include media-breakpoint-down(sm) {
+    font-size: 18px;
+  }
 }
 h3{
   font-size: 16px;
   font-weight: bold;
   margin-top: 10px;
   margin-bottom: 15px;
+  @include media-breakpoint-down(sm) {
+    font-size: 14px;
+  }
 }
 .pagetitle{
   margin-bottom: 35px;
@@ -65,6 +75,9 @@ h3{
   }
   h3{
     font-family: 'PT Serif';
+    @include media-breakpoint-down(sm) {
+      font-size: 16px;
+    }
   }
   ul{
     list-style-type: none;
@@ -118,6 +131,9 @@ h3{
       padding: 10px 15px;
       text-align: left;
       color: $white;
+      @include media-breakpoint-down(sm) {
+        padding: 8px 8px;
+      }
       &:last-child{
         border-radius: 0 $border-radius 0 0;
       }
@@ -131,6 +147,9 @@ h3{
       border-top: none;
       &.price{
         text-align: right;
+      }
+      @include media-breakpoint-down(sm) {
+        padding: 8px 8px;
       }
     }
   }

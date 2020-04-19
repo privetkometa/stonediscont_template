@@ -17,7 +17,7 @@
         {foreach $values as $value}
           <div class="col-md-6">
             <div class="radio">
-              <input type="radio" class="form-control" name="options[{$name}]"
+              <input type="radio" class="form-control option__input" name="options[{$name}]"
               value="{$value}" id="value_{$value}"
               onclick="yaCounter49607626.reachGoal('change_size'); return true;"
               {if $value@index == 0}checked="checked"{/if}
@@ -46,7 +46,7 @@
           <div class="col-md-12 order-3 option__size">
             <div class="option__title">Доп. элементы&nbsp;<span class="option__title-descrip"> (включены в стоимость)</span></div>
           {/if}
-          <div class="option option--mini">
+          <div class="option__mini">
             <span class="option__icon">
               <svg width="18" height="14"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#checkbox"></use></svg>
             </span>

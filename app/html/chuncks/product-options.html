@@ -1,0 +1,55 @@
+<!-- <div class="option">Артикул: <span class='msoptionsprice-article msoptionsprice-[[*id]]'>[[+article]]</span></div> -->
+
+  <div id="options" class="row">
+    {'msOptionsPrice.option' | snippet : [
+    'options' => 'stela_size,stand_size,garden_size,discount',
+    'tpl' => 'f_product-option',
+    'sortOptions' => 'stela_size:SORT_ASC:SORT_NATURAL',
+    'constraintOptions' => [
+        'stand_size' => ['stela_size'],
+        'garden_size' => ['stela_size'],
+        'discount' => ['stela_size']
+    ]
+    ]}
+
+    {'msOptionsPrice.option' | snippet : [
+      'options' => 'polishing',
+      'tpl' => 'f_product-option',
+      'sortOptions' => 'polishing:SORT_DESC:SORT_STRING'
+    ]}
+
+    <div class="col-md-12 order-5 option__size">
+      <div class="option__title">Варианты камня</div>
+      <div class="stones-mini stones-mini--gorizontal">
+        <div class="stones-mini__item stones-mini__item--gabroo">
+          <p class="stones-mini__text">
+            Камень, используемый в этой модели:
+            <b>Черный гранит Габбро-диабаз</b>
+          </p>
+        </div>
+        <div class="stones-mini__item stones-mini__item--dimovsky">
+          <p class="stones-mini__text">
+            Можем выполнить из камня:
+            <b>Коричневый гранит Дымовский</b>
+            <span>Подробности и стоимость у менеджера</span>
+          </p>
+        </div>
+        <div class="stones-mini__item stones-mini__item--pokostovsky">
+          <p class="stones-mini__text">
+              Можем выполнить из камня:
+            <b>Серый гранит Покостовский</b>
+            <span>Подробности и стоимость у менеджера</span>
+          </p>
+        </div>
+        <div class="stones-mini__item stones-mini__item--leznikovsky">
+          <p class="stones-mini__text">
+              Можем выполнить из камня:
+            <b>Красный гранит Лезниковский</b>
+            <span>Подробности и стоимость у менеджера</span>
+          </p>
+        </div>
+      </div>
+    </div>
+  
+  </div>
+

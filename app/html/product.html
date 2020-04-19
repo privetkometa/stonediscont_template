@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        [[$f_head]]
+      [[$f_head? &mobile=`1`]]
     </head>
     <body>
       [[$f_header]]
@@ -17,89 +17,27 @@
           </div>
           [[!msOptionsPrice.initialize?]]
           <form  class="ms2_form msoptionsprice-product" method="post">
+            <input type="hidden" name="id" value="[[*id]]"/>
+            <input type="hidden" name="count" id="product_price" class="input-sm form-control" value="1"/>
             <div class="row">
-              <div class="col-md-8">
+              <div class="col-xl-8 col-md-6">
                 <div class="row">
 
-                  <div class="col-md-6">
+                  <div class="col-xl-6">
                     <div class="product-card__gallery" >
                       [[!msGallery? &tpl=`f_gallery`]]
-                      <div id="discount">
-
-                      </div>
-
-
+                      <div id="discount"></div>
                     </div>
                   </div>
 
-                  <div class="col-md-6">
-                    <input type="hidden" name="id" value="[[*id]]"/>
-                    <input type="hidden" name="count" id="product_price" class="input-sm form-control" value="1"/>
-
-                    <!-- <div class="option">Артикул: <span class='msoptionsprice-article msoptionsprice-[[*id]]'>[[+article]]</span></div> -->
-
-                     <div class="row">
-                       {'msOptionsPrice.option' | snippet : [
-                        'options' => 'stela_size,stand_size,garden_size,discount',
-                        'tpl' => 'f_product-option',
-                        'sortOptions' => 'stela_size:SORT_ASC:SORT_NATURAL',
-                        'constraintOptions' => [
-                            'stand_size' => ['stela_size'],
-                            'garden_size' => ['stela_size'],
-                            'discount' => ['stela_size']
-                        ]
-                        ]}
-
-                       {'msOptionsPrice.option' | snippet : [
-                          'options' => 'polishing',
-                          'tpl' => 'f_product-option',
-                          'sortOptions' => 'polishing:SORT_DESC:SORT_STRING'
-                        ]}
-
-                        <div class="col-md-12 order-5 option__size">
-                          <div class="option__title">Варианты камня</div>
-                            <div class="stones-mini stones-mini--gorizontal">
-                              <div class="stones-mini__item stones-mini__item--gabroo">
-                                <p class="stones-mini__text">
-                                  Камень, используемый в этой модели:
-                                  <b>Черный гранит Габбро-диабаз</b>
-                                </p>
-                              </div>
-                              <div class="stones-mini__item stones-mini__item--dimovsky">
-                                <p class="stones-mini__text">
-                                  Можем выполнить из камня:
-                                  <b>Коричневый гранит Дымовский</b>
-                                  <span>Подробности и стоимость у менеджера</span>
-                                </p>
-                              </div>
-                              <div class="stones-mini__item stones-mini__item--pokostovsky">
-                                <p class="stones-mini__text">
-                                    Можем выполнить из камня:
-                                  <b>Серый гранит Покостовский</b>
-                                  <span>Подробности и стоимость у менеджера</span>
-                                </p>
-                              </div>
-                              <div class="stones-mini__item stones-mini__item--leznikovsky">
-                                <p class="stones-mini__text">
-                                    Можем выполнить из камня:
-                                  <b>Красный гранит Лезниковский</b>
-                                  <span>Подробности и стоимость у менеджера</span>
-                                </p>
-                              </div>
-                            </div>
-                        </div>
-                      
-                     </div>
+                  <div class="col-xl-6 d-none d-md-block">
+                    [[$product-options]]
                   </div>
-
-                  <div class="col-md-12">
-                    [[$tabs]]
-                  </div>
-
+                  
                 </div>
               </div>
 
-              <div class="col-md-4">
+              <div class="col-xl-4 col-md-6">
                 <div class="product-card__sticky-column">
                   <div class="product-card__submit-block">
                     <div class="product-card__price-block">
@@ -131,78 +69,79 @@
                     </div>
 
                   </div>
-
-                  <ul class="list product-card__services">
-                    <li class="product-card__services-item">
-                      <span class="product-card__services-icon">
-                        <svg width="35" height="37"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#drawing"></use></svg>
-                      </span>
-                      <span class="product-card__services-text">
-                        Разработка<br/>дизайн-проекта
-                      </span>
-                      <span class="product-card__services-price">
-                        <s>2 000 {'ms2_frontend_currency' | lexicon}</s>
-                        <span>бесплатно</span>
-                      </span>
-                    </li>
-                    <li class="product-card__services-item">
-                      <span class="product-card__services-icon">
-                        <svg width="35" height="35"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wheelbarrow"></use></svg>
-                      </span>
-                      <span class="product-card__services-text">
-                        Хранение<br/>комплекта
-                      </span>
-                      <span class="product-card__services-price">
-                        <s>150 {'ms2_frontend_currency' | lexicon}/сут</s>
-                        <span>бесплатно</span>
-                      </span>
-                    </li>
-                    <li class="product-card__services-item">
-                      <span class="product-card__services-icon">
-                        <svg width="35" height="35"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#protection"></use></svg>
-                      </span>
-                      <span class="product-card__services-text">
-                        Обработка<br/>антидождь
-                      </span>
-                      <span class="product-card__services-price">
-                        <s>1500 {'ms2_frontend_currency' | lexicon}</s>
-                        <span>бесплатно</span>
-                      </span>
-                    </li>
-                    <!-- <li class="product-card__services-item">
-                      <span class="product-card__services-text">
-                        Размер<br/>предоплаты
-                      </span>
-                      <span class="product-card__services-price">
-                        <s>50%</s>
-                        <span>Нет</span>
-                      </span>
-                    </li> -->
-                    <!-- <li class="product-card__services-item">
-                      <span class="product-card__services-text">
-                        Сертификат<br/>гарантии
-                      </span>
-                      <span class="product-card__services-price">
-                        <s>2 года</s>
-                        <span>25 лет</span>
-                      </span>
-                    </li>
-                    <li class="product-card__services-item">
-                      <span class="product-card__services-text">
-                        Беспроцентная<br/>рассрочка
-                      </span>
-                      <span class="product-card__services-price">
-                        <s>нет</s>
-                        <span>6 месяцев</span>
-                      </span>
-                    </li> -->
-                  </ul>
+                  <div class="d-none d-md-block">
+                    [[$product-services]]
+                  </div>
+                  
 
                 </div>
               </div>
 
+              <div id="mobile-options" class="col-12 d-md-none d-flex flex-column">
+                <h2>Выберите параметры</h2>
+                {'msOptionsPrice.option' | snippet : [
+                  'options' => 'stela_size,stand_size,garden_size,discount',
+                  'tpl' => 'product-option-mobile-tpl',
+                  'sortOptions' => 'stela_size:SORT_ASC:SORT_NATURAL',
+                  'constraintOptions' => [
+                      'stand_size' => ['stela_size'],
+                      'garden_size' => ['stela_size'],
+                      'discount' => ['stela_size']
+                  ]
+                  ]}
+
+                  {'msOptionsPrice.option' | snippet : [
+                    'options' => 'polishing',
+                    'tpl' => 'product-option-mobile-tpl',
+                    'sortOptions' => 'polishing:SORT_DESC:SORT_STRING'
+                  ]}
+                  <div class="row order-4 option__size">
+                    <div class="col-12">
+                      <div class="option__title">Варианты камня</div>
+                      <div class="stones-mini stones-mini--gorizontal">
+                        <div class="stones-mini__item stones-mini__item--gabroo">
+                          <p class="stones-mini__text">
+                            Камень, используемый в этой модели:
+                            <b>Черный гранит Габбро-диабаз</b>
+                          </p>
+                        </div>
+                        <div class="stones-mini__item stones-mini__item--dimovsky">
+                          <p class="stones-mini__text">
+                            Можем выполнить из камня:
+                            <b>Коричневый гранит Дымовский</b>
+                            <span>Подробности и стоимость у менеджера</span>
+                          </p>
+                        </div>
+                        <div class="stones-mini__item stones-mini__item--pokostovsky">
+                          <p class="stones-mini__text">
+                              Можем выполнить из камня:
+                            <b>Серый гранит Покостовский</b>
+                            <span>Подробности и стоимость у менеджера</span>
+                          </p>
+                        </div>
+                        <div class="stones-mini__item stones-mini__item--leznikovsky">
+                          <p class="stones-mini__text">
+                              Можем выполнить из камня:
+                            <b>Красный гранит Лезниковский</b>
+                            <span>Подробности и стоимость у менеджера</span>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+
             </div>
           </form>
+
+          <div class="row">
+            <div class="col-md-12">
+              [[$tabs]]
+            </div>
+            <div class="col-12 d-md-none mt-3">
+              [[$product-services]]
+            </div>
+          </div>
 
 
           [[!callBack? &registerCss=`0` &formSelector=`cheaper_ajax_form` &target=`CheaperModal` &registerBootstrap=`0` &tpl=`f_cheaper-btn` &form=`f_cheaper-form`]]
@@ -238,11 +177,9 @@
         ]]
 
         [[+examplesCarusel:isnot=``:then=`
-          <div class="container">
+          <div class="container mt-xl-4 mt-md-3">
             <div class="row">
               <div class="col-md-12">
-                <br />
-                <br />
                 <h2>
                   Примеры оформления
                 </h2>
@@ -264,9 +201,7 @@
         ]]
         
         [[+finishedWorks:!empty=`
-          <br/>
-          <br/>
-          <div class="container">
+          <div class="container mt-xl-4 mt-md-3">
             <div class="row">
               <div class="col-md-12">
                 <h2 class="underlined_title">

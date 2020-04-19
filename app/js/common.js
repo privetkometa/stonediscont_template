@@ -40,11 +40,37 @@ $(function() {
     }
   }
 
+  if(document.body.offsetWidth > 767) {
+    $('#mobile-options').remove()
+  } else {
+    $('#options').remove()
+  }
+
+
+
   $('.similar-carusel').owlCarousel({
     items: 4,
     margin: 30,
     nav: true,
     loop: true,
+    responsive : {
+      0 : {
+        items: 2,
+        margin: 10,
+      },
+      480 : {
+        items: 2,
+        margin: 10,
+      },
+      768 : {
+        items: 3,
+        margin: 20,
+      },
+      1200 : {
+        items: 4,
+        margin: 30,
+      }
+  }
   })
   $('.similar-complex-carusel').owlCarousel({
     items: 3,
@@ -54,10 +80,26 @@ $(function() {
   })
 
   $('.examples-carusel').owlCarousel({
-    items: 4,
-    margin: 30,
     nav: true,
     loop: true,
+    responsive : {
+      0 : {
+        items: 2,
+        margin: 10,
+      },
+      480 : {
+        items: 2,
+        margin: 10,
+      },
+      768 : {
+        items: 3,
+        margin: 20,
+      },
+      1200 : {
+        items: 4,
+        margin: 30,
+      }
+  }
   })
 
   $('[data-fancybox="examplesCarusel"]').fancybox({
