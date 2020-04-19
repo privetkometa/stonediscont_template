@@ -7,6 +7,9 @@
   &__text{
     line-height: 1.8;
     margin-bottom: 15px;
+    @include media-breakpoint-down(md) {
+      line-height: 1.5;
+    }
   }
   &__accent{
     text-transform: uppercase;

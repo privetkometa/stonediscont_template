@@ -6,6 +6,10 @@
     font-family: 'PT Serif';
     padding-bottom: 17px;
     position: relative;
+    @include media-breakpoint-down(md) {
+      padding: 10px 0;
+      font-size: 18px;
+    }
     &:after{
       content: '';
       height: 1px;

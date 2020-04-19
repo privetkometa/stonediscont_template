@@ -6,6 +6,14 @@
   align-items: center;
   li{
     margin: 0 3px;
+    @include media-breakpoint-down(sm) {
+      &:last-child {
+        display: none;
+      }
+      &:first-child {
+        display: none;
+      }
+    }
     a, span{
       transition: all $transition;
       text-decoration: none;

@@ -70,6 +70,9 @@
     height: 340px;
     &.product-mini__img--short{
       height: 210px;
+      @include media-breakpoint-down(lg) {
+        height: 125px;
+      }
     }
     @include media-breakpoint-down(lg) {
       height: 270px;

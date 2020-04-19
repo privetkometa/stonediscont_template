@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html>
     <head>
-        [[!$f_head]]
+      [[$f_head? &mobile=`1`]]
     </head>
     <body>
       <input id="simple-discount" name="simple-discount" type="hidden" value="[[msProductOptions?tpl=`uni_discount_value`]]">
       <input id="price" name="price" type="hidden" value="[[+price]]">
-      [[!$f_header]]
-      [[!$f_menu]]
+      [[$f_header]]
+      [[$f_menu]]
       <main>
         [[!msMiniCart? &tpl=`f_mini-cart`]]
         [[$f_advert]]
@@ -20,7 +20,7 @@
           [[!msOptionsPrice.initialize?]]
           <form  class="ms2_form msoptionsprice-product" method="post">
             <div class="row">
-              <div class="col-md-8">
+              <div class="col-xl-8 col-md-6">
                 <div class="row">
 
                   <div class="col-md-12">
@@ -32,14 +32,10 @@
                     </div>
                   </div>
 
-                  <div class="col-md-12">
-                    [[$tabs]]
-                  </div>
-
                 </div>
               </div>
 
-              <div class="col-md-4">
+              <div class="col-xl-4 col-md-6">
                 <div class="product-card__sticky-column">
                   <div class="product-card__submit-block">
                     <div class="product-card__price-block">
@@ -69,13 +65,13 @@
                             Заказать консультацию
                         </button> -->
                     </div>
-                    <div class="product-card__cheaper">
+                    <div class="product-card__cheaper mt-3">
                       <a href="#CheaperModal" onclick="yaCounter49607626.reachGoal('open_need_cheaper'); return true;" rel="modal:open" class="product-card__cheaper-link">Нужно дешевле? Снизим цену!</a>
                     </div>
 
                   </div>
 
-                  <ul class="list product-card__services">
+                  <ul class="list product-card__services mt-3 mt-md-0">
                     <li class="product-card__services-item">
                       <span class="product-card__services-icon">
                         <svg width="35" height="37"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#drawing"></use></svg>
@@ -142,6 +138,10 @@
                   </ul>
 
                 </div>
+              </div>
+
+              <div class="col-md-12 mt-3">
+                [[$tabs]]
               </div>
 
               <div class="col-md-12">
