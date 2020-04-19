@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html>
     <head>
-        [[!$f_head]]
+      [[$f_head? &mobile=`1`]]
     </head>
     <body>
-        [[!$f_header]]
-        [[!$f_menu]]
+        [[$f_header]]
+        [[$f_menu]]
         <main>
           [[!msMiniCart? &tpl=`f_mini-cart`]]
           [[$f_advert]]
-          [[!$f_banner]]
+          [[$f_banner]]
           <section class="block block--light">
             <div class="container">
               <div class="row d-flex align-items-center">
@@ -21,7 +21,7 @@
                   <p class="block__text">Кроме этого, если вы найдете аналогичную модель дешевле, то пришлите смету нам и мы сделаем скидку! Эта услуга называется <span class="block__accent">Гарантия лучшей цены</span>.</p>
                 </div>
                 <div class="col-md-1"></div>
-                <div class="col-md-4 d-flex justify-content-center">
+                <div class="col-md-4  justify-content-center d-none d-md-flex">
                   <div class="coin-icon"></div>
                 </div>
               </div>
@@ -95,12 +95,11 @@
 
           <section class="block  block--light">
             <div class="container">
-              <div class="row d-flex align-items-center">
-                <div class="col-md-4 d-flex justify-content-center">
+              <div class="row d-flex align-items-center justify-content-between">
+                <div class="col-xl-4 col-md-3 d-md-flex d-none justify-content-center">
                   <img src="/assets/images/notfind.png" alt="">
                 </div>
-                <div class="col-md-1"></div>
-                <div class="col-md-7">
+                <div class="col-xl-8 col-md-9">
                   <h2 class="block__title">Не нашли что искали?</h2>
                   <p class="block__text">
                     Если вы не смогли найти подходящий памятник, то пришлите нам на почту понравившуюся модель и мы изготовим аналогичную.

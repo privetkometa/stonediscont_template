@@ -4,6 +4,12 @@
   background: url('../assets/images/monument-statue.jpg') no-repeat center;
   background-size: cover;
   position: relative;
+  @include media-breakpoint-down(lg) {
+    height: 400px;
+  }
+  @include media-breakpoint-down(sm) {
+    height: 300px;
+  }
   &::after{
     content: '';
     position: absolute;
@@ -22,12 +28,19 @@
     font-family: 'PT Serif';
     font-size: 60px;
     line-height: 66px;
-    // text-transform: uppercase;
     color: $white;
     text-align: center;
     font-weight: bold;
     margin: 0 0 30px;
-    // font-weight: 400;
+    @include media-breakpoint-down(lg) {
+      font-size: 40px;
+      line-height: 50px;
+      margin-bottom: 20px;
+    }
+    @include media-breakpoint-down(sm) {
+      font-size: 24px;
+      line-height: 28px;
+    }
   }
   &__descrip{
     text-align: center;
@@ -35,5 +48,13 @@
     max-width: 800px;
     font-size: 22px;
     margin-bottom: 60px;
+    @include media-breakpoint-down(lg) {
+      font-size: 20px;
+      margin-bottom: 40px;
+    }
+    @include media-breakpoint-down(sm) {
+      font-size: 16px;
+      margin-bottom: 30px;
+    }
   }
 }
