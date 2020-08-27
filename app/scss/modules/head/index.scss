@@ -1,0 +1,41 @@
+@import 'node_modules/bootstrap/scss/grid';
+@import 'buttons';
+@import 'normalize';
+@import 'typography';
+@import 'node_modules/bootstrap/scss/utilities';
+
+body {
+  -moz-osx-font-smoothig: grayscale;
+  -webkit-font-smoothing: antialiased;
+  color: $dark;
+  font-family: 'Montserrat', 'Arial', sans-serif;
+  letter-spacing: 0;
+  font-size: 16px;
+  line-height: 1.4;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  min-height: 100vh;
+  & > svg {
+    display: none;
+  }
+  @include media-breakpoint-down(lg) {
+    font-size: 14px;
+  }
+}
+a{
+  color: inherit;
+}
+*{
+  -webkit-tap-highlight-color: transparent;
+  box-sizing: border-box;
+}
+
+img{
+  max-width: 100%;
+  max-height: 100%;
+}
+
+svg{
+  fill: $dark;
+}

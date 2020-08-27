@@ -1,7 +1,7 @@
 .banner{
   height: 600px;
   padding: 20px;
-  background: url('../assets/images/monument-statue.jpg') no-repeat center;
+  background: url('../assets/images/monument-statue.webp') no-repeat center;
   background-size: cover;
   position: relative;
   @include media-breakpoint-down(lg) {

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    [[$f_head? &mobile=`1`]]
+  </head>
+  <body>
+    [[$f_header]]
+    [[$f_menu]]
+    <main>
+      [[!msMiniCart? &tpl=`f_mini-cart`]]
+      [[$f_advert]]
+      <div class="container">
+
+        <h1 class="pagetitle">[[*pagetitle]]</h1>
+
+        [[*content]]
+
+        <div class="row faq">
+          <div class="col-md-3">
+            <div class="faq__nav-wrapper">
+              <ul class="nav nav-tabs faq__nav" role="tablist">
+                [[!pdoPage?
+                  &limit=`0`
+                  &showUnpublished=`1`
+                  &parents=`[[*id]]`
+                  &tpl=`faqNavItemTpl`
+                  &resources=`-[[*id]]`
+                  &sortby=`menuindex`
+                  &sortdir=`ASC`
+                ]]
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-md-9">
+            <div class="tab-content content">
+              [[!pdoPage?
+                &limit=`0`
+                &showUnpublished=`1`
+                &parents=`[[*id]]`
+                &tpl=`faqItemTpl`
+                &resources=`-[[*id]]`
+                &sortby=`menuindex`
+                &sortdir=`ASC`
+              ]]
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </main>
+    [[$f_footer? &pageName=`faq`]]
+  </body>
+</html>

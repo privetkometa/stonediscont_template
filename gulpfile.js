@@ -23,12 +23,12 @@ function commonJs() {
 	.pipe(concat('common.min.js'))
 	.pipe(uglify())
 	.pipe(gulp.dest('public/js'))
-	.pipe(ftp({
-		host: 'vh166.timeweb.ru',
-		user: 'cu67168_stonede',
-		pass: 'cxtEfVF9',
-		remotePath: '/public_html/assets/templates/frankenstein/public/js'
-	}))
+	// .pipe(ftp({
+	// 	host: 'vh166.timeweb.ru',
+	// 	user: 'cu67168_stonede',
+	// 	pass: 'cxtEfVF9',
+	// 	remotePath: '/public_html/assets/templates/frankenstein/public/js'
+	// }))
 }
 
 function vendorJs() {
@@ -44,17 +44,17 @@ function vendorJs() {
 	// .pipe(babel({ presets: ['babel-preset-env'] }))
 	.pipe(uglify())
 	.pipe(gulp.dest('public/js'))
-	.pipe(ftp({
-		host: 'vh166.timeweb.ru',
-		user: 'cu67168_stonede',
-		pass: 'cxtEfVF9',
-		remotePath: '/public_html/assets/templates/frankenstein/public/js'
-	}))
+	// .pipe(ftp({
+	// 	host: 'vh166.timeweb.ru',
+	// 	user: 'cu67168_stonede',
+	// 	pass: 'cxtEfVF9',
+	// 	remotePath: '/public_html/assets/templates/frankenstein/public/js'
+	// }))
 	.pipe(gutil.noop());
 }
 
 function css() {
-	return gulp.src('app/scss/*.scss')
+	return gulp.src('app/scss/pages/*.scss')
 	.pipe(sassGlob())
 	.pipe(sass().on('error', sass.logError))
 	.pipe(cssimport({ matchPattern: '*.css' }))
@@ -90,12 +90,12 @@ function svgSprite() {
 	}))
 	.pipe(svgstore({ inlineSvg: true }))
 	.pipe(gulp.dest('public/assets/images/svg'))
-	.pipe(ftp({
-		host: 'vh166.timeweb.ru',
-		user: 'cu67168_stonede',
-		pass: 'cxtEfVF9',
-		remotePath: '/public_html/assets/templates/frankenstein/public/assets/images/svg'
-	}))
+	// .pipe(ftp({
+	// 	host: 'vh166.timeweb.ru',
+	// 	user: 'cu67168_stonede',
+	// 	pass: 'cxtEfVF9',
+	// 	remotePath: '/public_html/assets/templates/frankenstein/public/assets/images/svg'
+	// }))
 	.pipe(gutil.noop());
 }
 
@@ -136,6 +136,9 @@ exports.watch = function() {
 	gulp.watch('app/assets/icons/*.svg', svgSprite);
 	gulp.watch('app/assets/images/*.**', images);
 }
+
+exports.css = css
+exports.html = html
 
 exports.default = gulp.series(
 	html,
