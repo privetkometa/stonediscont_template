@@ -123,10 +123,41 @@ $(function() {
   })
 
   $('#navbarMenuButton').click(function(){
-    console.log('CLICK')
     $("#navbarCatalogMenu").removeClass("show")
   })
 
+  // function CopyToClipboard(containerid) {
+  //   if (document.selection) { 
+  //       var range = document.body.createTextRange();
+  //       range.moveToElementText(document.getElementById(containerid));
+  //       range.select().createTextRange();
+  //       document.execCommand("Copy"); 
+    
+  //   } else if (window.getSelection) {
+  //       var range = document.createRange();
+  //        range.selectNode(document.getElementById(containerid));
+  //        console.log('range', range)
+  //        window.getSelection().addRange(range);
+  //        document.execCommand("Copy");
+  //   }}
 
+  function CopyToClipboard(containerid) {
+    var copyText = document.getElementById(containerid);
+    copyText.select();
+    document.execCommand("Copy");
+  }
+
+
+
+  $('.epitaph__price-button').click(function(){
+    var epitaphId = $(this).attr('for');
+    $(`#price-table_${epitaphId}`).addClass("open");
+    var textLength = $(`#content_${epitaphId}`).text().replace(/\s/g, '').length
+
+    $(`#price-table_${epitaphId} .epitaph__price--standart`).text(`${textLength*35} ₽`)
+    $(`#price-table_${epitaphId} .epitaph__price--gold`).text(`${textLength*65} ₽`)
+    $(`#price-table_${epitaphId} .epitaph__price--white`).text(`${textLength*90} ₽`)
+    console.log(textLength)
+  })
 
 });

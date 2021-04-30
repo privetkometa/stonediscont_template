@@ -8,6 +8,7 @@
   }
   &__title{
     margin: 10px 0;
+    font-weight: bold;
     @include media-breakpoint-down(lg) {
       &.footer__title--contacts{
         margin-top: 20px;

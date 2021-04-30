@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
     <head>
-      [[$f_head? &mobile=`1`]]
+      [[$f_head? &mobile=`1` &product=`1`]]
     </head>
     <body>
       [[$f_header]]
-      [[$f_menu]]
+      [[$f_menu? &class=`catalog-menu-open`]]
       <main>
         [[!msMiniCart? &tpl=`f_mini-cart`]]
         [[$f_advert]]
@@ -149,21 +149,22 @@
           {ignore}
             <script>
 
-              $(document).ready(function() {
-                  defer();
-                  miniShop2.Callbacks.Cart.add.response.success = function(response) {
-                    document.location.href='[[~30]]';
-                  };
-              });
+              // $(document).ready(function() {
+              //     defer();
+              //     miniShop2.Callbacks.Cart.add.response.success = function(response) {
+              //       document.location.href='[[~30]]';
+              //     };
+              // });
 
-              function defer() {
+              function deferGoal() {
                 if (window.yaCounter49607626) {
                   yaCounter49607626.reachGoal('view-cart');
                 }
                 else {
-                  setTimeout(function() { defer() }, 50);
+                  setTimeout(function() { deferGoal() }, 50);
                 }
               }
+              deferGoal();
 
             </script>
           {/ignore}

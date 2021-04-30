@@ -2,7 +2,7 @@
   <div class="container">
     <div class="row">
       <div class="col-xl-2 col-md-3">
-        <h4 class="footer__title"><a href="[[~9]]">Каталог</a></h4>
+        <p class="footer__title"><a href="[[~9]]">Каталог</a></p>
         <ul class="footer__list">
           <li><a href="[[~9]]">Все памятники</a></li>
         </ul>
@@ -14,7 +14,7 @@
         ]]
       </div>
       <div class="col-xl-2 col-md-3">
-        <h4 class="footer__title"><a href="[[~4]]">О нас</a></h4>
+        <p class="footer__title"><a href="[[~4]]">О нас</a></p>
         [[Wayfinder?
           &startId=`4`
           &level=`1`
@@ -22,7 +22,7 @@
         ]]
       </div>
       <div class="col-xl-2 col-md-3">
-        <h4 class="footer__title"><a href="[[~7]]">Услуги</a></h4>
+        <p class="footer__title"><a href="[[~7]]">Услуги</a></p>
         [[Wayfinder?
           &startId=`7`
           &level=`1`
@@ -31,10 +31,10 @@
       </div>
       <div class="col-xl-3 col-md-3">
         <!-- <h4 class="footer__title"><a href="[[~5]]">Наши работы</a></h4> -->
-        <h4 class="footer__title"><a href="[[~6]]">Гравировка</a></h4>
+        <p class="footer__title"><a href="[[~6]]">Гравировка</a></p>
       </div>
       <div class="col-xl-3 col-12">
-        <h4 class="footer__title footer__title--contacts"><a href="[[~8]]">Контакты</a></h4>
+        <p class="footer__title footer__title--contacts"><a href="[[~8]]">Контакты</a></p>
         <p class="footer__phone"><a href="tel:+78125653524">8 (812) 565-35-24</a></p>
         [[!callBack? &registerCss=`0` &registerBootstrap=`0` &tpl=`f_callback-btn` &form=`f_callback-form`]]
         <p class="footer__contacts">Лиговский пр. 114A,<br/>офис 3-06</p>
@@ -56,7 +56,17 @@
 <script type="text/javascript" src="[[!fileCashFix?input=`/assets/templates/frankenstein/public/js/vendor.min.js`]]"></script>
 <script type="text/javascript" src="[[!fileCashFix?input=`/assets/templates/frankenstein/public/js/common.min.js`]]"></script>
 
-<script src="//code.jivosite.com/widget/W0aKPRbRl1" async></script>
+
+<script>
+  if (window.location.origin === 'https://xn----7sbkdeqapqkeoabb1ay7u.xn--p1ai') {
+     var s = document.createElement('script');
+     s.async=true;
+     s.src="//code.jivosite.com/widget/W0aKPRbRl1";
+     f=document.getElementsByTagName('script')[0]
+     f.parentNode.insertBefore(s,f);
+  }
+</script>
+
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-159715393-1"></script>
 

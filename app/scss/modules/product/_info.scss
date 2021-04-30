@@ -41,6 +41,11 @@
       border-bottom: 3px solid transparent;
       color: $dark;
       transition: all $transition;
+      h2{
+        font-weight: inherit;
+        margin: 0;
+        font-size: inherit;
+      }
       &.active{
         border: 0;
         border-radius: 0;

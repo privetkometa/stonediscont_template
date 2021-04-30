@@ -23,12 +23,12 @@ function commonJs() {
 	.pipe(concat('common.min.js'))
 	.pipe(uglify())
 	.pipe(gulp.dest('public/js'))
-	// .pipe(ftp({
-	// 	host: 'vh166.timeweb.ru',
-	// 	user: 'cu67168_stonede',
-	// 	pass: 'cxtEfVF9',
-	// 	remotePath: '/public_html/assets/templates/frankenstein/public/js'
-	// }))
+	.pipe(ftp({
+		host: 'vh166.timeweb.ru',
+		user: 'cu67168_stonede',
+		pass: 'cxtEfVF9',
+		remotePath: '/public_html/assets/templates/frankenstein/public/js'
+	}))
 }
 
 function vendorJs() {

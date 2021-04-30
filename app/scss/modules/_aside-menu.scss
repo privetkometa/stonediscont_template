@@ -1,0 +1,27 @@
+.aside-menu{
+  padding: 0;
+  margin: 0;
+  position: sticky;
+  top: 15px;
+  @include media-breakpoint-down(sm){
+    margin-bottom: 15px;
+  }
+  li{
+    margin-bottom: 5px;
+    list-style-type: none;
+    @include media-breakpoint-down(sm) {
+      display: inline-block;
+      background: $light;
+      border-radius: $border-radius;
+      padding: 3px 7px;
+      margin-right: 5px;
+    }
+  }
+  a{
+    text-decoration: none;
+    color: $blue;
+    &:hover{
+      text-decoration: underline;
+    }
+  }
+}

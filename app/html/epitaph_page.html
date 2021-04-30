@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      [[$f_head? &mobile=`1`]]
+  </head>
+  <body>
+    [[$f_header]]
+    [[$f_menu? &class=`catalog-menu-open`]]
+    <main>
+      [[!msMiniCart? &tpl=`f_mini-cart`]]
+      [[$f_advert]]
+      <div class="container">
+        [[pdoCrumbs? &outputSeparator=`/`]]
+        <h1 class="pagetitle">[[*pagetitle]]</h1>
+        <div class="row">
+          <div class="col-md-2 col-12">
+            <ul class="aside-menu">
+              [[pdoResources?
+                &parents=`362`
+                &tpl=`@INLINE <li><a href="{{~[[+id]]}}" title="[[+pagetitle]]">[[+menutitle]]</a></li>`
+              ]]
+            </ul>
+            
+          </div>
+          <div class="col-lg-7 col-md-10">
+            [[*content]]
+            <br/>
+
+            [[!pdoPage?
+              &element=`getImageList`
+              &docid=`362`
+              &tvname=`epitaphs`
+              &tpl=`epitaph`
+              &where=`{ "epitaphs_categories:snippet:filter_inarray":"[[*tag]]" }`
+              &limit=`4`
+            ]]
+
+            <div class="d-flex justify-content-end">
+              [[!+page.nav]]
+            </div>
+          </div>
+          <div class="col-lg-3">
+            [[$callToAction_design]]
+          </div>
+         
+        </div>
+      </div>
+
+      [[getImageList?
+        &tvname=`examples`
+        &tpl=`f_examples-tpl`
+        &toPlaceholder=`examplesCarusel`
+      ]]
+
+      [[+examplesCarusel:isnot=``:then=`
+        <div class="container mt-xl-4 mt-md-3">
+          <div class="row">
+            <div class="col-md-12">
+              <h2>
+                Примеры оформления
+              </h2>
+              <div class="examples-carusel owl-carousel">
+                [[+examplesCarusel]]
+              </div>
+            </div>
+          </div>
+        </div>
+      `]]
+      <br/>
+      <br/>
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-8">
+            [[*reachText]]
+          </div>
+        </div>
+      </div>
+    </main>
+
+    [[$f_footer? &pageName=`epitaph_page`]]
+  </body>
+</html>
+
+

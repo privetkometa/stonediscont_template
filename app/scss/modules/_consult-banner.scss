@@ -2,18 +2,78 @@
   background-color: $light;
   margin: 40px 0 20px;
   padding-bottom: 30px;
-  background-image: url('../assets/images/final_2.png');
-  background-position: 87% bottom;
-  background-repeat: no-repeat;
-  background-size: 580px;
-  @include media-breakpoint-down(lg) {
-    margin: 10px 0 10px;
-    background-size: 410px;
-    background-position: 95% bottom;
-    padding-bottom: 60px;
+  &.consult-banner--babushka{
+    background-image: url('../assets/images/final_2.png');
+    background-position: 87% bottom;
+    background-repeat: no-repeat;
+    background-size: 580px;
+    @include media-breakpoint-down(lg) {
+      margin: 10px 0 10px;
+      background-size: 410px;
+      background-position: 95% bottom;
+      padding-bottom: 60px;
+    }
+    @include media-breakpoint-down(sm) {
+      background-size: 230px;
+    }
   }
-  @include media-breakpoint-down(sm) {
-    background-size: 230px;
+  &.consult-banner--contacts, &.consult-banner--design {
+    border-radius: $border-radius;
+    padding: 0 10px 30px;
+    h2, .h2{
+      margin-top: 20px; 
+    }
+    ul {
+      @include media-breakpoint-down(sm) {
+        margin-top: 20px;
+      }
+    }
+  }
+  &.consult-banner--design {
+    margin-top: 0;
+    top: 20px;
+    h2, .h2{
+      margin-bottom: 10px; 
+    }
+    .consult-banner__number {
+      font-size: 22px;
+    }
+    .consult-banner__number-text{
+      font-size: 14px;
+    }
+    @include media-breakpoint-down(lg) {
+      h2, .h2{
+        font-size: 16px;
+      }
+      .content{
+        line-height: 1.1;
+      }
+      .consult-banner__number{
+        font-size: 18px;
+      }
+    }
+    @include media-breakpoint-down(md){
+      margin-top: 30px;
+      padding-right: 200px;
+      .consult-banner__manager{
+        position: absolute;
+        right: -180px;
+        top: 20px;
+        width: 150px;
+      }
+    }
+    @include media-breakpoint-down(sm){
+      padding-right: 0;
+      .consult-banner__manager{
+        position: static;
+        width: 100%;
+        margin-bottom: 10px;
+      }
+      .consult-banner__number-text{
+        margin-top: 0;
+      }
+    }
+
   }
   ul{
     padding-left: 20px;
@@ -22,7 +82,7 @@
       margin-top: 0;
     }
   }
-  h2{
+  h2, .h2{
     margin: 30px 0 0;
   }
   &__bonus{
@@ -53,9 +113,42 @@
     a{
       text-decoration: none;
     }
+    @include media-breakpoint-down(lg) {
+      font-size: 20px;
+    }
+    @include media-breakpoint-down(sm) {
+      font-size: 26px;
+    }
   }
   &__number-text{
     line-height: 1;
     margin-bottom: 4px;
+    @include media-breakpoint-down(sm) {
+      margin-top: 15px;
+    }
+  }
+  &__manager{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  &__manager-photo{
+    width: 140px;
+    height: 140px;
+    overflow: hidden;
+    @include media-breakpoint-down(lg) {
+      width: 120px;
+      height: 120px;
+    }
+  }
+  &__manager-name{
+    margin-top: 5px;
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 3px;
+  }
+  &__manager-descrip{
+    font-size: 14px;
+    text-align: center;
   }
 }

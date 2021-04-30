@@ -1,0 +1,23 @@
+.remark{
+  background: $light;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: $border-radius;
+  & > &__title{
+    margin-bottom: 15px;
+    margin-top: 0;
+    font-family: 'Montserrat', 'Arial', sans-serif;
+    font-size: 18px;
+    position: relative;
+    &:before{
+      content: '';
+      display: block;
+      height: 100%;
+      width: 4px;
+      position: absolute;
+      left: -20px;
+      top: 0;
+      background: $red;
+    }
+  }
+}

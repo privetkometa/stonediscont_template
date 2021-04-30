@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      [[$f_head? &mobile=`1`]]
+  </head>
+  <body>
+    [[$f_header]]
+    [[$f_menu? &class=`catalog-menu-open`]]
+    <main>
+      [[!msMiniCart? &tpl=`f_mini-cart`]]
+      [[$f_advert]]
+      <div class="container">
+        [[pdoCrumbs? &outputSeparator=`/`]]
+        <h1 class="pagetitle">[[*pagetitle]]</h1>
+        <div class="row">
+          <div class="col-md-2 col-12">
+            <ul class="aside-menu">
+              [[pdoResources?
+                &parents=`362`
+                &tpl=`@INLINE <li><a href="{{~[[+id]]}}" title="[[+pagetitle]]">[[+menutitle]]</a></li>`
+              ]]
+            </ul>
+          </div>
+          <div class="col-md-10 col-12">
+            <div class="content">
+              [[*content]]
+            </div>
+            
+            [[$callToAction_contacts]]
+          </div>
+         
+        </div>
+      </div>
+    </main>
+    [[$f_footer? &pageName=`epitaph_main`]]
+  </body>
+</html>
