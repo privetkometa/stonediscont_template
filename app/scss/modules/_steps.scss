@@ -1,0 +1,49 @@
+.steps {
+
+  margin-bottom: 67px;
+
+  &__item {
+    margin-top: 28px;
+  }
+
+  &__item-number {
+    position: relative;
+    width: 70px;
+    height: 70px;
+    border: 3px solid transparent;
+    -webkit-box-sizing: border-box;
+    border-radius: 50%;
+    background: #E7EAEB;
+    color: #19304B;
+
+    &.red {
+      background: #fff;
+      color: #C43434;
+      border: 3px solid #c43434;
+    }
+
+    & > span {
+      position: absolute;
+      font-family: 'PT Serif';
+      font-weight: 600;
+      font-size: 57px;
+      line-height: 37px;
+      letter-spacing: 1px;
+      transform: translate(-50%, -50%);
+      top: 50%;
+      left: 50%;
+    }
+  }
+
+  &__item-title {
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 26px;
+    letter-spacing: -0.02em;
+    margin-top: 10px;
+  }
+
+  &__item-desc {
+    margin-top: 14px;
+  }
+}
