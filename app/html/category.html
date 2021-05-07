@@ -1,103 +1,110 @@
 <!DOCTYPE html>
 <html>
-  <head>
-      [[$f_head? &mobile=`1`]]
-  </head>
-  <body>
-    [[$f_header]]
-    [[$f_menu? &class=`catalog-menu-open`]]
-    <main>
-      [[!msMiniCart? &tpl=`f_mini-cart`]]
-      [[$f_advert]]
-      <div class="container">
+<head>
+    [[$f_head? &mobile=`1`]]
+</head>
+<body>
+[[$f_header]]
+[[$f_menu? &class=`catalog-menu-open`]]
+<main>
+    [[!msMiniCart? &tpl=`f_mini-cart`]]
+    [[$f_advert]]
+    <div class="container">
         <div class="d-md-flex justify-content-between align-items-baseline category__title">
-          <div class="flex-fill d-md-flex align-items-baseline">
-            <h1 class="pagetitle">[[*pagetitle]]</h1>
-            <p class="product-amount">[[!getProductAmount]] [[!getProductAmount:declension=`памятник,памятника,памятников`]]</p>
-            <div class="stones-mini stones-mini--gorizontal d-none d-xl-flex">
-              <div class="stones-mini__item stones-mini__item--gabroo">
-                <p class="stones-mini__text">
-                  Камень, используемый для этих моделей:
-                  <b>Черный гранит Габбро-диабаз</b>
-                </p>
-              </div>
-              <div class="stones-mini__item stones-mini__item--dimovsky">
-                <p class="stones-mini__text">
-                  Можем выполнить из камня:
-                  <b>Коричневый гранит Дымовский</b>
-                  <span>Подробности и стоимость у оператора</span>
-                </p>
-              </div>
-              <div class="stones-mini__item stones-mini__item--pokostovsky">
-                <p class="stones-mini__text">
-                    Можем выполнить из камня:
-                  <b>Серый гранит Покостовский</b>
-                  <span>Подробности и стоимость у оператора</span>
-                </p>
-              </div>
-              <div class="stones-mini__item stones-mini__item--leznikovsky">
-                <p class="stones-mini__text">
-                    Можем выполнить из камня:
-                  <b>Красный гранит Лезниковский</b>
-                  <span>Подробности и стоимость у оператора</span>
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="flex-fill d-flex justify-content-md-end">
-            <div class="sorting">
-              [[!sorting]]
-              <p class="sorting__title">Сортировать по&nbsp;</p>
-
-              <div class="dropdown sorting__dropdown">
-                <a class="dropdown-toggle sorting__active-item" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  [[+DetectGetText]]
-                </a>
-
-                <div class="dropdown-menu sorting__list" aria-labelledby="dropdownMenuLink">
-                  <a class="dropdown-item sorting__item" href="[[~[[*id]]]]">популярности</a>
-                  <a class="dropdown-item sorting__item" href="[[~[[*id]]]]?sort=new">новизне</a>
-                  <a class="dropdown-item sorting__item" href="[[~[[*id]]]]?sort=price_up">возрастанию цены</a>
-                  <a class="dropdown-item sorting__item" href="[[~[[*id]]]]?sort=price_down">убыванию цены</a>
-                  <a class="dropdown-item sorting__item" href="[[~[[*id]]]]?sort=discount">размеру скидки</a>
+            <div class="flex-fill d-md-flex align-items-baseline">
+                <h1 class="pagetitle">[[*pagetitle]]</h1>
+                <p class="product-amount">[[!getProductAmount]]
+                    [[!getProductAmount:declension=`памятник,памятника,памятников`]]</p>
+                <div class="stones-mini stones-mini--gorizontal d-none d-xl-flex">
+                    <div class="stones-mini__item stones-mini__item--gabroo">
+                        <p class="stones-mini__text">
+                            Камень, используемый для этих моделей:
+                            <b>Черный гранит Габбро-диабаз</b>
+                        </p>
+                    </div>
+                    <div class="stones-mini__item stones-mini__item--dimovsky">
+                        <p class="stones-mini__text">
+                            Можем выполнить из камня:
+                            <b>Коричневый гранит Дымовский</b>
+                            <span>Подробности и стоимость у оператора</span>
+                        </p>
+                    </div>
+                    <div class="stones-mini__item stones-mini__item--pokostovsky">
+                        <p class="stones-mini__text">
+                            Можем выполнить из камня:
+                            <b>Серый гранит Покостовский</b>
+                            <span>Подробности и стоимость у оператора</span>
+                        </p>
+                    </div>
+                    <div class="stones-mini__item stones-mini__item--leznikovsky">
+                        <p class="stones-mini__text">
+                            Можем выполнить из камня:
+                            <b>Красный гранит Лезниковский</b>
+                            <span>Подробности и стоимость у оператора</span>
+                        </p>
+                    </div>
                 </div>
-              </div>
             </div>
+            <div class="flex-fill d-flex justify-content-md-end">
+                <div class="sorting">
+                    [[!sorting]]
+                    <p class="sorting__title">Сортировать по&nbsp;</p>
 
-          </div>
+                    <div class="dropdown sorting__dropdown">
+                        <a class="dropdown-toggle sorting__active-item" href="#" role="button" id="dropdownMenuLink"
+                           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            [[+DetectGetText]]
+                        </a>
+
+                        <div class="dropdown-menu sorting__list" aria-labelledby="dropdownMenuLink">
+                            <a class="dropdown-item sorting__item" href="[[~[[*id]]]]">популярности</a>
+                            <a class="dropdown-item sorting__item" href="[[~[[*id]]]]?sort=new">новизне</a>
+                            <a class="dropdown-item sorting__item" href="[[~[[*id]]]]?sort=price_up">возрастанию
+                                цены</a>
+                            <a class="dropdown-item sorting__item" href="[[~[[*id]]]]?sort=price_down">убыванию цены</a>
+                            <a class="dropdown-item sorting__item" href="[[~[[*id]]]]?sort=discount">размеру скидки</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
         </div>
-      </div>
-      <div class="container">
+    </div>
+    <div class="container">
         <div class="row">
-          [[!pdoPage?
+            [[!pdoPage?
             &element=`msProducts`
             &tpl=`f_product-mini`
             &limit=`22`
             &sortbyTV=`[[+DetectGetBy]]`
-          	&sortbyTVType=`integer`
-          	&sortdirTV=`[[+DetectGetDir]]`
+            &sortbyTVType=`integer`
+            &sortdirTV=`[[+DetectGetDir]]`
             &sortby=`[[+DetectGetBy]]`
             &sortdir=`[[+DetectGetDir]]`
-            &tplPageWrapper=`@INLINE <ul class="pagination">[[+prev]][[+pages]][[+next]]</ul>`
-          ]]
-          <div class="col-xl-3 col-md-4 col-6 category-banner">
-            <a class="category-banner__inner" href="[[~48]]" target="_blank">
-              <img src="/assets/images/garanty-banner-min.png" alt="Гарантия лучшей цены">
-            </a>
-          </div>
-          <div class="col-xl-3 col-md-4 col-6 category-banner category-banner--second">
-            <div class="category-banner__inner">
-              <img src="/assets/images/other-stone-banner-min.png" alt="Изготовим памятник любой сложности">
+            &tplPageWrapper=`@INLINE <ul class="pagination">[[+prev]][[+pages]][[+next]]</ul>`]]
+            <div class="col-xl-3 col-md-4 col-6 category-banner">
+                <a class="category-banner__inner" href="[[~48]]" target="_blank">
+                    <img src="/assets/images/garanty-banner-min.png" alt="Гарантия лучшей цены">
+                </a>
             </div>
-          </div>
+            <div class="col-xl-3 col-md-4 col-6 category-banner category-banner--second">
+                <div class="category-banner__inner">
+                    <img src="/assets/images/other-stone-banner-min.png" alt="Изготовим памятник любой сложности">
+                </div>
+            </div>
         </div>
 
         <div class="d-flex justify-content-end">
-          [[!+page.nav]]
+            [[!+page.nav]]
         </div>
-      </div>
-    </main>
-    [[!msOptionsPrice.initialize?]]
-    [[$f_footer? &pageName=`category`]]
-  </body>
+
+        [[*category_desc:isnotempty=`
+        <div class="category__desc">[[*category_desc]]</div>
+        `]]
+
+    </div>
+</main>
+[[!msOptionsPrice.initialize?]]
+[[$f_footer? &pageName=`category`]]
+</body>
 </html>

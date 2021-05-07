@@ -1,15 +1,23 @@
-.category{
-  &__title{
-    .pagetitle{
+.category {
+  &__title {
+    .pagetitle {
       padding: 0;
       margin-bottom: 0;
       border: none;
     }
+
     margin-bottom: 35px;
     padding-bottom: 15px;
     border-bottom: 1px solid $smoke;
     @include media-breakpoint-down(lg) {
       margin-bottom: 25px;
+    }
+  }
+
+  &__desc {
+    margin-top: 60px;
+    @include media-breakpoint-down(sm) {
+      margin-top: 40px;
     }
   }
 }
