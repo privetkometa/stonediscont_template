@@ -9,7 +9,7 @@
       <main>
         [[!msMiniCart? &tpl=`f_mini-cart`]]
         [[$f_advert]]
-        <div class="container product-card">
+        <div itemscope itemtype="https://schema.org/Product" class="container product-card">
           [[pdoCrumbs?
           &tpl=`@INLINE <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a itemprop="item" href="[[+link]]"><span itemprop="name">[[+menutitle]]</span></a><meta itemprop="position" content="[[+idx]]" /></li>`
           &tplCurrent=`@INLINE <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="active"><span itemprop="name">[[+menutitle]]</span><meta itemprop="position" content="[[+idx]]" /></li>`
@@ -17,7 +17,7 @@
           &outputSeparator=`/`]]
           <div class="row">
             <div class="col-md-12">
-              <h1 class="pagetitle product-card__main-title">Памятник из чёрного гранита [[*pagetitle]]</h1>
+              <h1 itemprop="name" class="pagetitle product-card__main-title">Памятник из чёрного гранита [[*pagetitle]]</h1>
             </div>
           </div>
           [[!msOptionsPrice.initialize?]]
@@ -42,7 +42,7 @@
                 </div>
               </div>
 
-              <div class="col-xl-4 col-md-6">
+              <div itemprop="offers" itemscope itemtype="https://schema.org/Offer" class="col-xl-4 col-md-6">
                 <div class="product-card__sticky-column">
                   <div class="product-card__submit-block">
                     <div class="product-card__price-block">
@@ -51,7 +51,7 @@
 
                       </div>
                       <div class="product-card__price">
-                        <span class="product-card__new-price"><span class="msoptionsprice-cost msoptionsprice-[[*id]]">[[+price]]</span> {'ms2_frontend_currency' | lexicon}</span>
+                        <span class="product-card__new-price"><span itemprop="price" content="[[+price]]" class="msoptionsprice-cost msoptionsprice-[[*id]]">[[+price]]</span> <span itemprop="priceCurrency" content="RUB">{'ms2_frontend_currency' | lexicon}</span></span>
                         <!-- <span class="product-card__prepay">без предоплаты</span> -->
                         <div id="benefit" class="product-card__benefit">
 

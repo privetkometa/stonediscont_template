@@ -12,6 +12,7 @@
               onclick="ym(49607626, 'reachGoal', 'go-gallery'); return true;"
             >
               <img
+                itemprop="image"
                 src="{$file['product']}"
                 alt="[[*pagetitle]]"
                 title="Памятник [[*pagetitle]] изображение {$file['id']}"
@@ -34,7 +35,7 @@
 
 
     {else}
-        <img src="{('assets_url' | option) ~ 'components/minishop2/img/web/ms2_medium.png'}"
+        <img itemprop="image" src="{('assets_url' | option) ~ 'components/minishop2/img/web/ms2_medium.png'}"
              srcset="{('assets_url' | option) ~ 'components/minishop2/img/web/ms2_medium@2x.png'} 2x"
              alt="" title=""/>
     {/if}
