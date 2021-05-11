@@ -10,6 +10,11 @@
         [[!msMiniCart? &tpl=`f_mini-cart`]]
         [[$f_advert]]
         <div class="container product-card">
+          [[pdoCrumbs?
+          &tpl=`@INLINE <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a itemprop="item" href="[[+link]]"><span itemprop="name">[[+menutitle]]</span></a><meta itemprop="position" content="[[+idx]]" /></li>`
+          &tplCurrent=`@INLINE <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="active"><span itemprop="name">[[+menutitle]]</span><meta itemprop="position" content="[[+idx]]" /></li>`
+          &tplWrapper=`@INLINE <ul itemscope itemtype="https://schema.org/BreadcrumbList" class="breadcrumb">[[+output]]</ul>`
+          &outputSeparator=`/`]]
           <div class="row">
             <div class="col-md-12">
               <h1 class="pagetitle product-card__main-title">Памятник из чёрного гранита [[*pagetitle]]</h1>
