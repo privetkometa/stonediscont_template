@@ -21,8 +21,11 @@
       line-height: 1.5;
     }
   }
-  &__text-800{
+  &__max-800{
     max-width: 800px;
+  }
+  &__max-500{
+    max-width: 500px;
   }
   &__accent{
     text-transform: uppercase;

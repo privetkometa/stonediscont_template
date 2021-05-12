@@ -1,10 +1,22 @@
-.stones{
+.stones {
+  padding-top: 45px;
+  padding-bottom: 60px;
+  border-radius: 16px;
+  box-shadow: 13px 0px 74px rgba(212, 212, 212, 0.25);
+  @include media-breakpoint-down(sm) {
+    padding-top: 15px;
+    padding-bottom: 30px;
+  }
+}
+.stones-sorts {
   display: flex;
   justify-content: space-between;
-  margin-top: 60px;
+  margin-top: 36px;
+  row-gap: 20px;
+
   @include media-breakpoint-down(sm) {
     margin-top: 30px;
-    justify-content: center;
+    justify-content: start;
     flex-wrap: wrap;
   }
   &__item{
@@ -18,7 +30,6 @@
     }
   }
   &__name{
-    color: $white;
     text-align: center;
     font-size: 14px;
     max-width: 170px;
@@ -26,32 +37,32 @@
   &__img{
     background: $gray;
     border-radius: 50%;
-    height: 120px;
-    width: 120px;
+    height: 93px;
+    width: 93px;
     border: 2px solid $white;
     margin-bottom: 20px;
     @include media-breakpoint-down(sm) {
       height: 100px;
       width: 100px;
     }
-    &.stones__img--gabroo{
+    &.stones-sorts__img--gabroo{
       background: url('../assets/images/gabroo.jpg') no-repeat center;
       background-size: cover;
     }
-    &.stones__img--dimovsky{
+    &.stones-sorts__img--dimovsky {
       background: url('../assets/images/dimovsky.jpg') no-repeat center;
       background-size: cover;
     }
-    &.stones__img--pokostovsky{
+    &.stones-sorts__img--pokostovsky{
       background: url('../assets/images/pokostovsky.jpg') no-repeat center;
       background-size: cover;
     }
-    &.stones__img--smeshanny{
+    &.stones-sorts__img--smeshanny{
       background: url('../assets/images/smeshanny.jpg') no-repeat center;
       background-size: cover;
     }
-    &.stones__img--leznikovsky{
-      background: url('../assets/images/lenzicovsky.jpg') no-repeat center;
+    &.stones-sorts__img--leznikovsky{
+      background: url('../assets/images/leznikovsky.jpg') no-repeat center;
       background-size: cover;
     }
   }
