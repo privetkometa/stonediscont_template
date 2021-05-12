@@ -51,11 +51,12 @@
 
                       </div>
                       <div class="product-card__price">
-                        <span class="product-card__new-price"><span itemprop="price" content="[[+price]]" class="msoptionsprice-cost msoptionsprice-[[*id]]">[[+price]]</span> <span itemprop="priceCurrency" content="RUB">{'ms2_frontend_currency' | lexicon}</span></span>
+                        <span class="product-card__new-price"><span itemprop="price" content="[[+price:stripString=` `]].00" class="msoptionsprice-cost msoptionsprice-[[*id]]">[[+price]]</span> <span itemprop="priceCurrency" content="RUB">{'ms2_frontend_currency' | lexicon}</span></span>
                         <!-- <span class="product-card__prepay">без предоплаты</span> -->
                         <div id="benefit" class="product-card__benefit">
 
                         </div>
+                        <link itemprop="availability" href="https://schema.org/InStock" />
                       </div>
                     </div>
 
