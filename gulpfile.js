@@ -105,7 +105,8 @@ function fonts() {
 }
 
 function images() {
-	return gulp.src('app/assets/images/*.**')
+	return gulp.src('app/assets/images/**/*.**')
+	.pipe(changed('public/assets/images'))
 	.pipe(gulp.dest('public/assets/images'))
 	.pipe(ftp({
 		host: 'vh166.timeweb.ru',
