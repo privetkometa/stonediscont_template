@@ -1,0 +1,92 @@
+.offer {
+  padding-top: 45px;
+  padding-bottom: 60px;
+  border-radius: 16px;
+  box-shadow: 13px 0px 74px rgba(212, 212, 212, 0.25);
+  padding-left: 30px;
+  padding-right: 30px;
+
+  @include media-breakpoint-down(sm) {
+    padding-top: 127px;
+    padding-bottom: 30px;
+    margin-top: 123px;
+  }
+
+  &__second {
+    padding-left: 38px;
+    @include media-breakpoint-down(lg) {
+      padding-left: 15px;
+    }
+  }
+
+  &__photo {
+    width: 288px;
+    height: 319px;
+    background: $gray;
+    border-radius: 10px;
+    background: url("../assets/images/manager-anna.jpg") no-repeat;
+    background-size: cover !important;
+    background-position: center !important;
+    @include media-breakpoint-down(sm) {
+    position: absolute;
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    top: -200px;
+    left: -15px;
+    border: 20px solid white;
+    }
+  }
+
+  &__photo-badge {
+    font-size: 14px;
+    margin-top: 25px;
+    @include media-breakpoint-down(sm) {
+      margin-top: 0;
+    }
+  }
+
+  &__photo-badge-desc {
+    margin-top: 5px;
+  }
+
+  &__review {
+    margin-top: 30px;
+  }
+
+  &__review-desc {
+    font-size: 14px;
+    color: $gray;
+    padding-left: 9px;
+  }
+  &__review-mob {
+    margin-top: 30px;
+  }
+
+  &__action {
+    margin-top: 30px;
+    @include media-breakpoint-down(md) {
+      margin-top: 40px;
+    }
+
+    button {
+      width: 100%;
+      text-transform: inherit !important;
+      font-size: 18px;
+      min-height: 55px;
+    }
+  }
+
+  &__action-number {
+    @include media-breakpoint-down(md) {
+      margin-top: 9px;
+    }
+
+    span {
+      font-size: 24px;
+      font-weight: 700;
+    }
+  }
+
+
+}
