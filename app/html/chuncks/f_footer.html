@@ -1,4 +1,4 @@
-<footer class="footer">
+<footer class="footer" itemscope itemtype="https://schema.org/Organization">
   <div class="container">
     <div class="row">
       <div class="col-xl-2 col-md-3">
@@ -35,15 +35,16 @@
       </div>
       <div class="col-xl-3 col-12">
         <p class="footer__title footer__title--contacts"><a href="[[~8]]">Контакты</a></p>
-        <p class="footer__phone"><a href="tel:+78125653524">8 (812) 565-35-24</a></p>
+        <p class="footer__phone" itemprop="telephone"><a href="tel:+78125653524">8 (812) 565-35-24</a></p>
         [[!callBack? &registerCss=`0` &registerBootstrap=`0` &tpl=`f_callback-btn` &form=`f_callback-form`]]
-        <p class="footer__contacts">Лиговский пр. 114A,<br/>офис 3-06</p>
-        <p class="footer__contacts"><a href="mailto:info@pamyatniki-nedorogo.ru">info@pamyatniki-nedorogo.ru</a></p>
+        <p class="footer__contacts" itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+          <span itemprop="streetAddress">Лиговский пр. 114A</span>,<br/>офис 3-06</p>
+        <p class="footer__contacts" itemprop="email"><a href="mailto:info@pamyatniki-nedorogo.ru">info@pamyatniki-nedorogo.ru</a></p>
       </div>
     </div>
     <div class="row">
       <div class="col-md-12">
-        <p class="footer__copy">© 2020 <a href="/">ПАМЯТНИКИ-НЕДОРОГО.РФ</a>. Памятники с минимальной торговой наценкой.</p>
+        <p class="footer__copy">© 2020 <a href="/"><span itemprop="name">ПАМЯТНИКИ-НЕДОРОГО.РФ</span></a>. Памятники с минимальной торговой наценкой.</p>
       </div>
     </div>
   </div>
