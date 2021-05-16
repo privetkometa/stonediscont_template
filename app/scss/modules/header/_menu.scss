@@ -1,7 +1,6 @@
 .menu{
   background: $red;
   position: relative;
-  // font-family: 'PT Serif';
   // text-transform: uppercase;
   @include media-breakpoint-down(sm) {
     padding: 0;

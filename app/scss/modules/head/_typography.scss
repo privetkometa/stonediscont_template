@@ -8,7 +8,7 @@ hr{
   background: $smoke;
 }
 h1, .h1{
-  font-family: 'PT Serif';
+  font-family: 'Source Serif Pro';
   letter-spacing: -1px;
   margin-top: 30px;
   margin-bottom: 20px;
@@ -29,7 +29,6 @@ h1, .h1{
   margin-bottom: 30px;
 }
 h2, .h2{
-  // font-family: 'PT Serif';
   margin-top: 15px;
   margin-bottom: 20px;
   font-weight: bold;
@@ -77,10 +76,10 @@ h3, .h3{
   }
   h2, .h2{
     margin: 35px 0 15px;
-    font-family: 'PT Serif';
+    font-family: 'Source Serif Pro';
   }
   h3, .h3{
-    font-family: 'PT Serif';
+    font-family: 'Source Serif Pro';
     @include media-breakpoint-down(sm) {
       font-size: 16px;
     }

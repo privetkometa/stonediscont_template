@@ -7,7 +7,7 @@
     padding: 20px 0;
   }
   &__title{
-    font-family: 'PT Serif';
+    font-family: 'Source Serif Pro';
     font-size: 30px;
     @include media-breakpoint-down(lg) {
       font-size: 20px;
@@ -29,7 +29,7 @@
   }
   &__accent{
     text-transform: uppercase;
-    font-family: 'PT Serif';
+    font-family: 'Source Serif Pro';
     font-weight: bold;
     color: $red;
   }
