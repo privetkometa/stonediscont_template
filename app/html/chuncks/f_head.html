@@ -1,3 +1,11 @@
+{var $index_page =  '!getUrlParam' | snippet : [
+    'name' => 'page',
+]}
+
+{if $index_page >= 1}
+<meta name="robots" content="noindex, follow" />
+{/if}
+
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 [[+mobile:is=`1`:then=`
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
