@@ -1,13 +1,17 @@
 .button{
+  font-family: Open Sans;
+  font-weight: 600;
+  letter-spacing: 0.6px;
+  font-style: normal;
   display: inline-block;
   text-decoration: none;
   border: none;
   text-align: center;
-  padding: 8px 20px;
+  padding: 15px 30px;
   border-radius: $border-radius;
   background: $orange;
   color: $dark;
-  font-size: 16px;
+  font-size: 18px;
   line-height: 25px;
   transition: all $transition;
   box-shadow: 0 2px 4px rgba(0,0,0,0.3);
