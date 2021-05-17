@@ -16,7 +16,7 @@
 
   @include media-breakpoint-down(sm) {
     margin-top: 30px;
-    justify-content: start;
+    justify-content: center;
     flex-wrap: wrap;
   }
   &__item{
@@ -40,9 +40,13 @@
     height: 93px;
     width: 93px;
     margin-bottom: 20px;
+    @include media-breakpoint-down(md) {
+      height: 80px;
+      width: 80px;
+    }
     @include media-breakpoint-down(sm) {
-      height: 100px;
-      width: 100px;
+      height: 70px;
+      width: 70px;
     }
     &.stones-sorts__img--gabroo{
       background: url('../assets/images/gabroo.jpg') no-repeat center;
