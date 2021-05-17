@@ -1,16 +1,16 @@
-.banner{
-  height: 600px;
-  padding: 20px;
-  background: url('../assets/images/monument-statue.webp') no-repeat center;
+.banner {
+  padding: 140px 0;
+  background: url('../assets/images/monument-statue.jpg') no-repeat center;
   background-size: cover;
   position: relative;
   @include media-breakpoint-down(lg) {
-    height: 400px;
+    padding: 100px 0;
   }
   @include media-breakpoint-down(sm) {
-    height: 300px;
+    padding: 40px 5px;
   }
-  &::after{
+
+  &::after {
     content: '';
     position: absolute;
     top: 0;
@@ -18,43 +18,69 @@
     left: 0;
     right: 0;
     z-index: 0;
-    background: linear-gradient(to top, rgba(15,33,49,0.3), rgba(15,33,49,0.75));
+    background: linear-gradient(142.81deg, rgba(34, 43, 53, 0.8) 25.66%, rgba(82, 82, 82, 0) 87.72%);
   }
-  .container{
+
+  .container {
     position: relative;
     z-index: 1;
   }
-  &__title{
+
+  &__pretitle {
+    color: $gray-100;
+    font-size: 25px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    margin-bottom: 15px;
+    @include media-breakpoint-down(lg) {
+      letter-spacing: 3px;
+      font-size: 15px;
+      margin-bottom: 10px;
+    }
+    @include media-breakpoint-down(sm) {
+      font-size: 13px;
+      letter-spacing: 1px;
+    }
+  }
+
+  &__title {
     font-family: 'Source Serif Pro';
-    font-size: 60px;
+    font-size: 57px;
     line-height: 66px;
     color: $white;
-    text-align: center;
-    font-weight: bold;
-    margin: 0 0 30px;
+    font-weight: 600;
+    margin: 0 0 40px;
     @include media-breakpoint-down(lg) {
       font-size: 40px;
       line-height: 50px;
       margin-bottom: 20px;
     }
     @include media-breakpoint-down(sm) {
-      font-size: 24px;
+      font-size: 28px;
       line-height: 28px;
+      margin-bottom: 15px;
     }
   }
-  &__descrip{
-    text-align: center;
+
+  &__descrip {
     color: $smoke;
-    max-width: 800px;
-    font-size: 22px;
-    margin-bottom: 60px;
+    font-size: 18px;
+    margin-bottom: 54px;
     @include media-breakpoint-down(lg) {
-      font-size: 20px;
-      margin-bottom: 40px;
+      font-size: 14px;
+      margin-bottom: 30px;
     }
     @include media-breakpoint-down(sm) {
-      font-size: 16px;
-      margin-bottom: 30px;
+      font-size: 14px;
+      margin-bottom: 57px;
+    }
+  }
+
+  &__action {
+    button {
+      @include media-breakpoint-down(sm) {
+        width: 100%;
+      }
     }
   }
 }
