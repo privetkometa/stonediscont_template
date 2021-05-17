@@ -48,6 +48,10 @@
       background: #af141b;
     }
   }
+  @include media-breakpoint-down(sm) {
+    font-size: 14px;
+    line-height: 19px;
+  }
 }
 .help-btn{
   color: $dark;
