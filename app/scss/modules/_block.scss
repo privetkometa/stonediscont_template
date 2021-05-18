@@ -46,6 +46,55 @@
     max-width: 500px;
   }
 
+  &__steps {
+    position: relative;
+    width: 70px;
+    height: 70px;
+    border: 3px solid #e7eaeb;
+    -webkit-box-sizing: border-box;
+    border-radius: 50%;
+    background: $gray-300;
+    color: #19304B;
+
+
+    &.red {
+      background: #fff;
+      color: #C43434;
+      border: 3px solid #c43434;
+    }
+
+    & > span {
+      position: absolute;
+      font-family: 'Source Serif Pro';
+      font-weight: 600;
+      font-size: 57px;
+      line-height: 37px;
+      letter-spacing: 1px;
+      transform: translate(-50%, -50%);
+      top: 50%;
+      left: 50%;
+    }
+  }
+
+  &__steps-svg {
+    width: 70px;
+    height: 70px;
+    background: $gray-300;
+    border-radius: 50%;
+    position: relative;
+
+    svg {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  &__item {
+    margin-top: 15px;
+  }
+
   &__accent {
     text-transform: uppercase;
     font-family: 'Source Serif Pro';

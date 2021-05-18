@@ -1,10 +1,14 @@
-.standarts {
-
+.offer-2 {
   &__first {
     padding-right: 25px;
     @include media-breakpoint-down(lg) {
       padding-right: 15px;
     }
   }
-
+  &__action-mob {
+    margin-top: 20px;
+    button {
+      width: 100%;
+    }
+  }
 }
