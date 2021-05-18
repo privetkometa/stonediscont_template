@@ -1,0 +1,30 @@
+.standarts {
+  &__item {
+    margin-bottom: 50px;
+    @include media-breakpoint-down(lg) {
+      margin-bottom: 40px;
+    }
+    @include media-breakpoint-down(md) {
+      margin-bottom: 30px;
+    }
+  }
+  &__first {
+    padding-right: 25px;
+  }
+
+  &__item-img {
+    width: 70px;
+    height: 70px;
+    background: $gray-300;
+    border-radius: 50%;
+    position: relative;
+
+    svg {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+}

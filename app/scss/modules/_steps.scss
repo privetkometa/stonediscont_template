@@ -45,22 +45,4 @@
     }
   }
 
-  &__item-title {
-    font-weight: 600;
-    font-size: 22px;
-    line-height: 26px;
-    letter-spacing: -0.02em;
-    margin-top: 10px;
-    @include media-breakpoint-down(lg) {
-      font-size: 16px;
-      line-height: 22px;
-    }
-  }
-
-  &__item-desc {
-    margin-top: 14px;
-    @include media-breakpoint-down(lg) {
-      margin-top: 10px;
-    }
-  }
 }
