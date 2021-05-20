@@ -186,7 +186,9 @@
             </div>
             [[!pdoPage?
             &parents=`5`
-            &tplWrapper=`@INLINE <div class="main-carousel owl-carousel owl-theme">[[+output]]</div>`
+            &tplWrapper=`@INLINE
+            <div class="main-carousel owl-carousel owl-theme">[[+output]]</div>
+            `
             &tpl=`f_work-main`
             &limit=`8`
             &sortbyTV=`views`
@@ -251,6 +253,41 @@
                         Доставим памятник на любое кладбище. Сделаем установку или передадим надгробие администрации
                         кладбища с документами
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="block">
+        <div class="container">
+            <div class="samples">
+                <h2 class="block__title text-center">Несколько эскизов оформления<br>памятника за 1 рабочий день</h2>
+                <div class="text-center block__max-600 m-auto">Примеры эскизов памятника, которые мы ежедневно
+                    отправляем
+                    нашим клиентам по почте или в мессенджер
+                </div>
+                <div class="samples__window m-auto">
+                    <div class="samples__window-before">
+                        <div class="row">
+                            <div class="samples__window-before-first col-6 d-flex flex-column justify-content-center">
+                                <div class="samples__window-before-first-1"></div>
+                                <div class="samples__window-before-first-2"></div>
+                            </div>
+                            <div class="samples__window-before-second col-6">
+                                    <div class="samples__window-before-second-dots-dot"></div>
+                                    <div class="samples__window-before-second-dots-dot"></div>
+                                    <div class="samples__window-before-second-dots-dot"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="samples__window-carousel owl-carousel owl-theme m-auto">
+                        [[getImageList?
+                        &docid=`108`
+                        &tvname=`examples`
+                        &tpl=`f_samples-tpl`
+                        ]]
+                    </div>
+                    <div id="samples-dots" class="owl-dots"></div>
                 </div>
             </div>
         </div>

@@ -1,0 +1,184 @@
+.samples {
+
+  &__window {
+    max-width: 895px;
+  }
+
+  &__window-before {
+    margin-top: 20px;
+    background: $gray-300;
+    border-radius: 30px 30px 0 0;
+    border: 2px solid $gray-300;
+    @include media-breakpoint-down(lg) {
+      border-radius: 20px 20px 0 0;
+    }
+    @include media-breakpoint-down(sm) {
+      background: $gray-200;
+      border: 2px solid $gray-200;
+      border-radius: 10px 10px 0 0;
+    }
+
+    & .row {
+      padding: 29px;
+      @include media-breakpoint-down(lg) {
+        padding: 20px;
+      }
+      @include media-breakpoint-down(sm) {
+        padding: 12px;
+      }
+    }
+  }
+
+  &__window-before-first-1 {
+    width: 192px;
+    height: 7px;
+    background: $gray-500;
+    @include media-breakpoint-down(lg) {
+      width: 154px;
+      height: 5px;
+    }
+    @include media-breakpoint-down(sm) {
+      width: 77px;
+    }
+  }
+
+  &__window-before-first-2 {
+    width: 65px;
+    height: 7px;
+    background: $gray-500;
+    margin-top: 9px;
+    @include media-breakpoint-down(lg) {
+      width: 54px;
+      height: 5px;
+      margin-top: 6px;
+    }
+    @include media-breakpoint-down(sm) {
+      width: 27px;
+      margin-top: 3px;
+    }
+  }
+
+  &__window-before-second-dots-dot {
+    width: 9px;
+    height: 9px;
+    background: $gray-500;
+    display: inline-block;
+    border-radius: 50%;
+    margin-left: 9px;
+    float: right;
+    @include media-breakpoint-down(lg) {
+      width: 7px;
+      height: 7px;
+      margin-left: 7px;
+    }
+    @include media-breakpoint-down(sm) {
+      width: 5px;
+      height: 5px;
+      margin-left: 5px;
+    }
+  }
+
+  &__window-carousel {
+    border-radius: 0 0 30px 30px;
+    border: 2px solid $gray-300;
+    background: white;
+    padding: 0 47px 36px;
+    @include media-breakpoint-down(lg) {
+      border-radius: 0 0 20px 20px;
+    }
+    @include media-breakpoint-down(sm) {
+      border: 2px solid $gray-200;
+      border-radius: 0 0 10px 10px;
+      padding: 26px;
+    }
+
+    & .owl-next {
+      right: -100px;
+      @include media-breakpoint-down(lg) {
+        right: -20px;
+      }
+      @include media-breakpoint-down(sm) {
+        right: -15px;
+      }
+    }
+
+    & .owl-prev {
+      left: -100px;
+      @include media-breakpoint-down(lg) {
+        left: -20px;
+      }
+      @include media-breakpoint-down(sm) {
+        left: -15px;
+      }
+    }
+
+  }
+
+  &__window-carousel-title {
+    font-weight: 900;
+    @include media-breakpoint-down(sm) {
+      display: none;
+    }
+  }
+
+  &__window-carousel-desc {
+    @include media-breakpoint-down(sm) {
+      display: none;
+    }
+  }
+}
+
+#samples-dots {
+  text-align: center;
+  -webkit-tap-highlight-color: transparent;
+  margin-top: 40px;
+  @include media-breakpoint-down(lg) {
+    margin-top: 30px;
+  }
+  @include media-breakpoint-down(sm) {
+    margin-top: 10px;
+  }
+
+  & .owl-dot {
+    cursor: pointer;
+    display: inline-block;
+    zoom: 1;
+
+    span {
+      width: 16px;
+      height: 16px;
+      margin: 5px 7px;
+      background: $gray-300;
+      display: block;
+      -webkit-backface-visibility: visible;
+      transition: opacity .2s ease;
+      border-radius: 50%;
+      @include media-breakpoint-down(lg) {
+        width: 13px;
+        height: 13px;
+      }
+      @include media-breakpoint-down(sm) {
+        margin: 5px 5px;
+        width: 10px;
+        height: 10px;
+      }
+    }
+  }
+
+  .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
+    background: $darkblue;
+  }
+}
+
+.samples__window .owl-nav {
+  & > div {
+    &:hover {
+      opacity: 1;
+      background: $white;
+
+      svg {
+        fill: $black;
+      }
+    }
+  }
+}
