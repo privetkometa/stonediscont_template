@@ -1,11 +1,43 @@
 .product-gallery{
-  .owl-nav > .owl-prev {
+  & .owl-nav > .owl-prev {
     left: -7px;
   }
-  .owl-nav > .owl-next {
+  & .owl-nav > .owl-next {
     right: -7px;
     
   }
+
+  & .owl-nav > div {
+    font-size: 0;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: -30px;
+    background-color: transparent;
+    background-image: url('../assets/images/right-arrow.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 30px;
+    width: 30px;
+    @include media-breakpoint-down(lg) {
+      right: -15px;
+    }
+    &:hover{
+      opacity: 0.7;
+    }
+  }
+
+  & .owl-nav > .owl-prev{
+    right: auto;
+    left: -30px;
+    margin-top: -15px;
+    transform: rotate(180deg);
+    @include media-breakpoint-down(md) {
+      left: -15px;
+    }
+  }
+
   .item {
     display: block;
     padding: 0 20px;
