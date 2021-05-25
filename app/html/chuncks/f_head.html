@@ -1,8 +1,8 @@
-{var $index_page =  '!getUrlParam' | snippet : [
-    'name' => 'page',
+{var $index_page =  '!NOindex' | snippet : [
+    'params' => 'sort,page',
 ]}
 
-{if $index_page >= 1}
+{if $index_page}
 <meta name="robots" content="noindex, follow" />
 {/if}
 
