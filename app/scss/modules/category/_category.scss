@@ -20,4 +20,21 @@
       margin-top: 40px;
     }
   }
+
+  &__gallery {
+    margin-top: 60px;
+    @include media-breakpoint-down(sm) {
+      margin-top: 40px;
+    }
+    & .owl-nav > div {
+      top: 50%;
+    }
+  }
+
+  &__gallery-item {
+    border: 1px solid $smoke;
+    border-radius: $border-radius;
+    padding: 10px 10px 0;
+  }
+
 }

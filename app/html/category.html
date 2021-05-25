@@ -119,6 +119,19 @@
         <div class="category__desc">[[*category_desc]]</div>
         `]]
 
+
+        [[getImageList?
+          &tvname=`gallery`
+          &tpl=`f_cat-gallery`
+          &toPlaceholder=`categoryGallery`
+        ]]
+
+        [[+categoryGallery:isnotempty=`
+        <div class="category__gallery owl-carousel owl-theme">
+        [[+categoryGallery]]
+        </div>
+        `]]
+
     </div>
 </main>
 [[!msOptionsPrice.initialize?]]
