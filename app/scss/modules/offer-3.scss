@@ -1,0 +1,140 @@
+.offer-3 {
+  &__review {
+    margin-bottom: 20px;
+  }
+
+  &__review-desc {
+    font-size: 14px;
+    color: $gray;
+    padding-left: 9px;
+  }
+
+  &__desc {
+    margin-bottom: 15px;
+    @include media-breakpoint-down(md) {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__steps-item {
+    margin-top: 15px;
+  }
+
+  &__steps-item-img {
+    width: 90px;
+    height: 90px;
+    background-size: contain !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    margin: 0 auto 9px;
+    @include media-breakpoint-down(lg) {
+      width: 80px;
+      height: 80px;
+    }
+  }
+
+  &__steps-item-img-1 {
+    background: url('../assets/images/offer-3_1.png');
+  }
+
+  &__steps-item-img-2 {
+    background: url('../assets/images/offer-3_2.png');
+  }
+
+  &__steps-item-img-3 {
+    background: url('../assets/images/offer-3_3.png');
+  }
+
+  &__steps-item-img-4 {
+    background: url('../assets/images/offer-3_4.png');
+  }
+
+  &__steps-item-desc {
+    font-size: 14px;
+    @include media-breakpoint-down(lg) {
+      font-size: 12px;
+    }
+  }
+
+  &__left-photo {
+    width: 301px;
+    height: 396px;
+    background: url(../assets/images/monuments.png) no-repeat;
+    margin-bottom: 11px;
+    background-size: contain;
+    position: relative;
+    @include media-breakpoint-down(lg) {
+      height: 353px;
+      margin-bottom: 6px;
+    }
+  }
+
+  &__left-photo-ellipsis {
+    width: 90px;
+    height: 90px;
+    background: $red;
+    font-size: 24px;
+    color: $white;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 8px;
+    right: 0;
+    @include media-breakpoint-down(lg) {
+      font-size: 22px;
+      width: 80px;
+      height: 80px;
+      right: 36px;
+    }
+
+    span {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  &__left-desc {
+    font-weight: 900;
+    padding-left: 46px;
+    font-size: 15px;
+    @include media-breakpoint-down(lg) {
+      font-size: 14px;
+      padding-left: 40px;
+    }
+  }
+
+  &__mob {
+    margin-top: 40px;
+  }
+
+  &__mob-photo {
+    width: 100%;
+    height: 207px;
+    background: url(../assets/images/monuments.png) no-repeat;
+    background-size: contain;
+  }
+
+  &__mob-desc-1 {
+    font-weight: 900;
+    margin-top: 20px;
+  }
+
+  &__mob-desc-2 {
+    background: $red;
+    border-radius: 50%;
+    width: 53px;
+    height: 53px;
+    margin-top: 6px;
+    position: relative;
+    color: $white;
+    font-size: 12px;
+
+    span {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+}
