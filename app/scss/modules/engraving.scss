@@ -6,7 +6,7 @@
     margin-bottom: -90px;
   }
 
-  &__item-title {
+  &__block-title {
     font-weight: 600;
     font-size: 22px;
     line-height: 26px;
@@ -24,7 +24,7 @@
     }
   }
 
-  &__item {
+  &__block {
     margin-bottom: 100px;
     @include media-breakpoint-down(lg) {
       margin-bottom: 60px;
@@ -36,13 +36,16 @@
     }
   }
 
-  &__item-price {
+  &__price-table {
     margin-top: 54px;
     font-size: 18px;
     font-weight: 700;
-
-    & > .row {
-      margin-top: 6px;
+    display: table;
+    &.engraving__price-table--price-to-right {
+      width: 100%;
+      .engraving__price-cell:last-child{
+        text-align: right;
+      }
     }
 
     @include media-breakpoint-down(lg) {
@@ -53,29 +56,37 @@
     @include media-breakpoint-down(sm) {
       margin-top: 22px;
     }
-
   }
 
-  &__item-price-item-2 > div {
-    display: inline-block;
-    margin-right: 17px;
+  &__price-row {
+    display: table-row;
   }
 
-  &__item-price-discount {
-    span {
-      background: $red;
-      color: $white;
-      padding: 2px 4px;
-      font-weight: 100;
-      font-size: 16px;
-      border-radius: 5px;
-      @include media-breakpoint-down(lg) {
-        font-size: 12px;
-      }
+  &__price-cell{
+    padding: 3px 0;
+    display: table-cell;
+    &:first-child {
+      min-width: 235px;
+      padding-right: 20px;
+    }
+    & > span {
+      &:not(:first-child) { margin-left: 12px; }
     }
   }
 
-  &__item-link {
+  &__discount {
+    background: $red;
+    color: $white;
+    padding: 2px 4px;
+    font-weight: 100;
+    font-size: 16px;
+    border-radius: 5px;
+    @include media-breakpoint-down(lg) {
+      font-size: 12px;
+    }
+  }
+
+  &__link {
     display: block;
     margin-top: 54px;
     color: $red;
@@ -90,68 +101,68 @@
       margin-top: 12px;
     }
   }
-}
 
-.engraving__item-photo {
-  background-size: contain !important;
-  background-repeat: no-repeat !important;
-  background-position: center !important;
-}
+  &__image {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
 
-#engraving__item-1 .engraving__item-photo {
-  margin-top: 26px;
-  width: 143px;
-  height: 140px;
-  background: url("../assets/images/engraving/engraving-1.png");
-  @include media-breakpoint-down(lg) {
-    width: 123px;
-    height: 120px;
-  }
-  @include media-breakpoint-down(sm) {
-    margin-top: 0px;
-    width: 83px;
-    height: 83px;
-  }
-}
+    &.engraving__image--1 {
+      margin-top: 26px;
+      width: 143px;
+      height: 140px;
+      background-image: url("../assets/images/engraving/engraving-1.png");
+      @include media-breakpoint-down(lg) {
+        width: 123px;
+        height: 120px;
+      }
+      @include media-breakpoint-down(sm) {
+        margin-top: 0px;
+        width: 83px;
+        height: 83px;
+      }
+    }
 
-#engraving__item-2 .engraving__item-photo {
-  width: 249px;
-  height: 153px;
-  background: url("../assets/images/engraving/engraving-2.png");
-  @include media-breakpoint-down(lg) {
-    width: 220px;
-    height: 133px;
-  }
-  @include media-breakpoint-down(sm) {
-    width: 179px;
-    height: 116px;
-  }
-}
+    &.engraving__image--2 {
+      width: 249px;
+      height: 153px;
+      background-image: url("../assets/images/engraving/engraving-2.png");
+      @include media-breakpoint-down(lg) {
+        width: 220px;
+        height: 133px;
+      }
+      @include media-breakpoint-down(sm) {
+        width: 179px;
+        height: 116px;
+      }
+    }
 
-#engraving__item-3 .engraving__item-photo {
-  width: 184px;
-  height: 137px;
-  background: url("../assets/images/engraving/engraving-3.png");
-  @include media-breakpoint-down(lg) {
-    width: 164px;
-    height: 117px;
-  }
-  @include media-breakpoint-down(sm) {
-    width: 107px;
-    height: 80px;
-  }
-}
+    &.engraving__image--3 {
+      width: 184px;
+      height: 137px;
+      background-image: url("../assets/images/engraving/engraving-3.png");
+      @include media-breakpoint-down(lg) {
+        width: 164px;
+        height: 117px;
+      }
+      @include media-breakpoint-down(sm) {
+        width: 107px;
+        height: 80px;
+      }
+    }
 
-#engraving__item-4 .engraving__item-photo {
-  width: 137px;
-  height: 137px;
-  background: url("../assets/images/engraving/engraving-4.png");
-  @include media-breakpoint-down(lg) {
-    width: 117px;
-    height: 117px;
-  }
-  @include media-breakpoint-down(sm) {
-    width: 98px;
-    height: 98px;
+    &.engraving__image--4 {
+      width: 137px;
+      height: 137px;
+      background-image: url("../assets/images/engraving/engraving-4.png");
+      @include media-breakpoint-down(lg) {
+        width: 117px;
+        height: 117px;
+      }
+      @include media-breakpoint-down(sm) {
+        width: 98px;
+        height: 98px;
+      }
+    }
   }
 }

@@ -1,0 +1,36 @@
+<div class="engraving__price-row">
+  <div class="engraving__price-cell">
+    [[+name]]
+  </div>
+  <div class="engraving__price-cell">
+  
+    [[+old_price:isnot=`0`:then=`
+      <span>
+        [[+prefix:isnot=`0`:then=`от `]]
+        <s>
+          [[+old_price]] ₽
+        </s>
+      </span>
+    `]]
+
+    [[+old_price:isnot=`0`:then=`
+      <span class="red">
+        [[+price]] ₽
+      </span>
+    `:else=`
+      <span>
+        [[+prefix:isnot=`0`:then=`от `]][[+price]] ₽
+      </span>
+    `]]
+    
+    [[+old_price:isnot=`0`:then=`
+      <span class="engraving__discount">
+        [[!discountPercent?
+          &price=`[[+price]]`
+          &old_price=`[[+old_price]]`
+        ]]
+      </span>
+    `]]
+
+  </div>
+</div>
