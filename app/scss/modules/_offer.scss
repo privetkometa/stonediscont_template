@@ -1,7 +1,7 @@
 .offer {
   padding-top: 45px;
   padding-bottom: 60px;
-  border-radius: 16px;
+  border-radius: $border-radius-cards;
   box-shadow: 13px 0px 74px rgba(212, 212, 212, 0.25);
   padding-left: 30px;
   padding-right: 30px;
@@ -71,7 +71,6 @@
 
     button {
       width: 100%;
-      min-height: 55px;
     }
   }
 

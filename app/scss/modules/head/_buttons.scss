@@ -46,7 +46,7 @@
       background: #af141b;
     }
   }
-  @include media-breakpoint-down(sm) {
+  @include media-breakpoint-down(lg) {
     font-size: 14px;
     line-height: 19px;
   }

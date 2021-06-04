@@ -1,0 +1,180 @@
+.catalog {
+  &__items {
+    margin-top: 40px;
+    margin-bottom: -30px;
+    @include media-breakpoint-down(md) {
+      margin-left: 0px;
+    }
+  }
+
+  &__items-item {
+    margin-bottom: 30px;
+    @include media-breakpoint-down(md) {
+      padding: 0px;
+      margin-bottom: 0px;
+    }
+  }
+
+  &__items-item-inner {
+    background: $white;
+    border-radius: $border-radius-cards;
+    width: 100%;
+    height: 100%;
+    padding: 30px;
+  }
+
+  &__items-item-inner-desc {
+    min-height: 126px;
+    @include media-breakpoint-down(md) {
+      min-height: auto;
+    }
+  }
+
+  &__items-item-inner-models {
+    margin-top: 130px;
+    @include media-breakpoint-down(md) {
+      margin-top: auto;
+      text-align: right;
+    }
+
+    span {
+      font-weight: 600;
+      color: $red;
+    }
+  }
+
+  &__items-item-inner-price {
+    margin-top: 27px;
+    @include media-breakpoint-down(lg) {
+      margin-top: 17px;
+    }
+
+    span {
+      display: block;
+      font-size: 24px;
+      line-height: 29px;
+      font-weight: 600;
+    }
+  }
+
+  &__items-item-inner-footer {
+    margin-top: 20px;
+  }
+
+  button {
+    padding: 10px 14px;
+    @include media-breakpoint-down(md) {
+      padding: 5px 20px;
+    }
+    @include media-breakpoint-down(xs) {
+      font-size: 12px;
+    }
+  }
+
+  &__items-item-inner-back {
+    position: absolute;
+    bottom: 20px;
+  }
+
+  &__items-item-inner-back-1 {
+    width: 153px;
+    height: 264px;
+    background: url("../assets/images/catalog/catalog-1.png") no-repeat center / contain;
+    right: 20px;
+    @include media-breakpoint-down(lg) {
+      width: 150px;
+      height: 212px;
+      right: 10px;
+    }
+    @include media-breakpoint-down(md) {
+      position: relative;
+      right: auto;
+      left: 0;
+      height: 237px;
+    }
+  }
+
+  &__items-item-inner-back-2 {
+    width: 315px;
+    height: 221px;
+    background: url("../assets/images/catalog/catalog-2.png") no-repeat center / contain;
+    right: 57px;
+    @include media-breakpoint-down(lg) {
+      right: 40px;
+      width: 270px;
+      height: 190px;
+    }
+    @include media-breakpoint-down(md) {
+      position: relative;
+      right: auto;
+      left: 0;
+      height: 237px;
+    }
+  }
+
+  &__items-item-inner-back-3 {
+    width: 170px;
+    height: 266px;
+    background: url("../assets/images/catalog/catalog-3.png") no-repeat center / contain;
+    right: 10px;
+    @include media-breakpoint-down(lg) {
+      width: 150px;
+      height: 212px;
+    }
+    @include media-breakpoint-down(md) {
+      position: relative;
+      right: auto;
+      left: 0;
+      height: 237px;
+    }
+  }
+
+  &__items-item-inner-back-4 {
+    width: 156px;
+    height: 265px;
+    background: url("../assets/images/catalog/catalog-4.png") no-repeat center / contain;
+    right: 12px;
+    @include media-breakpoint-down(lg) {
+      width: 150px;
+      height: 212px;
+      right: 7px;
+    }
+    @include media-breakpoint-down(md) {
+      position: relative;
+      right: auto;
+      left: 0;
+      height: 237px;
+    }
+  }
+
+  &__items-item-inner-back-5 {
+    width: 211px;
+    height: 290px;
+    background: url("../assets/images/catalog/catalog-5.png") no-repeat center / contain;
+    right: 0px;
+    @include media-breakpoint-down(lg) {
+      width: 150px;
+      height: 212px;
+      right: 5px;
+    }
+    @include media-breakpoint-down(md) {
+      position: relative;
+      right: auto;
+      left: 0;
+      height: 237px;
+    }
+  }
+
+  &__items .owl-nav {
+    & > div {
+      &:hover {
+        opacity: 1;
+        background: $white;
+
+        svg {
+          fill: $black;
+        }
+      }
+    }
+  }
+}
