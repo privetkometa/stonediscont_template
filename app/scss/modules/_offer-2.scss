@@ -1,4 +1,11 @@
 .offer-2 {
+  & .row {
+    margin-bottom: -30px;
+    @include media-breakpoint-down(md) {
+      margin-bottom: 0px;
+    }
+  }
+
   &__first {
     padding-right: 25px;
     @include media-breakpoint-down(lg) {

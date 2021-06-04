@@ -1,0 +1,47 @@
+.discounts {
+  &__items {
+    margin-top: 38px;
+    margin-bottom: -20px;
+  }
+
+  &items-item {
+
+  }
+
+  &__items-item-img {
+    width: 93px;
+    height: 93px;
+    background: black;
+    border-radius: 50%;
+    margin: 0 auto 24px;
+    @include media-breakpoint-down(md) {
+      height: 80px;
+      width: 80px;
+    }
+    @include media-breakpoint-down(sm) {
+      height: 70px;
+      width: 70px;
+    }
+  }
+
+  &__items-item-desc {
+    margin-bottom: 20px;
+  }
+
+  .discounts__items > div:nth-child(1) .discounts__items-item-img {
+    background: url("../assets/images/discounts/discounts-1.png") no-repeat center / contain;
+  }
+
+  .discounts__items > div:nth-child(2) .discounts__items-item-img {
+    background: url("../assets/images/discounts/discounts-2.png") no-repeat center / contain;
+  }
+
+  .discounts__items > div:nth-child(3) .discounts__items-item-img {
+    background: url("../assets/images/discounts/discounts-3.png") no-repeat center / contain;
+  }
+
+  .discounts__items > div:nth-child(4) .discounts__items-item-img {
+    background: url("../assets/images/discounts/discounts-4.png") no-repeat center / contain;
+  }
+
+}
