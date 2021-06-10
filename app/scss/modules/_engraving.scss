@@ -35,10 +35,14 @@
     font-size: 18px;
     font-weight: 700;
     display: table;
+    width: 100%;
     &.engraving__price-table--price-to-right {
       width: 100%;
       .engraving__price-cell:last-child{
         text-align: right;
+        @include media-breakpoint-down(md) {
+          text-align: left;
+        }
       }
     }
 
@@ -59,9 +63,21 @@
   &__price-cell{
     padding: 3px 0;
     display: table-cell;
+
+    @include media-breakpoint-down(lg) {
+      vertical-align: middle;
+    }
+    &:last-child {
+      white-space: nowrap;
+    }
+    
     &:first-child {
       min-width: 235px;
       padding-right: 20px;
+      @include media-breakpoint-down(lg) {
+        min-width: auto;
+        width: 50%;
+      }
     }
     & > span {
       &:not(:first-child) { margin-left: 12px; }

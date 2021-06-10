@@ -90,12 +90,12 @@ function svgSprite() {
 	}))
 	.pipe(svgstore({ inlineSvg: true }))
 	.pipe(gulp.dest('public/assets/images/svg'))
-	// .pipe(ftp({
-	// 	host: 'vh166.timeweb.ru',
-	// 	user: 'cu67168_stonede',
-	// 	pass: 'cxtEfVF9',
-	// 	remotePath: '/public_html/assets/templates/frankenstein/public/assets/images/svg'
-	// }))
+	.pipe(ftp({
+		host: 'vh166.timeweb.ru',
+		user: 'cu67168_stonede',
+		pass: 'cxtEfVF9',
+		remotePath: '/public_html/assets/templates/frankenstein/public/assets/images/svg'
+	}))
 	.pipe(gutil.noop());
 }
 
@@ -140,6 +140,7 @@ exports.watch = function() {
 
 exports.css = css
 exports.html = html
+exports.svg = svgSprite
 
 exports.default = gulp.series(
 	html,
