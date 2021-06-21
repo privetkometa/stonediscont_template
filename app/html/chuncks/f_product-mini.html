@@ -4,7 +4,7 @@
   <a href="{$id | url}" class="product-mini">
     <div class="product-mini__img">
       {if $thumb?}
-          <img src="{$thumb}" alt="{$pagetitle}" title="{$pagetitle}"/>
+          <img src="{$thumb}" alt="{$category_name} {$pagetitle}" title="{$category_name} {$pagetitle}"/>
       {else}
           <img src="{'assets_url' | option}components/minishop2/img/web/ms2_small.png"
                srcset="{'assets_url' | option}components/minishop2/img/web/ms2_small@2x.png 2x"

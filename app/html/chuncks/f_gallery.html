@@ -2,6 +2,7 @@
     {if $files?}
 
     <div class="owl-carousel product-gallery-carusel" >
+        {set $count = 1}
         {foreach $files as $file}
             <a
               class="item"
@@ -14,21 +15,24 @@
               <img
                 itemprop="image"
                 src="{$file['product']}"
-                alt="[[*pagetitle]]"
-                title="Памятник [[*pagetitle]] изображение {$file['id']}"
+                alt="Памятник из чёрного гранита [[*pagetitle]] - фото {$count}"
+                title="Памятник из чёрного гранита [[*pagetitle]] - фото {$count}"
               >
             </a>
+          {include ++$count}
         {/foreach}
     </div>
     
     <div class="product-gallery__navigation d-flex justify-content-center">
+      {set $count = 1}
       {foreach $files as $file}
           <a class="d-flex justify-content-center" href="[[~[[*id]]]]#{$file['id']}">
             <img
               src="{$file['gallery']}"
-              alt="[[*pagetitle]] {$file['id']}"
-              title="Памятник [[*pagetitle]] миниатюра {$file['id']}">
+              alt="Памятник из чёрного гранита [[*pagetitle]] - миниатюра {$count}"
+              title="Памятник из чёрного гранита [[*pagetitle]] - миниатюра {$count}">
           </a>
+        {include ++$count}
       {/foreach}
     </div>
     

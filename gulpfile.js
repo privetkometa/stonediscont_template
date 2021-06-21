@@ -1,22 +1,21 @@
 const gulp 					= require('gulp'),
-		gutil 				= require('gulp-util'),
-		sass 				= require('gulp-sass'),
-		sassGlob 			= require('gulp-sass-glob'),
-		concat        		= require('gulp-concat'),
-		uglify        		= require('gulp-uglify-es').default,
-		cleanCSS      		= require('gulp-clean-css'),
-		rename        		= require('gulp-rename'),
-		autoprefixer  		= require('gulp-autoprefixer'),
-		notify        		= require('gulp-notify'),
-		svgstore 			= require('gulp-svgstore'),
-		inject 				= require('gulp-inject'),
-		babel 				= require('gulp-babel'),
-		svgmin 				= require('gulp-svgmin');
-		ftp 				= require('gulp-ftp');
-		changed 			= require('gulp-changed');
-		cssimport			= require('gulp-cssimport');
-
-sass.compiler = require('node-sass');
+			gutil 				= require('gulp-util'),
+			sass 					= require('gulp-sass'),
+			sassGlob 			= require('gulp-sass-glob'),
+			concat        = require('gulp-concat'),
+			uglify       	= require('gulp-uglify-es').default,
+			cleanCSS      = require('gulp-clean-css'),
+			rename        = require('gulp-rename'),
+			autoprefixer  = require('gulp-autoprefixer'),
+			notify        = require('gulp-notify'),
+			svgstore 			= require('gulp-svgstore'),
+			inject 				= require('gulp-inject'),
+			babel 				= require('gulp-babel'),
+			svgmin 				= require('gulp-svgmin');
+			ftp 					= require('gulp-ftp');
+			changed 			= require('gulp-changed');
+			cssimport			= require('gulp-cssimport');
+			sass.compiler = require('node-sass');
 
 function commonJs() {
 	return gulp.src('app/js/*.js')
@@ -116,6 +115,7 @@ function images() {
 	}))
 	.pipe(gutil.noop());
 }
+
 
 function html() {
 	return gulp.src(['app/html/**/*.html'])
