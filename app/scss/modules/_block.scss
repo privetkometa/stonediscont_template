@@ -50,6 +50,13 @@
     }
   }
 
+  &__text-small {
+    font-size: 15px;
+    @include media-breakpoint-down(lg) {
+      font-size: 13px;
+    }
+  }
+
   &__max-400 {
     max-width: 500px;
   }
@@ -68,6 +75,19 @@
 
   &__max-800 {
     max-width: 800px;
+  }
+
+  &__white {
+    padding-top: 45px;
+    padding-bottom: 60px;
+    border-radius: $border-radius-cards;
+    background: white;
+    box-shadow: 13px 0px 74px rgba(212, 212, 212, 0.25);
+
+    @include media-breakpoint-down(sm) {
+      padding-top: 15px;
+      padding-bottom: 30px;
+    }
   }
 
   &__steps {

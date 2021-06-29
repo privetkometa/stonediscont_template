@@ -1,0 +1,46 @@
+.monument-spending {
+  padding-left: 30px;
+  padding-right: 30px;
+
+  &__li {
+    margin-bottom: 38px;
+    @include media-breakpoint-down(lg) {
+      margin-bottom: 30px;
+    }
+
+    span {
+      width: 31px;
+      height: 31px;
+      border-radius: 50%;
+      border: 2px solid;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 600;
+      float: left;
+      clear: both;
+      margin-right: 16px;
+      @include media-breakpoint-down(lg) {
+        margin-right: 11px;
+      }
+    }
+  }
+
+  &__image {
+    width: 100%;
+    height: 443px;
+    background: url("../assets/images/monument-spending.jpg") 100% 100% no-repeat;
+    background-size: cover;
+    background-position: center;
+    @include media-breakpoint-down(lg) {
+      height: 377px;
+    }
+
+    & + .row {
+      margin-top: 30px;
+      @include media-breakpoint-down(md) {
+        margin-top: 43px;
+      }
+    }
+  }
+}
