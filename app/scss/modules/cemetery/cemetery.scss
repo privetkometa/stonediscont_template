@@ -1,0 +1,62 @@
+.cemetery {
+
+  &__first {
+    padding-right: 80px;
+  }
+
+  &__list {
+    a {
+      display: block;
+      text-decoration: none;
+      border-left: 6px solid transparent;
+      margin-bottom: 30px;
+      padding-left: 12px;
+      transition: 0.5s border ease-out;
+
+      &.active {
+        border-left: 6px solid $red;
+        font-weight: 900;
+      }
+
+      &:hover {
+        border-left: 6px solid $red;
+      }
+    }
+  }
+
+  &__steps {
+    & .row {
+      margin-top: 60px;
+      margin-bottom: 60px;
+    }
+  }
+
+  &__steps-svg-big {
+    width: 87px;
+    height: 87px;
+    background: $gray-300;
+    border-radius: 50%;
+    position: relative;
+
+    svg {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      fill: $darkblue;
+    }
+  }
+
+  &__steps-item-desc {
+    font-size: 15px;
+    margin-top: 16px;
+    @include media-breakpoint-down(lg) {
+      font-size: 13px;
+    }
+  }
+
+  &__title-big {
+    font-family: 'Source Serif Pro';
+    font-size: 37px;
+  }
+}

@@ -278,4 +278,13 @@ $(function () {
         console.log(textLength)
     })
 
+
+    $('.cemetery__list a[href^="#"]').click(function (e) {
+        e.preventDefault();
+        $(this).parents('.cemetery__list').find('.active').removeClass('active');
+        $(this).addClass('active');
+        elementID = $(this).attr("href");
+        position = $(elementID).offset().top;
+        $('html, body').animate({scrollTop: position}, 500);
+    });
 });
