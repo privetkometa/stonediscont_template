@@ -5,6 +5,10 @@
   }
 
   &__list {
+    position: sticky;
+    top: 40px;
+    bottom: 0;
+
     a {
       display: block;
       text-decoration: none;
@@ -58,5 +62,47 @@
   &__title-big {
     font-family: 'Source Serif Pro';
     font-size: 37px;
+    margin-bottom: 40px;
   }
+
+  &__second {
+    ul {
+      list-style: inherit;
+      padding-left: 30px;
+    }
+
+    & section {
+      margin-bottom: 80px;
+    }
+  }
+
+  &__item-title {
+    font-size: 18px;
+    font-weight: 700;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  &__worktime {
+    & .row {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__worktime-icon {
+    width: 59px;
+    height: 59px;
+  }
+
+  &__map {
+    margin-top: 40px;
+  }
+}
+
+#cemetery-phone {
+  background: url("../assets/images/cemetery/phone.png") center / contain no-repeat;
+}
+
+#cemetery-calendar {
+  background: url("../assets/images/cemetery/calendar.png") center / contain no-repeat;
 }

@@ -130,6 +130,29 @@ $(function () {
         }
     });
 
+    $('.cemetery__gallery').owlCarousel({
+
+        margin: 10,
+        nav: true,
+        dots: false,
+        navText: ['<svg viewBox="0 0 12 22" xmlns="http://www.w3.org/2000/svg"><path d="M10.2774 0.308777C10.6591 -0.0903267 11.2921 -0.104394 11.6912 0.277358C12.0903 0.65911 12.1044 1.29212 11.7226 1.69122L10.2774 0.308777ZM1.43478 11L0.712141 11.6912L0.050971 11L0.712141 10.3088L1.43478 11ZM11.7226 20.3088C12.1044 20.7079 12.0903 21.3409 11.6912 21.7226C11.2921 22.1044 10.6591 22.0903 10.2774 21.6912L11.7226 20.3088ZM11.7226 1.69122L2.15742 11.6912L0.712141 10.3088L10.2774 0.308777L11.7226 1.69122ZM2.15742 10.3088L11.7226 20.3088L10.2774 21.6912L0.712141 11.6912L2.15742 10.3088Z"/> </svg>',
+            '<svg viewBox="0 0 12 22" xmlns="http://www.w3.org/2000/svg"> <path d="M1.72264 0.308777C1.34089 -0.0903267 0.707881 -0.104394 0.308777 0.277358C-0.0903267 0.65911 -0.104394 1.29212 0.277358 1.69122L1.72264 0.308777ZM10.5652 11L11.2879 11.6912L11.949 11L11.2879 10.3088L10.5652 11ZM0.277358 20.3088C-0.104394 20.7079 -0.0903267 21.3409 0.308777 21.7226C0.707881 22.1044 1.34089 22.0903 1.72264 21.6912L0.277358 20.3088ZM0.277358 1.69122L9.84258 11.6912L11.2879 10.3088L1.72264 0.308777L0.277358 1.69122ZM9.84258 10.3088L0.277358 20.3088L1.72264 21.6912L11.2879 11.6912L9.84258 10.3088Z"/> </svg>'],
+        responsive: {
+            0: {
+                items: 1,
+            },
+            576: {
+                items: 3,
+            },
+            768: {
+                items: 2
+            },
+            1200: {
+                items: 2
+            }
+        }
+    });
+
     $('.main-carousel').owlCarousel({
         loop: true,
         margin: 10,
@@ -276,15 +299,33 @@ $(function () {
         $(`#price-table_${epitaphId} .epitaph__price--gold`).text(`${textLength * 65} ₽`)
         $(`#price-table_${epitaphId} .epitaph__price--white`).text(`${textLength * 90} ₽`)
         console.log(textLength)
-    })
-
-
-    $('.cemetery__list a[href^="#"]').click(function (e) {
-        e.preventDefault();
-        $(this).parents('.cemetery__list').find('.active').removeClass('active');
-        $(this).addClass('active');
-        elementID = $(this).attr("href");
-        position = $(elementID).offset().top;
-        $('html, body').animate({scrollTop: position}, 500);
     });
+
+
+    $(document).ready(function () {
+        $('.cemetery__list a[href^="#"]').bind('click', function (e) {
+            e.preventDefault(); // prevent hard jump, the default behavior
+
+            var target = $(this).attr("href"); // Set the target as variable
+
+            // perform animated scrolling by getting top-position of target-element and set it as scroll target
+            $('html, body').stop().animate({
+                scrollTop: $(target).offset().top
+            }, 600, function () {
+                location.hash = target; //attach the hash (#jumptarget) to the pageurl
+            });
+
+            return false;
+        });
+    });
+
+    $(window).scroll(function () {
+        var scrollDistance = $(window).scrollTop();
+        $('.cemetery section').each(function (i) {
+            if ($(this).position().top <= scrollDistance) {
+                $('.cemetery__list a.active').removeClass('active');
+                $('.cemetery__list a').eq(i).addClass('active');
+            }
+        });
+    }).scroll();
 });

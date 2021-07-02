@@ -15,7 +15,7 @@
             <div class="row">
                 <div class="col-4 cemetery__first">
                     <ul class="cemetery__list">
-                        <a href="#desc">
+                        <a href="#desc" class="active">
                             <li>Описание Южного кладбища</li>
                         </a>
                         <a href="#worktime">
@@ -38,7 +38,7 @@
                         </a>
                     </ul>
                 </div>
-                <div class="col">
+                <div class="col cemetery__second">
                     <section id="desc">
                         <div class="container cemetery__steps">
                             <h2 class="cemetery__title-big">Описание Южного кладбища</h2>
@@ -52,7 +52,7 @@
                                         </svg>
 
                                     </div>
-                                    <div class="cemetery__steps-item-desc">Волхонское шоссе, 1Б</div>
+                                    <div class="cemetery__steps-item-desc">[[*cemetery_address]]</div>
                                 </div>
                                 <div class="col-sm-3">
                                     <div class="cemetery__steps-svg-big">
@@ -63,7 +63,7 @@
                                         </svg>
 
                                     </div>
-                                    <div class="cemetery__steps-item-desc">Есть часовня с литургией</div>
+                                    <div class="cemetery__steps-item-desc">[[*cemetery_services-orthodox]]</div>
                                 </div>
                                 <div class="col-sm-3">
                                     <div class="cemetery__steps-svg-big">
@@ -74,7 +74,9 @@
                                         </svg>
 
                                     </div>
-                                    <div class="cemetery__steps-item-desc">Открыто для захоронения</div>
+                                    <div class="cemetery__steps-item-desc">[[*cemetery_status:is=`1`:then=`Открыто для
+                                        захоронения`:else=`Закрыто для захоронения`]]
+                                    </div>
                                 </div>
                                 <div class="col-sm-3">
                                     <div class="cemetery__steps-svg-big">
@@ -86,23 +88,78 @@
                                         </svg>
 
                                     </div>
-                                    <div class="cemetery__steps-item-desc">Сезон установок до 15 октября</div>
+                                    <div class="cemetery__steps-item-desc">Сезон установок до
+                                        [[*cemetery_installation:dateRU]]
+                                    </div>
                                 </div>
                             </div>
-                            <p>Южное кладбище является самым крупным в Ленинградской области. Площадь составляет 400
-                                гектар. На территории есть часовня.
-                                <br><br>
-                                Кладбище постоянно благоустраивается. Разрабатываются новые участки для погребения,
-                                ведется строительство колумбарных стен. Каждый посетитель может арендовать инвентарь для
-                                ухода за могилой.</p>
+                            <p>[[*cemetery_desc]]</p>
                         </div>
                     </section>
-                    <section id="worktime"></section>
-                    <section id="howtoget"></section>
-                    <section id="schema"></section>
-                    <section id="gallery"></section>
-                    <section id="services"></section>
-                    <section id="examples"></section>
+                    <section id="worktime">
+                        <div class="container cemetery__worktime">
+                            <h2 class="cemetery__title-big">Телефоны, часы работы и расписание посещений</h2>
+                            <div class="row">
+                                <div class="col">
+                                    <div class="cemetery__worktime-icon" id="cemetery-phone"></div>
+                                    <div class="cemetery__item-title">Телефоны администрации кладбища</div>
+                                    <div class="cemetery__item-desc">
+                                        [[*cemetery_phones]]
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="cemetery__worktime-icon" id="cemetery-calendar"></div>
+                                    <div class="cemetery__item-title">Часы работы и расписание посещений</div>
+                                    <div class="cemetery__item-desc">
+                                        [[*cemetery_worktime]]
+                                    </div>
+                                </div>
+                            </div>
+                            <p>
+                                [[*cemetery_details]]
+                            </p>
+                        </div>
+                    </section>
+                    <section id="howtoget">
+                        <div class="container">
+                            <h2 class="cemetery__title-big">Как добраться до Южного кладбища</h2>
+                            <p>[[*cemetery_howtoget]]</p>
+                            <div class="cemetery__map">[[*cemetery_map]]</div>
+                        </div>
+                    </section>
+                    <section id="schema">
+                        <div class="container">
+                            <h2 class="cemetery__title-big">План и схемы кварталов и участков захоронений</h2>
+                            <p>[[*cemetery_plan]]</p>
+                        </div>
+                    </section>
+                    <section id="gallery">
+                        <div class="container">
+                            <h2 class="cemetery__title-big">Фото наших работ на Южном кладбище</h2>
+                            [[getImageList?
+                            &tvname=`gallery`
+                            &docid=`[[*id]]`
+                            &tpl=`f_work-main`
+                            &limit=`5`
+                            &toPlaceholder=`cemeteryGallery`
+                            ]]
+
+                            <div class="cemetery__gallery owl-carousel owl-theme">
+                                [[+cemeteryGallery]]
+                            </div>
+                        </div>
+                    </section>
+                    <section id="services">
+                        <div class="container">
+                            <h2 class="cemetery__title-big">Услуги по установке на Южном кладбище в СПБ</h2>
+                            <p>[[*cemetery_services-installation]]</p>
+                        </div>
+                    </section>
+                    <section id="examples">
+                        <div class="container">
+                            <h2 class="cemetery__title-big">Примеры памятников для установки на Южном кладбище</h2>
+                        </div>
+                    </section>
                 </div>
             </div>
         </div>
