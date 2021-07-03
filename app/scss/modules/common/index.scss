@@ -46,6 +46,11 @@ main {
   line-height: 52px;
   margin-bottom: 60px;
   margin-top: 80px;
+  @include media-breakpoint-down(lg) {
+    font-size: 40px;
+    margin-bottom: 40px;
+    margin-top: 40px;
+  }
 }
 
 .coin-icon {

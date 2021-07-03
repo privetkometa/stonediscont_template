@@ -32,6 +32,10 @@
     & .row {
       margin-top: 60px;
       margin-bottom: 60px;
+      @include media-breakpoint-down(lg) {
+        margin-top: 40px;
+        margin-bottom: 40px;
+      }
     }
   }
 
@@ -41,6 +45,10 @@
     background: $gray-300;
     border-radius: 50%;
     position: relative;
+    @include media-breakpoint-down(lg) {
+      width: 80px;
+      height: 80px;
+    }
 
     svg {
       position: absolute;
@@ -63,6 +71,9 @@
     font-family: 'Source Serif Pro';
     font-size: 37px;
     margin-bottom: 40px;
+    @include media-breakpoint-down(lg) {
+      font-size: 30px;
+    }
   }
 
   &__second {
@@ -73,6 +84,9 @@
 
     & section {
       margin-bottom: 80px;
+      @include media-breakpoint-down(lg) {
+        margin-bottom: 60px;
+      }
     }
   }
 
@@ -96,6 +110,14 @@
 
   &__map {
     margin-top: 40px;
+  }
+
+  .owl-nav > .owl-next {
+    right: 0;
+  }
+
+  .owl-nav > .owl-prev {
+    left: 0;
   }
 }
 

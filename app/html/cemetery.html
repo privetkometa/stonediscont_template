@@ -7,41 +7,47 @@
 [[$f_header]]
 [[$f_menu]]
 <main>
+    [[!cemetery_words]]
+
     [[!msMiniCart? &tpl=`f_mini-cart`]]
     [[$f_advert]]
     <div class="container">
         <h1 class="pagetitle-big">[[*pagetitle]]<br>в Санкт-Петербурге </h1>
         <div class="container cemetery">
             <div class="row">
-                <div class="col-4 cemetery__first">
+                <div class="col cemetery__first">
                     <ul class="cemetery__list">
                         <a href="#desc" class="active">
-                            <li>Описание Южного кладбища</li>
+                            <li>Описание [[+cemetery.word_1]]</li>
                         </a>
                         <a href="#worktime">
                             <li>Часы работы и расписание посещений</li>
                         </a>
                         <a href="#howtoget">
-                            <li>Как добраться до Южного кладбища</li>
+                            <li>Как добраться до [[+cemetery.word_1]]</li>
                         </a>
+                        [[*cemetery_plan:isnotempty=`
                         <a href="#schema">
                             <li>Схемы кварталов и участков захоронений</li>
                         </a>
+                        `]]
                         <a href="#gallery">
-                            <li>Фото наших работ на Южном кладбище</li>
+                            <li>Фото наших работ на [[+cemetery.word_2]]</li>
                         </a>
+                        [[*cemetery_services-installation:isnotempty=`
                         <a href="#services">
                             <li>Услуги по установке и благоустройству</li>
                         </a>
+                        `]]
                         <a href="#examples">
                             <li>Примеры памятников для установки</li>
                         </a>
                     </ul>
                 </div>
-                <div class="col cemetery__second">
+                <div class="col-8 cemetery__second">
                     <section id="desc">
                         <div class="container cemetery__steps">
-                            <h2 class="cemetery__title-big">Описание Южного кладбища</h2>
+                            <h2 class="cemetery__title-big">Описание [[+cemetery.word_1]]</h2>
                             <div class="row">
                                 <div class="col-sm-3">
                                     <div class="cemetery__steps-svg-big">
@@ -122,24 +128,28 @@
                     </section>
                     <section id="howtoget">
                         <div class="container">
-                            <h2 class="cemetery__title-big">Как добраться до Южного кладбища</h2>
+                            <h2 class="cemetery__title-big">Как добраться до [[+cemetery.word_1]]</h2>
                             <p>[[*cemetery_howtoget]]</p>
                             <div class="cemetery__map">[[*cemetery_map]]</div>
                         </div>
                     </section>
+
+                    [[*cemetery_plan:isnotempty=`
                     <section id="schema">
                         <div class="container">
                             <h2 class="cemetery__title-big">План и схемы кварталов и участков захоронений</h2>
                             <p>[[*cemetery_plan]]</p>
                         </div>
                     </section>
+                    `]]
+
                     <section id="gallery">
                         <div class="container">
-                            <h2 class="cemetery__title-big">Фото наших работ на Южном кладбище</h2>
+                            <h2 class="cemetery__title-big">Фото наших работ на [[+cemetery.word_2]]</h2>
                             [[getImageList?
                             &tvname=`gallery`
                             &docid=`[[*id]]`
-                            &tpl=`f_work-main`
+                            &tpl=`f_work-cemetery`
                             &limit=`5`
                             &toPlaceholder=`cemeteryGallery`
                             ]]
@@ -149,15 +159,28 @@
                             </div>
                         </div>
                     </section>
+
+                    [[*cemetery_services-installation:isnotempty=`
                     <section id="services">
                         <div class="container">
-                            <h2 class="cemetery__title-big">Услуги по установке на Южном кладбище в СПБ</h2>
+                            <h2 class="cemetery__title-big">Услуги по установке на [[+cemetery.word_2]] в СПБ</h2>
                             <p>[[*cemetery_services-installation]]</p>
                         </div>
                     </section>
+                    `]]
+
                     <section id="examples">
                         <div class="container">
                             <h2 class="cemetery__title-big">Примеры памятников для установки на Южном кладбище</h2>
+                            <div class="cemetery__examples owl-carousel owl-theme">
+                                [[!pdoPage?
+                                &parents=`37`
+                                &element=`msProducts`
+                                &tpl=`f_product-similar`
+                                &limit=`10`
+                                &sortby=`RAND()`
+                                ]]
+                            </div>
                         </div>
                     </section>
                 </div>
