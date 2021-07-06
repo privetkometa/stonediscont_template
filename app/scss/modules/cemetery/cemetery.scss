@@ -2,6 +2,9 @@
 
   &__first {
     padding-right: 80px;
+    @include media-breakpoint-down(md) {
+      display: none;
+    }
   }
 
   &__list {
@@ -31,11 +34,13 @@
   &__steps {
     & .row {
       margin-top: 60px;
-      margin-bottom: 60px;
       @include media-breakpoint-down(lg) {
         margin-top: 40px;
-        margin-bottom: 40px;
       }
+      @include media-breakpoint-down(sm) {
+        margin-top: 30px;
+      }
+
     }
   }
 
@@ -49,6 +54,12 @@
       width: 80px;
       height: 80px;
     }
+    @include media-breakpoint-down(sm) {
+      width: 70px;
+      height: 70px;
+      margin-left: auto;
+      margin-right: auto;
+    }
 
     svg {
       position: absolute;
@@ -59,11 +70,25 @@
     }
   }
 
+  &__steps-item {
+    margin-bottom: 60px;
+    @include media-breakpoint-down(lg) {
+      margin-bottom: 40px;
+    }
+    @include media-breakpoint-down(sm) {
+      margin-bottom: 30px;
+      text-align: center;
+    }
+  }
+
   &__steps-item-desc {
     font-size: 15px;
     margin-top: 16px;
     @include media-breakpoint-down(lg) {
       font-size: 13px;
+    }
+    @include media-breakpoint-down(sm) {
+      margin-top: 10px;
     }
   }
 
@@ -73,6 +98,10 @@
     margin-bottom: 40px;
     @include media-breakpoint-down(lg) {
       font-size: 30px;
+    }
+    @include media-breakpoint-down(sm) {
+      margin-bottom: 30px;
+      font-size: 24px;
     }
   }
 
@@ -87,6 +116,9 @@
       @include media-breakpoint-down(lg) {
         margin-bottom: 60px;
       }
+      @include media-breakpoint-down(sm) {
+        margin-bottom: 35px;
+      }
     }
   }
 
@@ -100,6 +132,15 @@
   &__worktime {
     & .row {
       margin-bottom: 40px;
+      @include media-breakpoint-down(sm) {
+        margin-bottom: 20px;
+      }
+
+      & .col-sm:first-child {
+        @include media-breakpoint-down(sm) {
+          margin-bottom: 34px;
+        }
+      }
     }
   }
 
