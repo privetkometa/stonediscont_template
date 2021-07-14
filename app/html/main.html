@@ -11,6 +11,16 @@
     [[$f_advert]]
     [[$f_banner]]
 
+    [[!msGetProductsMinMaxPrice?
+    &parents=`10,11,14,15,16`
+    &addIds=`1`
+    ]]
+
+    [[!msGetProductsCount?
+    &parents=`10,11,14,15,16`
+    &addIds=`1`
+    ]]
+
     <section class="block">
         <div class="container offer-3">
             <div class="row">
@@ -220,7 +230,8 @@
                     </div>
                 </div>
                 <div class="col-md">
-                    <img src="/assets/templates/frankenstein/public/assets/images/monument-spending.jpg" class="monument-spending__image">
+                    <img src="/assets/templates/frankenstein/public/assets/images/monument-spending.jpg"
+                         class="monument-spending__image">
                     <div class="row">
                         <div class="block__text-small col d-none d-md-block">
                             *на нашем сайте за подставку и цветник доплачивать не нужно
@@ -621,7 +632,7 @@
                         </div>
 
                         <div class="catalog__items-item-inner-price block__steps-item-desc row">
-                            <div class="col">Цена от <span>[[!getProductMinPrice? &parent=`10`]] ₽</span>
+                            <div class="col">Цена от <span>[[+min_price_10]] ₽</span>
                             </div>
                         </div>
                         <div class="catalog__items-item-inner-footer row d-lg-block d-flex">
@@ -629,9 +640,7 @@
                                 <a href="[[~10]]" class="button button--red">Посмотреть</a>
                             </div>
                             <div class="catalog__items-item-inner-models block__steps-item-desc col">
-                                <span>[[!getProductAmount?
-                                       &parent=`10`
-                                       ]]</span> моделей
+                                <span>[[+total_count_10]]</span> моделей
                             </div>
                         </div>
 
@@ -650,7 +659,7 @@
                         </div>
 
                         <div class="catalog__items-item-inner-price block__steps-item-desc row">
-                            <div class="col">Цена от <span>[[!getProductMinPrice? &parent=`11`]] ₽</span>
+                            <div class="col">Цена от <span>[[+min_price_11]] ₽</span>
                             </div>
                         </div>
 
@@ -659,9 +668,7 @@
                                 <a href="[[~11]]" class="button button--red">Посмотреть</a>
                             </div>
                             <div class="catalog__items-item-inner-models block__steps-item-desc col">
-                                <span>[[!getProductAmount?
-                                       &parent=`11`
-                                       ]]</span> моделей
+                                <span>[[+total_count_11]]</span> моделей
                             </div>
                         </div>
 
@@ -678,7 +685,7 @@
                         </div>
 
                         <div class="catalog__items-item-inner-price block__steps-item-desc row">
-                            <div class="col">Цена от <span>[[!getProductMinPrice? &parent=`15`]] ₽</span>
+                            <div class="col">Цена от <span>[[+min_price_15]] ₽</span>
                             </div>
                         </div>
 
@@ -687,9 +694,7 @@
                                 <a href="[[~15]]" class="button button--red">Посмотреть</a>
                             </div>
                             <div class="catalog__items-item-inner-models block__steps-item-desc col">
-                                <span>[[!getProductAmount?
-                                       &parent=`15`
-                                       ]]</span> моделей
+                                <span>[[+total_count_15]]</span> моделей
                             </div>
                         </div>
 
@@ -706,7 +711,7 @@
                         </div>
 
                         <div class="catalog__items-item-inner-price block__steps-item-desc row">
-                            <div class="col">Цена от <span>[[!getProductMinPrice? &parent=`14`]] ₽</span>
+                            <div class="col">Цена от <span>[[+min_price_14]] ₽</span>
                             </div>
                         </div>
 
@@ -715,9 +720,7 @@
                                 <a href="[[~14]]" class="button button--red">Посмотреть</a>
                             </div>
                             <div class="catalog__items-item-inner-models block__steps-item-desc col">
-                                <span>[[!getProductAmount?
-                                       &parent=`14`
-                                       ]]</span> моделей
+                                <span>[[+total_count_14]]</span> моделей
                             </div>
                         </div>
 
@@ -734,7 +737,7 @@
                             сердца и др.
                         </div>
                         <div class="catalog__items-item-inner-price block__steps-item-desc row">
-                            <div class="col">Цена от <span>[[!getProductMinPrice? &parent=`16`]] ₽</span>
+                            <div class="col">Цена от <span>[[+min_price_16]] ₽</span>
                             </div>
                         </div>
 
@@ -743,9 +746,7 @@
                                 <a href="[[~16]]" class="button button--red">Посмотреть</a>
                             </div>
                             <div class="catalog__items-item-inner-models block__steps-item-desc col">
-                                <span>[[!getProductAmount?
-                                       &parent=`16`
-                                       ]]</span> моделей
+                                <span>[[+total_count_16]]</span> моделей
                             </div>
                         </div>
 
