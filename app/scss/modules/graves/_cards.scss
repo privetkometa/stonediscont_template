@@ -1,4 +1,6 @@
-.graves {
+.graves-cards {
+  margin-bottom: 85px;
+
   &__items-item-inner-back-1 {
     width: 167px;
     height: 186px;
@@ -25,6 +27,7 @@
     height: 181px;
     background: url(../assets/images/graves/table.jpg) no-repeat center/contain;
     right: 0px;
+    bottom: 30px;
   }
 
   &__items-item-inner-back-5 {
@@ -40,10 +43,12 @@
     background: url(../assets/images/graves/ograda.jpg) no-repeat center/contain;
     right: 6px;
   }
+
   &__items-item-inner-back-7 {
     width: 180px;
     height: 162px;
     background: url(../assets/images/graves/dop.jpg) no-repeat center/contain;
     right: 6px;
+    bottom: 50px !important;
   }
 }

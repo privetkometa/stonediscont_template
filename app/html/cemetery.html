@@ -48,7 +48,7 @@
             </div>
             <div class="col-lg-8 cemetery__second">
                 <section id="desc" class="cemetery__steps">
-                    <h2 class="cemetery__title-big">Описание [[+cemetery.word_1]]</h2>
+                    <h2 class="h2__title-big">Описание [[+cemetery.word_1]]</h2>
                     <div class="row cemetery__steps-items">
                         <div class="col-6 col-sm-3 cemetery__steps-item">
                             <div class="cemetery__steps-svg-big">
@@ -82,7 +82,7 @@
                     <p>[[*cemetery_desc]]</p>
                 </section>
                 <section id="worktime" class="cemetery__worktime">
-                    <h2 class="cemetery__title-big">Телефоны, часы работы и расписание посещений</h2>
+                    <h2 class="h2__title-big">Телефоны, часы работы и расписание посещений</h2>
                     <div class="row">
                         <div class="col-sm">
                             <div class="cemetery__worktime-icon" id="cemetery-phone"></div>
@@ -104,20 +104,20 @@
                     </p>
                 </section>
                 <section id="howtoget">
-                    <h2 class="cemetery__title-big">Как добраться до [[+cemetery.word_1]]</h2>
+                    <h2 class="h2__title-big">Как добраться до [[+cemetery.word_1]]</h2>
                     <p>[[*cemetery_howtoget]]</p>
                     <div class="cemetery__map">[[*cemetery_map]]</div>
                 </section>
 
                 [[*cemetery_plan:isnotempty=`
                 <section id="schema">
-                    <h2 class="cemetery__title-big">План и схемы кварталов и участков захоронений</h2>
+                    <h2 class="h2__title-big">План и схемы кварталов и участков захоронений</h2>
                     <p>[[*cemetery_plan]]</p>
                 </section>
                 `]]
 
                 <section id="gallery">
-                    <h2 class="cemetery__title-big">Фото наших работ на [[+cemetery.word_2]]</h2>
+                    <h2 class="h2__title-big">Фото наших работ на [[+cemetery.word_2]]</h2>
                     [[getImageList?
                     &tvname=`gallery`
                     &docid=`[[*id]]`
@@ -133,13 +133,13 @@
 
                 [[*cemetery_services-installation:isnotempty=`
                 <section id="services">
-                    <h2 class="cemetery__title-big">Услуги по установке на [[+cemetery.word_2]] в СПБ</h2>
+                    <h2 class="h2__title-big">Услуги по установке на [[+cemetery.word_2]] в СПБ</h2>
                     <p>[[*cemetery_services-installation]]</p>
                 </section>
                 `]]
 
                 <section id="examples">
-                    <h2 class="cemetery__title-big">Примеры памятников для установки на Южном кладбище</h2>
+                    <h2 class="h2__title-big">Примеры памятников для установки на Южном кладбище</h2>
                     <div class="cemetery__examples owl-carousel owl-theme">
                         [[!pdoPage?
                         &parents=`37`

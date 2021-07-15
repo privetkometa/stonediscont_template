@@ -1,213 +1,237 @@
 <!DOCTYPE html>
 <html>
-  <head>
+<head>
     [[$f_head? &mobile=`1`]]
-  </head>
-  <body class="bg-gray">
-    [[$f_header]]
-    [[$f_menu]]
-    <main>
-      [[!msMiniCart? &tpl=`f_mini-cart`]]
-      [[$f_advert]]
-      <div class="container">
+</head>
+<body class="bg-gray">
+[[$f_header]]
+[[$f_menu]]
+<main>
+    [[!msMiniCart? &tpl=`f_mini-cart`]]
+    [[$f_advert]]
+    <div class="container">
         <h1 class="pagetitle-big">[[*pagetitle]]</h1>
-        <div class="catalog__items owl-carousel owl-theme d-md-flex row">
-                <div class="catalog__items-item col-lg-4">
-                    <div class="catalog__items-item-inner">
-                        <div class="catalog__items-item-inner-back graves__items-item-inner-back-1"></div>
-                        <div class="catalog__items-item-inner-title block__title-3">
-                            Вазы<br>из гранита
-                        </div>
-                        <div class="catalog__items-item-inner-desc block__steps-item-desc">Представляют собой узкие стелы, предназначенные для установки на месте захоронения одного человека.
-                          Данная категория пользуется самым большим спросом
-                        </div>
+    </div>
 
-                        <div class="catalog__items-item-inner-price block__steps-item-desc row">
-                            <div class="col">Цена от <span>10 375 ₽</span>
-                            </div>
+    <div class="container graves-cards">
+        <div class="catalog__items owl-carousel owl-theme d-md-flex row">
+            <div class="catalog__items-item col-lg-4">
+                <div class="catalog__items-item-inner">
+                    <div class="catalog__items-item-inner-back graves-cards__items-item-inner-back-1"></div>
+                    <div class="catalog__items-item-inner-title block__title-3">
+                        Вазы<br>из гранита
+                    </div>
+                    <div class="catalog__items-item-inner-desc block__steps-item-desc">Представляют собой узкие стелы,
+                        предназначенные для установки на месте захоронения одного человека.
+                        Данная категория пользуется самым большим спросом
+                    </div>
+
+                    <div class="catalog__items-item-inner-price block__steps-item-desc row">
+                        <div class="col">Цена от <span>10 375 ₽</span>
                         </div>
-                        <div class="catalog__items-item-inner-footer row d-lg-block d-flex">
-                            <div class="col">
-                                <a href="[[~10]]" class="btn btn-outline-danger">Посмотреть</a>
-                            </div>
-                            <div class="catalog__items-item-inner-models block__steps-item-desc col">
+                    </div>
+                    <div class="catalog__items-item-inner-footer row d-lg-block d-flex">
+                        <div class="col">
+                            <a href="[[~10]]" class="btn btn-outline-danger">Посмотреть</a>
+                        </div>
+                        <div class="catalog__items-item-inner-models block__steps-item-desc col">
                                 <span>[[!getProductAmount?
                                        &parent=`10`
                                        ]]</span> моделей
-                            </div>
                         </div>
-
                     </div>
+
                 </div>
-                <div class="catalog__items-item col-lg-8">
-                    <div class="catalog__items-item-inner">
-                        <div class="catalog__items-item-inner-back graves__items-item-inner-back-2"></div>
-                        <div class="catalog__items-item-inner-title block__title-3">
-                            Гранитный цоколь<br>на могилу
-                        </div>
-                        <div class="catalog__items-item-inner-desc block__steps-item-desc">Горизонтальные стелы служат
-                            символом единения. Их устанавливают на могилы усопших, которые были близки при жизни. Общие
-                            памятники для двоих и более людей целесообразно покупать для супружеских пар и кровных
-                            родственников.
-                        </div>
+            </div>
+            <div class="catalog__items-item col-lg-8">
+                <div class="catalog__items-item-inner">
+                    <div class="catalog__items-item-inner-back graves-cards__items-item-inner-back-2"></div>
+                    <div class="catalog__items-item-inner-title block__title-3">
+                        Гранитный цоколь<br>на могилу
+                    </div>
+                    <div class="catalog__items-item-inner-desc block__steps-item-desc">Горизонтальные стелы служат
+                        символом единения. Их устанавливают на могилы усопших, которые были близки при жизни. Общие
+                        памятники для двоих и более людей целесообразно покупать для супружеских пар и кровных
+                        родственников.
+                    </div>
 
-                        <div class="catalog__items-item-inner-price block__steps-item-desc row">
-                            <div class="col">Цена от <span>10 375 ₽</span>
-                            </div>
+                    <div class="catalog__items-item-inner-price block__steps-item-desc row">
+                        <div class="col">Цена от <span>10 375 ₽</span>
                         </div>
+                    </div>
 
-                        <div class="catalog__items-item-inner-footer row d-lg-block d-flex">
-                            <div class="col">
-                                <a href="[[~11]]" class="btn btn-outline-danger">Посмотреть</a>
-                            </div>
-                            <div class="catalog__items-item-inner-models block__steps-item-desc col">
+                    <div class="catalog__items-item-inner-footer row d-lg-block d-flex">
+                        <div class="col">
+                            <a href="[[~11]]" class="btn btn-outline-danger">Посмотреть</a>
+                        </div>
+                        <div class="catalog__items-item-inner-models block__steps-item-desc col">
                                 <span>[[!getProductAmount?
                                        &parent=`11`
                                        ]]</span> моделей
-                            </div>
                         </div>
-
                     </div>
+
                 </div>
-                <div class="catalog__items-item col-lg-4">
-                    <div class="catalog__items-item-inner">
-                        <div class="catalog__items-item-inner-back graves__items-item-inner-back-3"></div>
-                        <div class="catalog__items-item-inner-title block__title-3">
-                            Лампадки<br>из гранита
-                        </div>
-                        <div class="catalog__items-item-inner-desc block__steps-item-desc">Стелы отличаются классической
-                            прямоугольной формой. Подойдет, если предпочитаете простой дизайн
-                        </div>
+            </div>
+            <div class="catalog__items-item col-lg-4">
+                <div class="catalog__items-item-inner">
+                    <div class="catalog__items-item-inner-back graves-cards__items-item-inner-back-3"></div>
+                    <div class="catalog__items-item-inner-title block__title-3">
+                        Лампадки<br>из гранита
+                    </div>
+                    <div class="catalog__items-item-inner-desc block__steps-item-desc">Стелы отличаются классической
+                        прямоугольной формой. Подойдет, если предпочитаете простой дизайн
+                    </div>
 
-                        <div class="catalog__items-item-inner-price block__steps-item-desc row">
-                            <div class="col">Цена от <span>10 375 ₽</span>
-                            </div>
+                    <div class="catalog__items-item-inner-price block__steps-item-desc row">
+                        <div class="col">Цена от <span>10 375 ₽</span>
                         </div>
+                    </div>
 
-                        <div class="catalog__items-item-inner-footer row d-lg-block d-flex">
-                            <div class="col">
-                                <a href="[[~15]]" class="btn btn-outline-danger">Посмотреть</a>
-                            </div>
-                            <div class="catalog__items-item-inner-models block__steps-item-desc col">
+                    <div class="catalog__items-item-inner-footer row d-lg-block d-flex">
+                        <div class="col">
+                            <a href="[[~15]]" class="btn btn-outline-danger">Посмотреть</a>
+                        </div>
+                        <div class="catalog__items-item-inner-models block__steps-item-desc col">
                                 <span>[[!getProductAmount?
                                        &parent=`15`
                                        ]]</span> моделей
-                            </div>
                         </div>
-
                     </div>
+
                 </div>
-                <div class="catalog__items-item col-lg-4">
-                    <div class="catalog__items-item-inner">
-                        <div class="catalog__items-item-inner-back graves__items-item-inner-back-4"></div>
-                        <div class="catalog__items-item-inner-title block__title-3">
-                            Столики и лавочки<br>из гранита
-                        </div>
-                        <div class="catalog__items-item-inner-desc block__steps-item-desc">Устанавливаются на могилы
-                            верующих. Стелы изготавливаются в форме креста или содержат его изображения.
-                        </div>
+            </div>
+            <div class="catalog__items-item col-lg-4">
+                <div class="catalog__items-item-inner">
+                    <div class="catalog__items-item-inner-back graves-cards__items-item-inner-back-4"></div>
+                    <div class="catalog__items-item-inner-title block__title-3">
+                        Столики и лавочки<br>из гранита
+                    </div>
+                    <div class="catalog__items-item-inner-desc block__steps-item-desc">Устанавливаются на могилы
+                        верующих. Стелы изготавливаются в форме креста или содержат его изображения.
+                    </div>
 
-                        <div class="catalog__items-item-inner-price block__steps-item-desc row">
-                            <div class="col">Цена от <span>10 375 ₽</span>
-                            </div>
+                    <div class="catalog__items-item-inner-price block__steps-item-desc row">
+                        <div class="col">Цена от <span>10 375 ₽</span>
                         </div>
+                    </div>
 
-                        <div class="catalog__items-item-inner-footer row d-lg-block d-flex">
-                            <div class="col">
-                                <a href="[[~14]]" class="btn btn-outline-danger">Посмотреть</a>
-                            </div>
-                            <div class="catalog__items-item-inner-models block__steps-item-desc col">
+                    <div class="catalog__items-item-inner-footer row d-lg-block d-flex">
+                        <div class="col">
+                            <a href="[[~14]]" class="btn btn-outline-danger">Посмотреть</a>
+                        </div>
+                        <div class="catalog__items-item-inner-models block__steps-item-desc col">
                                 <span>[[!getProductAmount?
                                        &parent=`14`
                                        ]]</span> моделей
-                            </div>
                         </div>
-
                     </div>
-                </div>
-                <div class="catalog__items-item col-lg-4">
-                    <div class="catalog__items-item-inner">
-                        <div class="catalog__items-item-inner-back graves__items-item-inner-back-5"></div>
-                        <div class="catalog__items-item-inner-title block__title-3">
-                            Надгробные плиты<br>из гранита
-                        </div>
-                        <div class="catalog__items-item-inner-desc block__steps-item-desc">Каждый памятник из этой
-                            категории – произведение искусства. На сайте представлены стелы в форме цветов, птиц, чаши,
-                            сердца и др.
-                        </div>
-                        <div class="catalog__items-item-inner-price block__steps-item-desc row">
-                            <div class="col">Цена от <span>10 375 ₽</span>
-                            </div>
-                        </div>
 
-                        <div class="catalog__items-item-inner-footer row d-lg-block d-flex">
-                            <div class="col">
-                                <a href="[[~16]]" class="btn btn-outline-danger">Посмотреть</a>
-                            </div>
-                            <div class="catalog__items-item-inner-models block__steps-item-desc col">
+                </div>
+            </div>
+            <div class="catalog__items-item col-lg-4">
+                <div class="catalog__items-item-inner">
+                    <div class="catalog__items-item-inner-back graves-cards__items-item-inner-back-5"></div>
+                    <div class="catalog__items-item-inner-title block__title-3">
+                        Надгробные плиты<br>из гранита
+                    </div>
+                    <div class="catalog__items-item-inner-desc block__steps-item-desc">Каждый памятник из этой
+                        категории – произведение искусства. На сайте представлены стелы в форме цветов, птиц, чаши,
+                        сердца и др.
+                    </div>
+                    <div class="catalog__items-item-inner-price block__steps-item-desc row">
+                        <div class="col">Цена от <span>10 375 ₽</span>
+                        </div>
+                    </div>
+
+                    <div class="catalog__items-item-inner-footer row d-lg-block d-flex">
+                        <div class="col">
+                            <a href="[[~16]]" class="btn btn-outline-danger">Посмотреть</a>
+                        </div>
+                        <div class="catalog__items-item-inner-models block__steps-item-desc col">
                                 <span>[[!getProductAmount?
                                        &parent=`16`
                                        ]]</span> моделей
-                            </div>
                         </div>
-
                     </div>
+
                 </div>
-                <div class="catalog__items-item col-lg-8">
-                    <div class="catalog__items-item-inner">
-                        <div class="catalog__items-item-inner-back graves__items-item-inner-back-6"></div>
-                        <div class="catalog__items-item-inner-title block__title-3">
-                            Гранитные ограды
+            </div>
+            <div class="catalog__items-item col-lg-8">
+                <div class="catalog__items-item-inner">
+                    <div class="catalog__items-item-inner-back graves-cards__items-item-inner-back-6"></div>
+                    <div class="catalog__items-item-inner-title block__title-3">
+                        Гранитные ограды
+                    </div>
+                    <div class="catalog__items-item-inner-desc block__steps-item-desc">Горизонтальные стелы служат
+                        символом единения. Их устанавливают на могилы усопших, которые были близки при жизни. Общие
+                        памятники для двоих и более людей целесообразно выбирать для супружеских пар и близких
+                        родственников.
+                    </div>
+                    <div class="catalog__items-item-inner-price block__steps-item-desc row">
+                        <div class="col">Цена от <span>10 375 ₽</span>
                         </div>
-                        <div class="catalog__items-item-inner-desc block__steps-item-desc">Горизонтальные стелы служат символом единения. Их устанавливают на могилы усопших, которые были близки при жизни. Общие памятники для двоих и более людей целесообразно выбирать для супружеских пар и близких родственников.
+                    </div>
+                    <div class="catalog__items-item-inner-footer row d-lg-block d-flex">
+                        <div class="col">
+                            <a href="[[~10]]" class="btn btn-outline-danger">Посмотреть</a>
                         </div>
-                        <div class="catalog__items-item-inner-price block__steps-item-desc row">
-                            <div class="col">Цена от <span>10 375 ₽</span>
-                            </div>
-                        </div>
-                        <div class="catalog__items-item-inner-footer row d-lg-block d-flex">
-                            <div class="col">
-                                <a href="[[~10]]" class="btn btn-outline-danger">Посмотреть</a>
-                            </div>
-                            <div class="catalog__items-item-inner-models block__steps-item-desc col">
+                        <div class="catalog__items-item-inner-models block__steps-item-desc col">
                                 <span>[[!getProductAmount?
                                        &parent=`10`
                                        ]]</span> моделей
-                            </div>
                         </div>
-
                     </div>
+
                 </div>
-                <div class="catalog__items-item col-lg-4">
-                    <div class="catalog__items-item-inner">
-                        <div class="catalog__items-item-inner-back graves__items-item-inner-back-7"></div>
-                        <div class="catalog__items-item-inner-title block__title-3">
-                            Гранитная плитка<br>на могилу, мраморная<br>крошка
-                        </div>
-                        <div class="catalog__items-item-inner-desc block__steps-item-desc">Каждый памятник из этой категории – произведение искусства. На сайте представлены стелы в форме цветов, птиц, чаши, сердца и др.
-                        </div>
+            </div>
+            <div class="catalog__items-item col-lg-4">
+                <div class="catalog__items-item-inner">
+                    <div class="catalog__items-item-inner-back graves-cards__items-item-inner-back-7"></div>
+                    <div class="catalog__items-item-inner-title block__title-3">
+                        Гранитная плитка<br>на могилу, мраморная<br>крошка
+                    </div>
+                    <div class="catalog__items-item-inner-desc block__steps-item-desc">Каждый памятник из этой категории
+                        – произведение искусства. На сайте представлены стелы в форме цветов, птиц, чаши, сердца и др.
+                    </div>
 
-                        <div class="catalog__items-item-inner-price block__steps-item-desc row">
-                            <div class="col">Цена от <span>10 375 ₽</span>
-                            </div>
+                    <div class="catalog__items-item-inner-price block__steps-item-desc row">
+                        <div class="col">Цена от <span>10 375 ₽</span>
                         </div>
+                    </div>
 
-                        <div class="catalog__items-item-inner-footer row d-lg-block d-flex">
-                            <div class="col">
-                                <a href="[[~11]]" class="btn btn-outline-danger">Посмотреть</a>
-                            </div>
-                            <div class="catalog__items-item-inner-models block__steps-item-desc col">
+                    <div class="catalog__items-item-inner-footer row d-lg-block d-flex">
+                        <div class="col">
+                            <a href="[[~11]]" class="btn btn-outline-danger">Посмотреть</a>
+                        </div>
+                        <div class="catalog__items-item-inner-models block__steps-item-desc col">
                                 <span>[[!getProductAmount?
                                        &parent=`11`
                                        ]]</span> моделей
-                            </div>
                         </div>
-
                     </div>
+
                 </div>
             </div>
-      </div>
-    </main>
-    [[$f_footer? &pageName=`graves`]]
-  </body>
+        </div>
+    </div>
+
+    <div class="container">
+        <h2 class="h2__title-big">Примеры оформления могилы - фото</h2>
+        [[!pdoPage?
+            &parents=`5`
+            &tplWrapper=`@INLINE
+            <div class="main-carousel owl-carousel owl-theme">[[+output]]</div>
+            `
+            &tpl=`f_work-main`
+            &limit=`8`
+            &sortbyTV=`views`
+            &sortdirTV=`DESC`
+            &includeTVs=`views`
+            ]]
+    </div>
+
+</main>
+[[$f_footer? &pageName=`graves`]]
+</body>
 </html>
