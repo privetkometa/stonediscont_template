@@ -216,20 +216,20 @@
         </div>
     </div>
 
+    [[getImageList?
+    &tvname=`gallery`
+    &tpl=`f_cat-gallery`
+    &toPlaceholder=`categoryGallery`
+    ]]
+
+    [[+categoryGallery:isnotempty=`
     <div class="container">
         <h2 class="h2__title-big">Примеры оформления могилы - фото</h2>
-        [[!pdoPage?
-            &parents=`5`
-            &tplWrapper=`@INLINE
-            <div class="main-carousel owl-carousel owl-theme">[[+output]]</div>
-            `
-            &tpl=`f_work-main`
-            &limit=`8`
-            &sortbyTV=`views`
-            &sortdirTV=`DESC`
-            &includeTVs=`views`
-            ]]
+        <div class="category__gallery owl-carousel owl-theme">
+            [[+categoryGallery]]
+        </div>
     </div>
+    `]]
 
 </main>
 [[$f_footer? &pageName=`graves`]]

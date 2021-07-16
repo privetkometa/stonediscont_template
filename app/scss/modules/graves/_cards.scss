@@ -6,6 +6,11 @@
     height: 186px;
     background: url(../assets/images/graves/vaza.jpg) no-repeat center/contain;
     right: -10px;
+
+    @include media-breakpoint-down(lg) {
+      width: 127px;
+      height: 142px;
+    }
   }
 
   &__items-item-inner-back-2 {
@@ -13,6 +18,12 @@
     height: 242px;
     background: url(../assets/images/graves/cokol.jpg) no-repeat center/contain;
     right: 20px;
+
+    @include media-breakpoint-down(lg) {
+      width: 380px;
+      height: 206px;
+      right: 0px;
+    }
   }
 
   &__items-item-inner-back-3 {
@@ -20,6 +31,12 @@
     height: 199px;
     background: url(../assets/images/graves/lampadka.jpg) no-repeat center/contain;
     right: 24px;
+
+    @include media-breakpoint-down(lg) {
+      width: 87px;
+      height: 161px;
+      right: 16px;
+    }
   }
 
   &__items-item-inner-back-4 {
@@ -28,6 +45,11 @@
     background: url(../assets/images/graves/table.jpg) no-repeat center/contain;
     right: 0px;
     bottom: 30px;
+
+    @include media-breakpoint-down(lg) {
+      width: 167px;
+      height: 168px;
+    }
   }
 
   &__items-item-inner-back-5 {
@@ -35,6 +57,12 @@
     height: 217px;
     background: url(../assets/images/graves/plita.jpg) no-repeat center/contain;
     right: 6px;
+
+    @include media-breakpoint-down(lg) {
+      width: 130px;
+      height: 186px;
+      right: 0px;
+    }
   }
 
   &__items-item-inner-back-6 {
@@ -42,6 +70,12 @@
     height: 241px;
     background: url(../assets/images/graves/ograda.jpg) no-repeat center/contain;
     right: 6px;
+    bottom: 10px !important;
+
+    @include media-breakpoint-down(lg) {
+      width: 460px;
+      height: 200px;
+    }
   }
 
   &__items-item-inner-back-7 {
@@ -50,5 +84,11 @@
     background: url(../assets/images/graves/dop.jpg) no-repeat center/contain;
     right: 6px;
     bottom: 50px !important;
+
+    @include media-breakpoint-down(lg) {
+      width: 160px;
+      height: 135px;
+      right: 0px;
+    }
   }
 }

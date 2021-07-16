@@ -87,6 +87,14 @@
   &__items-item-inner-back {
     position: absolute;
     bottom: 20px;
+    @include media-breakpoint-down(md) {
+      position: relative;
+      background-position: bottom;
+      width: auto !important;
+      right: auto !important;
+      left: 0 !important;
+      height: 237px !important;
+    }
   }
 
   &__items-item-inner-back-1 {
@@ -98,12 +106,6 @@
       width: 150px;
       height: 212px;
       right: 10px;
-    }
-    @include media-breakpoint-down(md) {
-      position: relative;
-      right: auto;
-      left: 0;
-      height: 237px;
     }
   }
 
@@ -117,12 +119,6 @@
       width: 270px;
       height: 190px;
     }
-    @include media-breakpoint-down(md) {
-      position: relative;
-      right: auto;
-      left: 0;
-      height: 237px;
-    }
   }
 
   &__items-item-inner-back-3 {
@@ -133,12 +129,6 @@
     @include media-breakpoint-down(lg) {
       width: 150px;
       height: 212px;
-    }
-    @include media-breakpoint-down(md) {
-      position: relative;
-      right: auto;
-      left: 0;
-      height: 237px;
     }
   }
 
@@ -152,12 +142,6 @@
       height: 212px;
       right: 7px;
     }
-    @include media-breakpoint-down(md) {
-      position: relative;
-      right: auto;
-      left: 0;
-      height: 237px;
-    }
   }
 
   &__items-item-inner-back-5 {
@@ -169,12 +153,6 @@
       width: 150px;
       height: 212px;
       right: 5px;
-    }
-    @include media-breakpoint-down(md) {
-      position: relative;
-      right: auto;
-      left: 0;
-      height: 237px;
     }
   }
 

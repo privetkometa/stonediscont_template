@@ -36,6 +36,11 @@ main {
   flex-grow: 2;
 }
 
+a.btn {
+  @include media-breakpoint-down(xs) {
+    font-size: 14px;
+  }
+}
 
 .hidden {
   visibility: hidden;
