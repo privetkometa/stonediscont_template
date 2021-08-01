@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      [[$f_head? &mobile=`1` &product=`1`]]
+    </head>
+    <body>
+      [[$f_header]]
+      [[$f_menu? &class=`catalog-menu-open`]]
+      <main>
+        [[!msMiniCart? &tpl=`f_mini-cart`]]
+        [[$f_advert]]
+        <div itemscope itemtype="https://schema.org/Product" class="container product-card">
+          [[pdoCrumbs?
+          &tpl=`@INLINE <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a itemprop="item" href="[[+link]]"><span itemprop="name">[[+menutitle]]</span></a><meta itemprop="position" content="[[+idx]]" /></li>`
+          &tplCurrent=`@INLINE <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="active"><span itemprop="name">[[+menutitle]]</span><meta itemprop="position" content="[[+idx]]" /></li>`
+          &tplWrapper=`@INLINE <ul itemscope itemtype="https://schema.org/BreadcrumbList" class="breadcrumb">[[+output]]</ul>`
+          &tplHome=`@INLINE <li><a href="[[+link]]" class="text-uppercase">[[++site_name]]</a></li>`
+          &showHome=`1`
+          &outputSeparator=`/`]]
+          <div class="row">
+            <div class="col-md-12">
+              <h1 itemprop="name" class="pagetitle product-card__main-title">[[*pagetitle]]</h1>
+            </div>
+          </div>
+          [[!msOptionsPrice.initialize?]]
+          <form  class="ms2_form msoptionsprice-product" method="post">
+            <input type="hidden" name="id" value="[[*id]]"/>
+            <input type="hidden" name="count" id="product_price" class="input-sm form-control" value="1"/>
+            <div class="row">
+              <div class="col-xl-8 col-md-6">
+                <div class="row">
+
+                  <div class="col-xl-6">
+                    <div class="product-card__gallery" >
+                      [[!msGallery? &tpl=`f_gallery`]]
+                      <div id="discount"></div>
+                    </div>
+                  </div>
+
+                  <!-- <div class="col-xl-6 d-none d-md-block">
+                    [[$product-options]]
+                  </div>
+                   -->
+                </div>
+              </div>
+
+              <div itemprop="offers" itemscope itemtype="https://schema.org/Offer" class="col-xl-4 col-md-6">
+                <div class="product-card__sticky-column">
+                  <div class="product-card__submit-block">
+                    <div class="product-card__price-block">
+                      <div class="product-card__benefit-block">
+                        <span id="old_price" class="product-card__old-price"></span>
+
+                      </div>
+                      <div class="product-card__price">
+                        <span class="product-card__new-price"><span itemprop="price" content="[[+price:stripString=` `]].00" class="msoptionsprice-cost msoptionsprice-[[*id]]">[[+price]]</span> <span itemprop="priceCurrency" content="RUB">{'ms2_frontend_currency' | lexicon}</span></span>
+                        <!-- <span class="product-card__prepay">без предоплаты</span> -->
+                        <div id="benefit" class="product-card__benefit">
+
+                        </div>
+                        <link itemprop="availability" href="https://schema.org/InStock" />
+                      </div>
+                    </div>
+
+                    <div class="product-card__btn-wrapp">
+                      <a href="#callBackModal" rel="modal:open" onclick="yaCounter49607626.reachGoal('order-oformlenie-zakaza'); return true;" class="button button--red">
+                        <span class="pulse-point"></span>
+                        Задать вопрос
+                      </a>
+                        <!-- <button type="submit" class="button" name="ms2_action" value="cart/add" onclick="yaCounter49607626.reachGoal('order-oformlenie-zakaza'); return true;">
+                            Заказать консультацию
+                        </button> -->
+                    </div>
+                    <a href="tel:+78125653524" class="product-card__phone">8 (812) 565-35-24</a>
+                    <div class="product-card__cheaper">
+                      <a href="#CheaperModal" onclick="yaCounter49607626.reachGoal('open_need_cheaper'); return true;" rel="modal:open" class="product-card__cheaper-link">Нужно дешевле? Снизим цену!</a>
+                    </div>
+
+                  </div>
+                  <div class="d-none d-md-block">
+                    [[$product-services]]
+                  </div>
+                  
+
+                </div>
+              </div>
+<!-- 
+              <div id="mobile-options" class="col-12 d-md-none d-flex flex-column">
+                <div class="product-card__mobile-title">Выберите параметры</div>
+                {'msOptionsPrice.option' | snippet : [
+                  'options' => 'stela_size,stand_size,garden_size,discount',
+                  'tpl' => 'product-option-mobile-tpl',
+                  'sortOptions' => 'stela_size:SORT_ASC:SORT_NATURAL',
+                  'constraintOptions' => [
+                      'stand_size' => ['stela_size'],
+                      'garden_size' => ['stela_size'],
+                      'discount' => ['stela_size']
+                  ]
+                  ]}
+
+                  {'msOptionsPrice.option' | snippet : [
+                    'options' => 'polishing',
+                    'tpl' => 'product-option-mobile-tpl',
+                    'sortOptions' => 'polishing:SORT_DESC:SORT_STRING'
+                  ]}
+                  <div class="row order-4 option__size">
+                    <div class="col-12">
+                      <div class="option__title">Варианты камня</div>
+                      <div class="stones-mini stones-mini--gorizontal">
+                        <div class="stones-mini__item stones-mini__item--gabroo">
+                          <p class="stones-mini__text">
+                            Камень, используемый в этой модели:
+                            <b>Черный гранит Габбро-диабаз</b>
+                          </p>
+                        </div>
+                        <div class="stones-mini__item stones-mini__item--dimovsky">
+                          <p class="stones-mini__text">
+                            Можем выполнить из камня:
+                            <b>Коричневый гранит Дымовский</b>
+                            <span>Подробности и стоимость у менеджера</span>
+                          </p>
+                        </div>
+                        <div class="stones-mini__item stones-mini__item--pokostovsky">
+                          <p class="stones-mini__text">
+                              Можем выполнить из камня:
+                            <b>Серый гранит Покостовский</b>
+                            <span>Подробности и стоимость у менеджера</span>
+                          </p>
+                        </div>
+                        <div class="stones-mini__item stones-mini__item--leznikovsky">
+                          <p class="stones-mini__text">
+                              Можем выполнить из камня:
+                            <b>Красный гранит Лезниковский</b>
+                            <span>Подробности и стоимость у менеджера</span>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+              </div> -->
+
+            </div>
+          </form>
+
+          <div class="row">
+            <div class="col-md-12">
+              [[$tabs]]
+            </div>
+            <div class="col-12 d-md-none mt-3">
+              [[$product-services]]
+            </div>
+          </div>
+
+
+          [[!callBack? &registerCss=`0` &formSelector=`cheaper_ajax_form` &target=`CheaperModal` &registerBootstrap=`0` &tpl=`f_cheaper-btn` &form=`f_cheaper-form`]]
+
+          {ignore}
+            <script>
+
+              // $(document).ready(function() {
+              //     defer();
+              //     miniShop2.Callbacks.Cart.add.response.success = function(response) {
+              //       document.location.href='[[~30]]';
+              //     };
+              // });
+
+              function deferGoal() {
+                if (window.yaCounter49607626) {
+                  yaCounter49607626.reachGoal('view-cart');
+                }
+                else {
+                  setTimeout(function() { deferGoal() }, 50);
+                }
+              }
+              deferGoal();
+
+            </script>
+          {/ignore}
+        </div>
+
+
+        [[getImageList?
+          &tvname=`examples`
+          &tpl=`f_examples-tpl`
+          &toPlaceholder=`examplesCarusel`
+        ]]
+
+        [[+examplesCarusel:isnot=``:then=`
+          <div class="container mt-xl-4 mt-md-3">
+            <div class="row">
+              <div class="col-md-12">
+                <h2>
+                  Примеры оформления
+                </h2>
+                <div class="examples-carusel owl-carousel">
+                  [[+examplesCarusel]]
+                </div>
+              </div>
+            </div>
+          </div>
+        `]]
+
+        [[pdoPage?
+          &parents=`5`
+          &includeTVs=`model,date,autor,review,mark,cemetery_string,cemetery_list,gallery`
+          &limit=`10`
+          &tpl=`finishedWorkTpl`
+          &tvFilters=`model==[[*id]]`
+          &toPlaceholder=`finishedWorks`
+        ]]
+        
+        [[+finishedWorks:!empty=`
+          <div class="container mt-xl-4 mt-md-3">
+            <div class="row">
+              <div class="col-md-12">
+                <h2 class="underlined_title">
+                  Готовые работы
+                </h2>
+                <div class="">
+                  [[+finishedWorks]]
+
+                </div>
+              </div>
+            </div>
+          </div>
+        `]]
+
+
+        [[$f_consultation_banner]]
+
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <h2>
+                Похожие
+              </h2>
+              <div class="similar-carusel owl-carousel">
+                [[!pdoPage?
+                  &parents=`37`
+                  &element=`msProducts`
+                  &tpl=`f_product-similar`
+                  &master=`[[*id]]`
+                  &limit=`10`
+                  &link=`2`
+                  &sortby=`RAND()`
+                ]]
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+      </main>
+
+      [[$f_footer? &pageName=`product`]]
+    </body>
+</html>
