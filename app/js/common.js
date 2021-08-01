@@ -312,9 +312,9 @@ $(function () {
         $(`#price-table_${epitaphId}`).addClass("open");
         var textLength = $(`#content_${epitaphId}`).text().replace(/\s/g, '').length
 
-        $(`#price-table_${epitaphId} .epitaph__price--standart`).text(`${textLength * 35} ₽`)
-        $(`#price-table_${epitaphId} .epitaph__price--gold`).text(`${textLength * 65} ₽`)
-        $(`#price-table_${epitaphId} .epitaph__price--white`).text(`${textLength * 90} ₽`)
+        $(`#price-table_${epitaphId} .epitaph__price--standart`).text(`${textLength * 40} ₽`)
+        $(`#price-table_${epitaphId} .epitaph__price--gold`).text(`${textLength * 70} ₽`)
+        $(`#price-table_${epitaphId} .epitaph__price--white`).text(`${textLength * 100} ₽`)
         console.log(textLength)
     });
 
