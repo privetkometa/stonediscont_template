@@ -1,0 +1,67 @@
+.catalog-monuments {
+  &__item {
+    position: relative;
+    padding: 25px 29px 40px 29px;
+    min-height: 523px;
+    overflow: hidden;
+    margin-bottom: 30px;
+  }
+
+  &__item-title {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 14px;
+  }
+
+  &__item-price {
+    margin-top: 35px;
+
+    span {
+      font-size: 24px;
+      font-weight: 700;
+      display: block;
+    }
+  }
+
+  &__item-buttons {
+    margin-top: 35px;
+
+    a.btn {
+      font-size: 18px;
+    }
+  }
+
+  &__item-models {
+    position: absolute;
+    bottom: 40px;
+
+    span {
+      font-weight: 600;
+      color: $red;
+    }
+  }
+
+  &__item-img {
+    position: absolute;
+    width: 731px;
+    height: 290px;
+  }
+
+  &__item-img--monuments {
+    background: url("../assets/images/catalog-monuments/monuments.jpg") center / contain no-repeat;
+    right: 0;
+    bottom: 35px;
+  }
+
+  &__item-img--complexes {
+    background: url("../assets/images/catalog-monuments/complexes.jpg") center / contain no-repeat;
+    right: 0;
+    bottom: 35px;
+  }
+
+  &__item-img--graves {
+    background: url("../assets/images/catalog-monuments/graves.jpg") center / contain no-repeat;
+    right: 17px;
+    bottom: -25px;
+  }
+}

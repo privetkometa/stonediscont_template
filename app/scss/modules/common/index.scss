@@ -37,10 +37,12 @@ main {
 }
 
 a.btn {
+  text-decoration: none;
   @include media-breakpoint-down(lg) {
     font-size: 14px;
   }
 }
+
 
 .hidden {
   visibility: hidden;
