@@ -1,0 +1,68 @@
+.services {
+
+  margin-bottom: 25px;
+
+  &__items {
+    margin-top: 40px;
+    margin-bottom: -30px;
+  }
+
+  &__items-item {
+    margin-bottom: 20px;
+  }
+
+  &__items-item-inner {
+    background: $white;
+    border-radius: $border-radius-large;
+    padding: 15px;
+    min-height: 423px;
+
+    @include media-breakpoint-down(lg) {
+      min-height: 390px;
+    }
+
+    @include media-breakpoint-down(xs) {
+      min-height: auto;
+    }
+  }
+
+  &__items-item-inner-more {
+    display: block;
+    position: absolute;
+    bottom: 30px;
+    @include media-breakpoint-down(xs) {
+      position: relative;
+      margin-top: 10px;
+      bottom: auto;
+    }
+  }
+
+  &__items-item-inner-img {
+    width: 100%;
+    height: 150px;
+    margin-bottom: 20px;
+    border-radius: $border-radius-medium;
+    overflow: hidden;
+  }
+
+  &__items-item-inner-img--payment {
+    background: url("../assets/images/services/payment.jpg") center / cover no-repeat;
+  }
+
+  &__items-item-inner-img--delivery {
+    background: url("../assets/images/services/delivery.jpg") center / cover no-repeat;
+  }
+
+  &__items-item-inner-img--setup {
+    background: url("../assets/images/services/setup.jpg") center / cover no-repeat;
+  }
+
+  &__items-item-inner-img--guarantee {
+    background: url("../assets/images/services/guarantee.jpg") center / cover no-repeat;
+  }
+
+  &__items-item-inner-img--storage {
+    background: url("../assets/images/services/storage.jpg") center / cover no-repeat;
+  }
+
+}
