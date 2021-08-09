@@ -3,7 +3,7 @@
 <head>
     [[$f_head? &mobile=`1`]]
 </head>
-<body>
+<body class="bg-gray">
 [[$f_header]]
 [[$f_menu]]
 <main>
@@ -11,6 +11,17 @@
 
     [[!msMiniCart? &tpl=`f_mini-cart`]]
     [[$f_advert]]
+
+    [[!msGetProductsMinMaxPrice?
+    &ids=`10,11,14,15,16`
+    &addIds=`1`
+    &thousandsSep=` `
+    ]]
+
+    [[!msGetProductsCount?
+    &ids=`10,11,14,15,16`
+    &addIds=`1`
+    ]]
 
     <div class="container">
         <h1 class="pagetitle-big">[[*pagetitle]]<br>в Санкт-Петербурге </h1>
@@ -33,6 +44,9 @@
                         <li>Схемы кварталов и участков захоронений</li>
                     </a>
                     `]]
+                    <a href="#catalog">
+                        <li>Цены на изготовление памятников</li>
+                    </a>
                     <a href="#gallery">
                         <li>Фото наших работ на [[+cemetery.word_2]]</li>
                     </a>
@@ -115,6 +129,159 @@
                     <p>[[*cemetery_plan]]</p>
                 </section>
                 `]]
+
+                <section id="catalog">
+                    <h2 class="h2__title-big">Цены на изготовление памятников на [[+cemetery.word_2]] гранитной
+                        мастерской “Прометей”</h2>
+                    <div class="cemetery-catalog catalog__items owl-carousel owl-theme d-md-flex row">
+                        <div class="catalog__items-item col-lg">
+                            <div class="catalog__items-item-inner">
+                                <div class="product-mini__discount">
+                                    <span class="product-mini__discount-text">Скидка</span>
+                                    <span>до <span class="product-mini__discount-value">23%</span>
+                                </span>
+                                </div>
+                                <div class="catalog__items-item-inner-back catalog__items-item-inner-back-1"></div>
+                                <div class="catalog__items-item-inner-title block__title-3">
+                                    Вертикальные<br>памятники
+                                </div>
+                                <div class="catalog__items-item-inner-desc">Представляют собой
+                                    узкие
+                                    стелы, предназначенные для установки на месте захоронения одного человека. Данная
+                                    категория
+                                    пользуется самым большим спросом
+                                </div>
+
+                                <div class="catalog__items-item-inner-price row">
+                                    <div class="col">Цена от <span>[[+min_price_10]] ₽</span>
+                                    </div>
+                                </div>
+                                <div class="catalog__items-item-inner-footer row d-lg-block d-flex">
+                                    <div class="col">
+                                        <a href="[[~10]]" class="btn btn-outline-danger">Посмотреть</a>
+                                    </div>
+                                    <div class="catalog__items-item-inner-models col">
+                                        <span>[[+total_count_10]]</span> моделей
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="catalog__items-item col-lg">
+                            <div class="catalog__items-item-inner">
+                                <div class="catalog__items-item-inner-back catalog__items-item-inner-back-3"></div>
+                                <div class="catalog__items-item-inner-title block__title-3">
+                                    Бюджетные<br>памятники эконом
+                                </div>
+                                <div class="catalog__items-item-inner-desc block__steps-item-desc">Стелы отличаются
+                                    классической
+                                    прямоугольной формой. Подойдет, если предпочитаете простой дизайн
+                                </div>
+
+                                <div class="catalog__items-item-inner-price block__steps-item-desc row">
+                                    <div class="col">Цена от <span>[[+min_price_15]] ₽</span>
+                                    </div>
+                                </div>
+
+                                <div class="catalog__items-item-inner-footer row d-lg-block d-flex">
+                                    <div class="col">
+                                        <a href="[[~15]]" class="btn btn-outline-danger">Посмотреть</a>
+                                    </div>
+                                    <div class="catalog__items-item-inner-models block__steps-item-desc col">
+                                        <span>[[+total_count_15]]</span> моделей
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="catalog__items-item col-lg-12">
+                            <div class="catalog__items-item-inner">
+                                <div class="catalog__items-item-inner-back catalog__items-item-inner-back-2"></div>
+                                <div class="catalog__items-item-inner-title block__title-3">
+                                    Горизонтальные<br>двойные памятники
+                                </div>
+                                <div class="catalog__items-item-inner-desc block__steps-item-desc">Горизонтальные стелы
+                                    служат
+                                    символом единения. Их устанавливают на могилы усопших, которые были близки при
+                                    жизни. Общие
+                                    памятники для двоих и более людей целесообразно покупать для супружеских пар и
+                                    кровных
+                                    родственников.
+                                </div>
+
+                                <div class="catalog__items-item-inner-price block__steps-item-desc row">
+                                    <div class="col">Цена от <span>[[+min_price_11]] ₽</span>
+                                    </div>
+                                </div>
+
+                                <div class="catalog__items-item-inner-footer row d-lg-block d-flex">
+                                    <div class="col">
+                                        <a href="[[~11]]" class="btn btn-outline-danger">Посмотреть</a>
+                                    </div>
+                                    <div class="catalog__items-item-inner-models block__steps-item-desc col">
+                                        <span>[[+total_count_11]]</span> моделей
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="catalog__items-item col-lg">
+                            <div class="catalog__items-item-inner">
+                                <div class="catalog__items-item-inner-back catalog__items-item-inner-back-4"></div>
+                                <div class="catalog__items-item-inner-title block__title-3">
+                                    Православные<br>памятники с крестом
+                                </div>
+                                <div class="catalog__items-item-inner-desc block__steps-item-desc">Устанавливаются на
+                                    могилы
+                                    верующих. Стелы изготавливаются в форме креста или содержат его изображения.
+                                </div>
+
+                                <div class="catalog__items-item-inner-price block__steps-item-desc row">
+                                    <div class="col">Цена от <span>[[+min_price_14]] ₽</span>
+                                    </div>
+                                </div>
+
+                                <div class="catalog__items-item-inner-footer row d-lg-block d-flex">
+                                    <div class="col">
+                                        <a href="[[~14]]" class="btn btn-outline-danger">Посмотреть</a>
+                                    </div>
+                                    <div class="catalog__items-item-inner-models block__steps-item-desc col">
+                                        <span>[[+total_count_14]]</span> моделей
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="catalog__items-item col-lg">
+                            <div class="catalog__items-item-inner">
+                                <div class="catalog__items-item-inner-back catalog__items-item-inner-back-5"></div>
+                                <div class="catalog__items-item-inner-title block__title-3">
+                                    Эксклюзивные<br>памятники
+                                </div>
+                                <div class="catalog__items-item-inner-desc block__steps-item-desc">Каждый памятник из
+                                    этой
+                                    категории – произведение искусства. На сайте представлены стелы в форме цветов,
+                                    птиц, чаши,
+                                    сердца и др.
+                                </div>
+                                <div class="catalog__items-item-inner-price block__steps-item-desc row">
+                                    <div class="col">Цена от <span>[[+min_price_16]] ₽</span>
+                                    </div>
+                                </div>
+
+                                <div class="catalog__items-item-inner-footer row d-lg-block d-flex">
+                                    <div class="col">
+                                        <a href="[[~16]]" class="btn btn-outline-danger">Посмотреть</a>
+                                    </div>
+                                    <div class="catalog__items-item-inner-models block__steps-item-desc col">
+                                        <span>[[+total_count_16]]</span> моделей
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </section>
 
                 <section id="gallery">
                     <h2 class="h2__title-big">Фото наших работ на [[+cemetery.word_2]]</h2>
