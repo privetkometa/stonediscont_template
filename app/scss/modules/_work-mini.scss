@@ -3,12 +3,12 @@
   display: block;
   position: relative;
   transition: all $transition;
-  border-radius: $border-radius;
+  border-radius: 16px;
+  padding: 15px;
   margin-bottom: 20px;
-  padding: 10px 10px 0;
   border: 1px solid $smoke;
-  // box-shadow: $box-shadow;
-  border-radius: $border-radius;
+  background: $white;
+  height: calc(100% - 20px);
   @include media-breakpoint-down(sm) {
     padding: 5px 5px 0;
   }
@@ -30,7 +30,7 @@
     }
   }
   &__title{
-    margin: 10px 0 15px;
+    margin: 10px 0 0;
     font-size: 14px;
     font-weight: normal;
   }
