@@ -346,3 +346,25 @@ $(function () {
         });
     }).scroll();
 });
+
+function deferIframe() {
+    var iframeElem = document.getElementsByTagName('iframe');
+    for ( var i = 0; i < iframeElem.length; i++ ) {
+        if(iframeElem[i].getAttribute('data-src')) {
+        iframeElem[i].setAttribute('src',iframeElem[i].getAttribute('data-src'));
+        } 
+    } 
+}
+
+function deferYaMap() {
+    var mapContainer = document.getElementById('yamap');
+    let script = document.createElement('script');
+    script.src = 'https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Aa77303d2634d82d0032a1e51060fb22646c83850d7b57e754ad1e5ea7621f359&amp;width=100%&amp;height=626&amp;lang=ru_RU&amp;scroll=false';
+    mapContainer.replaceWith(script); 
+}
+
+window.onload = function() {
+    deferYaMap();
+    deferIframe();
+};
+
