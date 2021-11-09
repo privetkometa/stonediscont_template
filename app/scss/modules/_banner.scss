@@ -1,6 +1,8 @@
 .banner {
   padding: 140px 0;
-  background: url('../assets/images/monument-statue.jpg') no-repeat center;
+  background: url('../assets/images/monument-statue.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
   background-size: cover;
   position: relative;
   @include media-breakpoint-down(lg) {
