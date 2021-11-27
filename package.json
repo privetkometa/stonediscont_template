@@ -34,6 +34,7 @@
     "bootstrap": "^4.6.0",
     "jquery": "^3.6.0",
     "jquery-modal": "^0.9.1",
+    "materialize-css": "^1.0.0-rc.2",
     "normalize-scss": "^7.0.1",
     "owl.carousel2": "^2.2.2",
     "popper.js": "^1.16.1"

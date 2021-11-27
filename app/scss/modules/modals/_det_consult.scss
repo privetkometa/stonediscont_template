@@ -1,0 +1,51 @@
+.dcons {
+
+  max-width: 863px;
+  padding: 58px 91px;
+  @include media-breakpoint-down(lg) {
+    padding: 38px 71px;
+  }
+
+  &__desc {
+    margin-bottom: 30px;
+    margin-top: 35px;
+
+    @include media-breakpoint-down(lg) {
+      margin-bottom: 20px;
+      margin-top: 25px;
+    }
+  }
+
+  &__back {
+    width: 359px;
+    height: 359px;
+    background: url("../assets/images/modals/dcons.png");
+    position: absolute;
+    bottom: 54px;
+    right: 0;
+    background-size: contain;
+    @include media-breakpoint-down(lg) {
+      width: 259px;
+      height: 259px;
+    }
+  }
+
+  .h1 {
+    font-size: 37px;
+    line-height: 37px;
+
+    @include media-breakpoint-down(lg) {
+      font-size: 27px;
+      line-height: 27px;
+    }
+  }
+
+  .modal-dialog {
+    margin-bottom: 30px;
+  }
+
+  &__button-under {
+    font-size: 14px;
+    margin-top: 15px;
+  }
+}
