@@ -1,41 +1,35 @@
-<div class="modal dcons" id="test" role="dialog">
-    <div class="dcons__inner">
+<div class="modal dcons" id="[[+target]]" role="dialog">
+    <div class="dcons__inner col col-md-8 p-0">
     <p class="h1">Вам перезвонит специалист мастерской “Прометей”</p>
-    <p class="dcons__desc col-8 p-0">Получите подробную консультацию по вопросам заказа и установки памятника. <br><br>Наш специалист выслушает ваши
+    <p class="dcons__desc p-0">Получите подробную консультацию по вопросам заказа и установки памятника. <br><br>Наш специалист выслушает ваши
         пожелания и ответит на вопросы. Рассчитает и отправит смету. Расскажет, что делать дальше. </p>
     <div class="modal-dialog">
-        <div class="modal-content col-6 p-0">
+        <div class="modal-content col-md-10 col-lg-6 p-0">
             <form role="form" method="POST" action="[[~[[*id]]]]" class="">
                 <div class="order__fields modal-body">
 
                     <div class="order__field">
-                        <label class="order__field-label" for="name">
-                            Ваше имя:<span>*</span>
-                        </label>
                         <input type="text" class="form-control input" id="name" name="name"
-                               value="[[!+fi.name]]" placeholder="Как Вас зовут?">
+                               value="[[!+fi.name]]" placeholder="Ваше имя">
                         <span class="input__error error error_name">[[+fi.error.name]]</span>
                     </div>
 
                     <div class="order__field">
-                        <label class="order__field-label" for="phone">
-                            Ваш телефон:<span>*</span>
-                        </label>
                         <input type="text" class="form-control input" id="phone" name="phone"
-                               value="[[!+fi.phone]]" data-mask="+0 (000) 000-00-00" placeholder="+7 (000) 000-00-00">
+                               value="[[!+fi.phone]]" data-mask="+0 (000) 000-00-00" placeholder="Ваш телефон">
                         <span class="input__error error_phone error">[[+fi.error.phone]]</span>
                     </div>
                 </div>
 
                 <div class="modal-footer">
-                    <button type="submit" class="callback-submit button">Перезвоните мне</button>
-                    <p class="dcons__button-under"><i>*перезвоним в рабочее время</i></p>
+                    <button type="submit" class="callback-submit button button--red">Перезвоните мне</button>
+                    <p class="dcons__button-under"><i>*менеджер перезвонит в рабочее время</i></p>
                 </div>
 
             </form>
         </div>
     </div>
 
-    <div class="dcons__back"></div>
     </div>
+        <div class="dcons__back"></div>
 </div>

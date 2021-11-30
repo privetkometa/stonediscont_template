@@ -4,7 +4,13 @@
     [[$f_head? &mobile=`1`]]
 </head>
 <body class="bg-gray">
-    <p><a href="#test" rel="modal:open">Open Modal</a></p>
+[[!callBack?
+    &registerCss=`0`
+    &registerBootstrap=`0`
+    &tpl=`det_consult_btn`
+    &form=`det_consult`
+    &target=`callBackDest`
+]]
 
 [[$f_header]]
 [[$f_menu]]
@@ -23,6 +29,8 @@
     &ids=`10,11,14,15,16`
     &addIds=`1`
     ]]
+
+
 
 
     [[$det_consult]]

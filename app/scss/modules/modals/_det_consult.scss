@@ -1,14 +1,14 @@
 .dcons {
 
-  max-width: 863px;
-  padding: 58px 91px;
+  max-width: 1080px;
+  padding: 60px;
   @include media-breakpoint-down(lg) {
-    padding: 38px 71px;
+    padding: 40px;
   }
 
   &__desc {
     margin-bottom: 30px;
-    margin-top: 35px;
+    margin-top: 24px;
 
     @include media-breakpoint-down(lg) {
       margin-bottom: 20px;
@@ -17,35 +17,58 @@
   }
 
   &__back {
-    width: 359px;
-    height: 359px;
-    background: url("../assets/images/modals/dcons.png");
+    width: 260px;
+    height: 426px;
+    background: url(../assets/images/modals/dcons.png) no-repeat center/contain;
     position: absolute;
     bottom: 54px;
-    right: 0;
-    background-size: contain;
+    right: 40px;
     @include media-breakpoint-down(lg) {
-      width: 259px;
-      height: 259px;
+      width: 250px;
+      height: 340px;
+      bottom: 30px;
+      right: 20px;
+    }
+    @include media-breakpoint-down(sm) {
+      display: none;
     }
   }
 
   .h1 {
     font-size: 37px;
     line-height: 37px;
+    border-bottom: 1px solid #E7EAEB;
+    padding-bottom: 24px;
+    margin-bottom: 0;
+    margin-top: 0;
 
     @include media-breakpoint-down(lg) {
       font-size: 27px;
       line-height: 27px;
     }
-  }
 
-  .modal-dialog {
-    margin-bottom: 30px;
+    @include media-breakpoint-down(xs) {
+      font-size: 24px;
+      line-height: 24px;
+    }
+
   }
 
   &__button-under {
     font-size: 14px;
     margin-top: 15px;
+  }
+
+  button {
+    width: 100%;
+  }
+
+  input {
+    border-radius: 6px;
+    padding: 12px 12px;
+  }
+
+  .order-field {
+    margin-bottom: 17px;
   }
 }
